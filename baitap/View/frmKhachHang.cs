@@ -1,4 +1,5 @@
-﻿using baitap.Model;
+﻿using baitap.Control;
+using baitap.Model;
 using baitap.Object;
 using Krypton.Toolkit;
 using System;
@@ -9,6 +10,7 @@ namespace baitap.View
     public partial class frmKhachHang : KryptonForm
     {
         KhachHangMod khachHangMod = new KhachHangMod();
+        KhachHangCtr KhachHangCtr = new KhachHangCtr();
 
         public frmKhachHang()
         {

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using baitap.View;
 using Bunifu.Framework.UI;
 using Krypton.Toolkit;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace QL_QuanCafe_Trung_Hai.View
 {
@@ -19,7 +20,7 @@ namespace QL_QuanCafe_Trung_Hai.View
         public frmMain()
         {
             InitializeComponent();
-            MofrmCon(new frmNhanVien());
+            MofrmCon(new frmTrangChu());
         }
 
         private void DoiMauLabel_MouseEnter(object sender, EventArgs e)
@@ -31,12 +32,22 @@ namespace QL_QuanCafe_Trung_Hai.View
                 label.BackColor = Color.Gray;
             }
         }
+
         private void DoiMauLabel2_MouseEnter(object sender, EventArgs e)
         {
             Label label = sender as Label;
             if (label != null)
             {
                 label.ForeColor = Color.Red;
+            }
+        }
+
+        private void DoiMauLabel3_MouseEnter(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            if (label != null)
+            {
+                label.ForeColor = Color.LightBlue;
             }
         }
 
@@ -47,6 +58,15 @@ namespace QL_QuanCafe_Trung_Hai.View
             {
                 label.ForeColor = anhClick ? Color.White : SystemColors.ControlText;
                 label.BackColor = anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245);
+            }
+        }
+
+        private void DoiMauLabel2_MouseLeave(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            if (label != null)
+            {
+                label.ForeColor = Color.Black;
             }
         }
 
@@ -139,17 +159,26 @@ namespace QL_QuanCafe_Trung_Hai.View
                 closedForm.Dispose();
             }
         }
+        private void TrangChuOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmTrangChu());
+        }
 
         private void NhanVienOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmNhanVien());
         }
 
-
         private void KhachHangOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmKhachHang());
         }
+
+        private void SettingKhachHangOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmSettingKhachHang());
+        }
+
 
         private void thoat_Click(object sender, EventArgs e)
         {

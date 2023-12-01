@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             panel1 = new Panel();
+            rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label6 = new Label();
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -96,6 +101,11 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(rjTextBox1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox4);
@@ -111,6 +121,77 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1584, 71);
             panel1.TabIndex = 1;
+            // 
+            // rjTextBox1
+            // 
+            rjTextBox1.BackColor = SystemColors.Window;
+            rjTextBox1.BorderColor = Color.White;
+            rjTextBox1.BorderFocusColor = Color.HotPink;
+            rjTextBox1.BorderRadius = 5;
+            rjTextBox1.BorderSize = 2;
+            rjTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            rjTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            rjTextBox1.Location = new Point(362, 22);
+            rjTextBox1.Margin = new Padding(4);
+            rjTextBox1.Multiline = false;
+            rjTextBox1.Name = "rjTextBox1";
+            rjTextBox1.Padding = new Padding(10, 7, 10, 7);
+            rjTextBox1.PasswordChar = false;
+            rjTextBox1.PlaceholderColor = Color.DarkGray;
+            rjTextBox1.PlaceholderText = "Tìm kiếm mọi thứ ở đây...";
+            rjTextBox1.Size = new Size(250, 31);
+            rjTextBox1.TabIndex = 6;
+            rjTextBox1.Texts = "";
+            rjTextBox1.UnderlinedStyle = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(1156, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 25);
+            label5.TabIndex = 2;
+            label5.Text = "Liên hệ";
+            label5.MouseEnter += DoiMauLabel3_MouseEnter;
+            label5.MouseLeave += DoiMauLabel2_MouseLeave;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(1072, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 25);
+            label4.TabIndex = 3;
+            label4.Text = "Dịch vụ";
+            label4.MouseEnter += DoiMauLabel3_MouseEnter;
+            label4.MouseLeave += DoiMauLabel2_MouseLeave;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(964, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(102, 25);
+            label3.TabIndex = 4;
+            label3.Text = "Tính năng";
+            label3.MouseEnter += DoiMauLabel3_MouseEnter;
+            label3.MouseLeave += DoiMauLabel2_MouseLeave;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(854, 18);
+            label6.Name = "label6";
+            label6.Size = new Size(104, 25);
+            label6.TabIndex = 5;
+            label6.Text = "Trang Chủ";
+            label6.Click += TrangChuOpen;
+            label6.MouseEnter += DoiMauLabel3_MouseEnter;
+            label6.MouseLeave += DoiMauLabel2_MouseLeave;
             // 
             // panel3
             // 
@@ -187,7 +268,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(343, 22);
+            pictureBox1.Location = new Point(331, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(31, 31);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -210,9 +291,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(68, 21);
             label1.Name = "label1";
-            label1.Size = new Size(240, 32);
+            label1.Size = new Size(248, 32);
             label1.TabIndex = 0;
-            label1.Text = "SavorCraft Café T-H";
+            label1.Text = "Trung Luxury Resort";
             // 
             // panelSidebar
             // 
@@ -282,6 +363,7 @@
             lbCaiDat.TabIndex = 0;
             lbCaiDat.Text = "Cài đặt";
             lbCaiDat.TextAlign = ContentAlignment.MiddleCenter;
+            lbCaiDat.Click += SettingKhachHangOpen;
             lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
             lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
@@ -353,6 +435,7 @@
             lbTrangChu.TabIndex = 0;
             lbTrangChu.Text = "Trang Chủ";
             lbTrangChu.TextAlign = ContentAlignment.MiddleCenter;
+            lbTrangChu.Click += TrangChuOpen;
             lbTrangChu.MouseEnter += DoiMauLabel_MouseEnter;
             lbTrangChu.MouseLeave += DoiMauLabel_MouseLeave;
             // 
@@ -434,5 +517,9 @@
         private Label lbTrangChu;
         private Label lbNhanVien;
         private Panel panelMain;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label6;
     }
 }

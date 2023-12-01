@@ -84,10 +84,14 @@ namespace baitap.View
                             }
                             else if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
                             {
+                                txtUserName.Text = "";
+                                txtPassword.Text = "";
                                 MessageBox.Show("Bạn cần điền đủ thông tin đăng nhập để có thể tiếp tục", "Thiếu thông tin đăng nhập");
                             }
                             else
                             {
+                                txtUserName.Text = "";
+                                txtPassword.Text = "";
                                 MessageBox.Show("Đăng nhập thất bại");
                             }
                         }

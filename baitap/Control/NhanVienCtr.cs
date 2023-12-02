@@ -8,7 +8,7 @@ namespace baitap.Control
     internal class NhanVienCtr
     {
         NhanVienMod nvMod = new NhanVienMod();
-        public string ErrorMessage { get; private set; }
+        public string tinnhanLoi { get; private set; }
 
         public DataTable GetData()
         {
@@ -18,7 +18,7 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                ErrorMessage = "Lỗi khi lấy dữ liệu: " + ex.Message;
+                tinnhanLoi = "Lỗi khi lấy dữ liệu: " + ex.Message;
                 return null;
             }
         }
@@ -31,7 +31,7 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                ErrorMessage = "Lỗi khi thêm dữ liệu: " + ex.Message;
+                tinnhanLoi = "Lỗi khi thêm dữ liệu: " + ex.Message;
                 return false;
             }
         }
@@ -44,7 +44,7 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                ErrorMessage = "Lỗi khi xóa dữ liệu: " + ex.Message;
+                tinnhanLoi = "Lỗi khi xóa dữ liệu: " + ex.Message;
                 return false;
             }
         }

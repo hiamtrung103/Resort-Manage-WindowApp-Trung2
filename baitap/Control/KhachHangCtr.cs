@@ -13,72 +13,46 @@ namespace baitap.Control
     {
         class KhachHangControl
         {
-            private KhachHangMod khMod = new KhachHangMod();
+            KhachHangMod khMod = new KhachHangMod();
+            public string tinnhanLoi { get; private set; }
 
-            public DataTable LayDuLieuKhachHang()
+            public DataTable GetData()
             {
-                return khMod.LayDuLieuKhachHang();
+                try
+                {
+                    return khMod.LayDuLieuKhachHang();
+                }
+                catch (Exception ex)
+                {
+                    tinnhanLoi = "Lỗi khi lấy dữ liệu: " + ex.Message;
+                    return null;
+                }
             }
 
-            public bool ThemDuLieuKhachHang(string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password)
+            public bool AddData(KhachHangObj khObj)
             {
-                if (kiemTraTonTai(tenTaiKhoan, email))
+                try
                 {
-                    MessageBox.Show("Tên tài khoản hoặc Email đã tồn tại.");
+                    return khMod.ThemDuLieuKhachHang(khObj);
+                }
+                catch (Exception ex)
+                {
+                    tinnhanLoi = "Lỗi khi thêm dữ liệu: " + ex.Message;
                     return false;
                 }
-
-                KhachHangObj khObj = new KhachHangObj
-                {
-                    HoTen = hoTen,
-                    GioiTinh = gioiTinh,
-                    NamSinh = namSinh,
-                    DiaChi = diaChi,
-                    DienThoai = dienThoai,
-                    TenTaiKhoan = tenTaiKhoan,
-                    Email = email,
-                    Password = password
-                };
-
-                return khMod.ThemDuLieuKhachHang(khObj);
             }
 
-            public void CapNhatDuLieuKhachHang(string maKhachHang, string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password)
+            public bool DelData(string id)
             {
-                KhachHangObj khObj = new KhachHangObj
+                try
                 {
-                    MaKhachHang = maKhachHang,
-                    HoTen = hoTen,
-                    GioiTinh = gioiTinh,
-                    NamSinh = namSinh,
-                    DiaChi = diaChi,
-                    DienThoai = dienThoai,
-                    TenTaiKhoan = tenTaiKhoan,
-                    Email = email,
-                    Password = password
-                };
-
-                khMod.CapNhatDuLieuKhachHang(khObj);
-            }
-
-            public bool XoaDuLieuKhachHang(string maKhachHang)
-            {
-                return khMod.XoaDuLieuKhachHang(maKhachHang);
-            }
-
-            private bool kiemTraTonTai(string tenTaiKhoan, string email)
-            {
-                DataTable dt = khMod.LayDuLieuKhachHang();
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    if (row["ten_tai_khoan"].ToString() == tenTaiKhoan || row["email"].ToString() == email)
-                    {
-                        return true;
-                    }
+                    return khMod.XoaDuLieuKhachHang(id);
                 }
-
-                return false;
+                catch (Exception ex)
+                {
+                    tinnhanLoi = "Lỗi khi xóa dữ liệu: " + ex.Message;
+                    return false;
+                }
             }
         }
     }

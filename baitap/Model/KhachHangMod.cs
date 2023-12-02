@@ -77,26 +77,29 @@ namespace baitap.Model
 
         public void CapNhatDuLieuKhachHang(KhachHangObj khObj)
         {
-            cmd.CommandText = "UPDATE KhachHang SET HoTen = @HoTen, GioiTinh = @GioiTinh, NamSinh = @NamSinh, " +
-                              "DiaChi = @DiaChi, DienThoai = @DienThoai, TenTaiKhoan = @TenTaiKhoan, Email = @Email, Password = @Password, MaGiamGia = @MaGiamGia" +
-                              "WHERE ID = @ID";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conn.Connection;
-
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@HoTen", khObj.HoTen);
-            cmd.Parameters.AddWithValue("@GioiTinh", khObj.GioiTinh);
-            cmd.Parameters.AddWithValue("@NamSinh", khObj.NamSinh);
-            cmd.Parameters.AddWithValue("@DiaChi", khObj.DiaChi);
-            cmd.Parameters.AddWithValue("@DienThoai", khObj.DienThoai);
-            cmd.Parameters.AddWithValue("@TenTaiKhoan", khObj.TenTaiKhoan);
-            cmd.Parameters.AddWithValue("@Email", khObj.Email);
-            cmd.Parameters.AddWithValue("@Password", khObj.Password);
-            cmd.Parameters.AddWithValue("@MaGiamGia", khObj.MaGiamGia);
-            cmd.Parameters.AddWithValue("@ID", khObj.MaKhachHang);
-
             try
             {
+                cmd.CommandText = "UPDATE KhachHang SET HoTen = @HoTen, GioiTinh = @GioiTinh, NamSinh = @NamSinh, " +
+                                  "DiaChi = @DiaChi, DienThoai = @DienThoai, TenTaiKhoan = @TenTaiKhoan, " +
+                                  "Email = @Email, Password = @Password, MaGiamGia = @MaGiamGia " +
+                                  "WHERE ID = @ID";
+
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conn.Connection;
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@HoTen", khObj.HoTen);
+                cmd.Parameters.AddWithValue("@GioiTinh", khObj.GioiTinh);
+                cmd.Parameters.AddWithValue("@NamSinh", khObj.NamSinh);
+                cmd.Parameters.AddWithValue("@DiaChi", khObj.DiaChi);
+                cmd.Parameters.AddWithValue("@DienThoai", khObj.DienThoai);
+                cmd.Parameters.AddWithValue("@TenTaiKhoan", khObj.TenTaiKhoan);
+                cmd.Parameters.AddWithValue("@Email", khObj.Email);
+                cmd.Parameters.AddWithValue("@Password", khObj.Password);
+
+                cmd.Parameters.AddWithValue("@MaGiamGia", khObj.MaGiamGia ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@ID", khObj.MaKhachHang);
+
                 conn.OpenConn();
                 int soDongAnhHuong = cmd.ExecuteNonQuery();
 

@@ -17,10 +17,11 @@ namespace baitap.Object
         public string Email { get; set; }
         public string Password { get; set; }
         public string MaKhachHang { get; set; }
+        public string MaGiamGia { get; set; }
 
         public KhachHangObj() { }
 
-        public KhachHangObj(string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password, string maKhachHang)
+        public KhachHangObj(string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password, string maKhachHang, string maGiamGia)
         {
             HoTen = hoTen;
             GioiTinh = gioiTinh;
@@ -31,6 +32,7 @@ namespace baitap.Object
             Email = email;
             Password = password;
             MaKhachHang = maKhachHang;
+            MaGiamGia = maGiamGia;
         }
     }
 }

@@ -56,7 +56,7 @@
             groupBox1 = new GroupBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             lbEmail = new Krypton.Toolkit.KryptonLabel();
-            kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
+            txtGiamGia = new Krypton.Toolkit.KryptonTextBox();
             txtXacNhanPass = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
@@ -114,6 +114,7 @@
             txtDienThoai.StateCommon.Border.Rounding = 5F;
             txtDienThoai.StateCommon.Border.Width = 2;
             txtDienThoai.TabIndex = 2;
+            txtDienThoai.KeyPress += nhapSo_KeyPress;
             // 
             // txtDiaChi
             // 
@@ -345,7 +346,7 @@
             groupBox1.Controls.Add(kryptonLabel7);
             groupBox1.Controls.Add(txtHoTenKhachHang);
             groupBox1.Controls.Add(kryptonLabel3);
-            groupBox1.Controls.Add(kryptonTextBox2);
+            groupBox1.Controls.Add(txtGiamGia);
             groupBox1.Controls.Add(txtXacNhanPass);
             groupBox1.Controls.Add(txtPassword);
             groupBox1.Controls.Add(kryptonLabel1);
@@ -376,25 +377,24 @@
             lbEmail.TabIndex = 1;
             lbEmail.Values.Text = "Email";
             // 
-            // kryptonTextBox2
+            // txtGiamGia
             // 
-            kryptonTextBox2.Location = new Point(442, 135);
-            kryptonTextBox2.Name = "kryptonTextBox2";
-            kryptonTextBox2.PasswordChar = '●';
-            kryptonTextBox2.Size = new Size(183, 29);
-            kryptonTextBox2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonTextBox2.StateCommon.Border.Rounding = 5F;
-            kryptonTextBox2.StateCommon.Border.Width = 2;
-            kryptonTextBox2.TabIndex = 2;
-            kryptonTextBox2.UseSystemPasswordChar = true;
+            txtGiamGia.Location = new Point(442, 135);
+            txtGiamGia.Name = "txtGiamGia";
+            txtGiamGia.Size = new Size(183, 29);
+            txtGiamGia.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtGiamGia.StateCommon.Border.Rounding = 5F;
+            txtGiamGia.StateCommon.Border.Width = 2;
+            txtGiamGia.TabIndex = 2;
+            txtGiamGia.KeyPress += nhapSo_KeyPress;
             // 
             // txtXacNhanPass
             // 
             txtXacNhanPass.Location = new Point(352, 139);
             txtXacNhanPass.Name = "txtXacNhanPass";
-            txtXacNhanPass.Size = new Size(85, 20);
+            txtXacNhanPass.Size = new Size(78, 20);
             txtXacNhanPass.TabIndex = 1;
-            txtXacNhanPass.Values.Text = "Xác Mật khẩu";
+            txtXacNhanPass.Values.Text = "Mã giảm giá";
             // 
             // kryptonLabel2
             // 
@@ -483,7 +483,7 @@
         private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
         private Krypton.Toolkit.KryptonTextBox txtEmail;
         private Krypton.Toolkit.KryptonLabel lbEmail;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private Krypton.Toolkit.KryptonTextBox txtGiamGia;
         private Krypton.Toolkit.KryptonLabel txtXacNhanPass;
     }
 }

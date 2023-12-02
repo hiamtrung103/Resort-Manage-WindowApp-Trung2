@@ -40,8 +40,8 @@ namespace baitap.Model
 
         public bool ThemDuLieuKhachHang(KhachHangObj khObj)
         {
-            cmd.CommandText = "INSERT INTO KhachHang (HoTen, GioiTinh, NamSinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password) " +
-                              "VALUES (@HoTen, @GioiTinh, @NamSinh, @DiaChi, @DienThoai, @TenTaiKhoan, @Email, @Password)";
+            cmd.CommandText = "INSERT INTO KhachHang (HoTen, GioiTinh, NamSinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password, MaGiamGia) " +
+                              "VALUES (@HoTen, @GioiTinh, @NamSinh, @DiaChi, @DienThoai, @TenTaiKhoan, @Email, @Password, @MaGiamGia)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn.Connection;
 
@@ -54,6 +54,7 @@ namespace baitap.Model
             cmd.Parameters.AddWithValue("@TenTaiKhoan", khObj.TenTaiKhoan);
             cmd.Parameters.AddWithValue("@Email", khObj.Email);
             cmd.Parameters.AddWithValue("@Password", khObj.Password);
+            cmd.Parameters.AddWithValue("@MaGiamGia", khObj.MaGiamGia);
 
             try
             {
@@ -77,7 +78,7 @@ namespace baitap.Model
         public void CapNhatDuLieuKhachHang(KhachHangObj khObj)
         {
             cmd.CommandText = "UPDATE KhachHang SET HoTen = @HoTen, GioiTinh = @GioiTinh, NamSinh = @NamSinh, " +
-                              "DiaChi = @DiaChi, DienThoai = @DienThoai, TenTaiKhoan = @TenTaiKhoan, Email = @Email, Password = @Password " +
+                              "DiaChi = @DiaChi, DienThoai = @DienThoai, TenTaiKhoan = @TenTaiKhoan, Email = @Email, Password = @Password, MaGiamGia = @MaGiamGia" +
                               "WHERE ID = @ID";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn.Connection;
@@ -91,6 +92,7 @@ namespace baitap.Model
             cmd.Parameters.AddWithValue("@TenTaiKhoan", khObj.TenTaiKhoan);
             cmd.Parameters.AddWithValue("@Email", khObj.Email);
             cmd.Parameters.AddWithValue("@Password", khObj.Password);
+            cmd.Parameters.AddWithValue("@MaGiamGia", khObj.MaGiamGia);
             cmd.Parameters.AddWithValue("@ID", khObj.MaKhachHang);
 
             try

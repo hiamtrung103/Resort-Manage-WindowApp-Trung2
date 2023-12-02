@@ -36,6 +36,7 @@ namespace baitap.View
                 txtTenTaiKhoan.Text = row.Cells["TenTaiKhoan"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtPassword.Text = row.Cells["Password"].Value.ToString();
+                txtGiamGia.Text = row.Cells["MaGiamGia"].Value.ToString();
             }
         }
 
@@ -48,7 +49,8 @@ namespace baitap.View
                 string.IsNullOrWhiteSpace(txtDienThoai.Text) ||
                 string.IsNullOrWhiteSpace(txtTenTaiKhoan.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text))
+                string.IsNullOrWhiteSpace(txtPassword.Text) ||
+                string.IsNullOrWhiteSpace(txtGiamGia.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
@@ -63,6 +65,7 @@ namespace baitap.View
             khachHangObj.TenTaiKhoan = txtTenTaiKhoan.Text;
             khachHangObj.Email = txtEmail.Text;
             khachHangObj.Password = txtPassword.Text;
+            khachHangObj.MaGiamGia = txtGiamGia.Text;
 
             bool result = khachHangMod.ThemDuLieuKhachHang(khachHangObj);
 
@@ -115,6 +118,7 @@ namespace baitap.View
                 khachHangObj.TenTaiKhoan = txtTenTaiKhoan.Text;
                 khachHangObj.Email = txtEmail.Text;
                 khachHangObj.Password = txtPassword.Text;
+                khachHangObj.MaGiamGia = txtGiamGia.Text;
 
                 khachHangObj.MaKhachHang = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
@@ -137,6 +141,7 @@ namespace baitap.View
             txtTenTaiKhoan.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            txtGiamGia.Text = "";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -157,6 +162,14 @@ namespace baitap.View
         private void btnHuy_Click(object sender, EventArgs e)
         {
             ClearTextBox();
+        }
+
+        private void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

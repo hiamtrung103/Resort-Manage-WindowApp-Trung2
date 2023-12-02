@@ -410,6 +410,7 @@
             txtDienThoai.StateCommon.Border.Rounding = 5F;
             txtDienThoai.StateCommon.Border.Width = 2;
             txtDienThoai.TabIndex = 2;
+            txtDienThoai.KeyPress += nhapSo_KeyPress;
             // 
             // txtTenTaiKhoan
             // 

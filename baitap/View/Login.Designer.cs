@@ -36,7 +36,6 @@
             pictureBox5 = new PictureBox();
             label6 = new Label();
             pictureBox2 = new PictureBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             label4 = new Label();
             txtUserName = new Krypton.Toolkit.KryptonTextBox();
             pictureBox3 = new PictureBox();
@@ -48,7 +47,6 @@
             label3 = new Label();
             panel1 = new Panel();
             label8 = new Label();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             label7 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -59,6 +57,8 @@
             staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            rjButton1 = new CustomControls.RJControls.RJButton();
+            rjButton2 = new CustomControls.RJControls.RJButton();
             panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -90,7 +90,6 @@
             panelMain.Controls.Add(label1);
             panelMain.Controls.Add(label6);
             panelMain.Controls.Add(pictureBox2);
-            panelMain.Controls.Add(kryptonButton1);
             panelMain.Controls.Add(label4);
             panelMain.Controls.Add(txtUserName);
             panelMain.Controls.Add(pictureBox3);
@@ -98,6 +97,7 @@
             panelMain.Controls.Add(pictureBox4);
             panelMain.Controls.Add(label5);
             panelMain.Controls.Add(txtPassword);
+            panelMain.Controls.Add(rjButton1);
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 0);
             panelMain.Name = "panelMain";
@@ -157,18 +157,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
-            // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(509, 324);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(100, 30);
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.Rounding = 7F;
-            kryptonButton1.StateCommon.Border.Width = 1;
-            kryptonButton1.TabIndex = 5;
-            kryptonButton1.Values.Text = "Đăng nhập";
-            kryptonButton1.Click += btnDangNhap_click;
             // 
             // label4
             // 
@@ -276,8 +264,8 @@
             panel1.BackgroundImage = Properties.Resources._5153829;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label8);
-            panel1.Controls.Add(kryptonButton2);
             panel1.Controls.Add(label7);
+            panel1.Controls.Add(rjButton2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -295,18 +283,6 @@
             label8.Size = new Size(146, 45);
             label8.TabIndex = 2;
             label8.Text = "Đăng Ký";
-            // 
-            // kryptonButton2
-            // 
-            kryptonButton2.Location = new Point(113, 252);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(100, 30);
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Rounding = 7F;
-            kryptonButton2.StateCommon.Border.Width = 1;
-            kryptonButton2.TabIndex = 5;
-            kryptonButton2.Values.Text = "Đăng Ký";
-            kryptonButton2.Click += btnDangKy_click;
             // 
             // label7
             // 
@@ -376,6 +352,46 @@
             thoátToolStripMenuItem.Size = new Size(205, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.DeepSkyBlue;
+            rjButton1.BackgroundColor = Color.DeepSkyBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(509, 324);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(100, 40);
+            rjButton1.TabIndex = 7;
+            rjButton1.Text = "Đăng nhập";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnDangNhap_click;
+            // 
+            // rjButton2
+            // 
+            rjButton2.BackColor = Color.Crimson;
+            rjButton2.BackgroundColor = Color.Crimson;
+            rjButton2.BorderColor = Color.PaleVioletRed;
+            rjButton2.BorderRadius = 5;
+            rjButton2.BorderSize = 0;
+            rjButton2.FlatAppearance.BorderSize = 0;
+            rjButton2.FlatStyle = FlatStyle.Flat;
+            rjButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton2.ForeColor = Color.White;
+            rjButton2.Location = new Point(113, 244);
+            rjButton2.Name = "rjButton2";
+            rjButton2.Size = new Size(100, 40);
+            rjButton2.TabIndex = 7;
+            rjButton2.Text = "Đăng ký";
+            rjButton2.TextColor = Color.White;
+            rjButton2.UseVisualStyleBackColor = false;
+            rjButton2.Click += btnDangKy_click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -413,7 +429,6 @@
         private PictureBox pictureBox2;
         private Label label5;
         private Krypton.Toolkit.KryptonTextBox txtUserName;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Label label6;
         private Label label4;
         private Krypton.Toolkit.KryptonTextBox txtPassword;
@@ -423,7 +438,6 @@
         private PictureBox pic;
         private PictureBox pictureBox6;
         private Label label8;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem báoCáoSựCốToolStripMenuItem;
@@ -434,5 +448,7 @@
         private ToolStripMenuItem chếĐộTốiToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Label label7;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton rjButton2;
     }
 }

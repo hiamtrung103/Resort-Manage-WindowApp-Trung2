@@ -130,6 +130,20 @@ namespace QL_QuanCafe_Trung_Hai.View
             }
         }
 
+        private void btnToggleSidebar2_Click(object sender, EventArgs e)
+        {
+            int minSize = 10;
+
+            if (panel2.Height == minSize)
+            {
+                panel2.Height = 100;
+            }
+            else
+            {
+                panel2.Height = minSize;
+            }
+        }
+
         private void MofrmCon(Form frmCon)
         {
             if (frmConHientai != null)

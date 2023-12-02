@@ -48,6 +48,8 @@
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
+            panel2 = new Panel();
+            label7 = new Label();
             pictureBox9 = new PictureBox();
             lbThoat = new Label();
             lbCaiDat = new Label();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelSidebar.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
@@ -302,6 +305,7 @@
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
+            panelSidebar.Controls.Add(panel2);
             panelSidebar.Controls.Add(pictureBox9);
             panelSidebar.Controls.Add(lbThoat);
             panelSidebar.Controls.Add(lbCaiDat);
@@ -322,6 +326,29 @@
             panelSidebar.ShadowDepth = 20;
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label7);
+            panel2.Location = new Point(0, 418);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 10);
+            panel2.TabIndex = 2;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Image = baitap.Properties.Resources.settings_24;
+            label7.ImageAlign = ContentAlignment.MiddleLeft;
+            label7.Location = new Point(9, 13);
+            label7.Name = "label7";
+            label7.Size = new Size(211, 32);
+            label7.TabIndex = 0;
+            label7.Text = "Cài đặt";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.Click += SettingKhachHangOpen;
+            label7.MouseEnter += DoiMauLabel_MouseEnter;
+            label7.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // pictureBox9
             // 
@@ -363,7 +390,7 @@
             lbCaiDat.TabIndex = 0;
             lbCaiDat.Text = "Cài đặt";
             lbCaiDat.TextAlign = ContentAlignment.MiddleCenter;
-            lbCaiDat.Click += SettingKhachHangOpen;
+            lbCaiDat.Click += btnToggleSidebar2_Click;
             lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
             lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
@@ -487,6 +514,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelSidebar.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
@@ -521,5 +549,7 @@
         private Label label4;
         private Label label3;
         private Label label6;
+        private Panel panel2;
+        private Label label7;
     }
 }

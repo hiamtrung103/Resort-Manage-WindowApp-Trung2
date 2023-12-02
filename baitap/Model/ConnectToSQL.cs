@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace baitap.Model
 {
     class ConnectToSQL
     {
         private SqlConnection Conn;
-        private string StrCon = null;
+        public string StrCon = null;
         private string _error;
 
         public string Error
@@ -20,9 +16,14 @@ namespace baitap.Model
             set { _error = value; }
         }
 
-        public SqlConnection Connection
+        public SqlConnection KetNoi
         {
             get { return Conn; }
+        }
+
+        public string ChuoiKetNoi
+        {
+            get { return StrCon; }
         }
 
         public ConnectToSQL()
@@ -31,7 +32,7 @@ namespace baitap.Model
             Conn = new SqlConnection(StrCon);
         }
 
-        public bool OpenConn()
+        public bool MoKetNoi()
         {
             try
             {
@@ -46,7 +47,7 @@ namespace baitap.Model
             return true;
         }
 
-        public bool CloseConn()
+        public bool DongKetNoi()
         {
             try
             {

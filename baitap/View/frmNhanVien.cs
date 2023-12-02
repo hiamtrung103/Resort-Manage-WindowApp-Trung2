@@ -35,7 +35,7 @@ namespace baitap.View
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 txtTenNV.Text = row.Cells["ho_ten"].Value.ToString();
-                txtGioiTinh.Text = row.Cells["gioi_tinh"].Value.ToString();
+                txtNamSinh.Text = row.Cells["gioi_tinh"].Value.ToString();
                 txtNamSinh.Text = row.Cells["nam_sinh"].Value.ToString();
                 txtDiaChi.Text = row.Cells["dia_chi"].Value.ToString();
                 txtDienThoai.Text = row.Cells["sdt"].Value.ToString();
@@ -49,7 +49,7 @@ namespace baitap.View
         public void btnThem()
         {
             if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
-                string.IsNullOrWhiteSpace(txtGioiTinh.Text) ||
+                string.IsNullOrWhiteSpace(txtNamSinh.Text) ||
                 string.IsNullOrWhiteSpace(txtNamSinh.Text) ||
                 string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
                 string.IsNullOrWhiteSpace(txtDienThoai.Text) ||
@@ -64,7 +64,7 @@ namespace baitap.View
 
             NhanvienObj nvObj = new NhanvienObj();
             nvObj.TenNhanVien = txtTenNV.Text;
-            nvObj.GioiTinh = txtGioiTinh.Text;
+            nvObj.GioiTinh = txtNamSinh.Text;
             nvObj.NamSinh = txtNamSinh.Text;
             nvObj.DiaChi = txtDiaChi.Text;
             nvObj.DienThoai = txtDienThoai.Text;
@@ -117,7 +117,7 @@ namespace baitap.View
             {
                 NhanvienObj nvObj = new NhanvienObj();
                 nvObj.TenNhanVien = txtTenNV.Text;
-                nvObj.GioiTinh = txtGioiTinh.Text;
+                nvObj.GioiTinh = txtNamSinh.Text;
                 nvObj.NamSinh = txtNamSinh.Text;
                 nvObj.DiaChi = txtDiaChi.Text;
                 nvObj.DienThoai = txtDienThoai.Text;
@@ -141,7 +141,7 @@ namespace baitap.View
         {
             txtTenNV.Text = "";
             txtMatkhau.Text = "";
-            txtGioiTinh.Text = "";
+            txtNamSinh.Text = "";
             txtNamSinh.Text = "";
             txtDiaChi.Text = "";
             txtDienThoai.Text = "";

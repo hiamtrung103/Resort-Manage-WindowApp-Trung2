@@ -5,17 +5,16 @@ USE ql_resort;
 CREATE TABLE NhanVien
 (
     ID INT PRIMARY KEY IDENTITY(1,1),
-    ho_ten NVARCHAR(255) NOT NULL,
-    gioi_tinh NVARCHAR(10),
-    nam_sinh NVARCHAR(10),
-    dia_chi NVARCHAR(255),
-    sdt NVARCHAR(20),
-    ten_tai_khoan NVARCHAR(50),
-    email NVARCHAR(100),
-    mat_khau NVARCHAR(50),
-    quyen_han NVARCHAR(50)
+    HoTen NVARCHAR(255) NOT NULL,
+    GioiTinh NVARCHAR(10),
+    NamSinh NVARCHAR(10),
+    DiaChi NVARCHAR(255),
+    DienThoai NVARCHAR(20),
+    TenTaiKhoan NVARCHAR(50),
+    Email NVARCHAR(100),
+    MatKhau NVARCHAR(50),
+    QuyenHan NVARCHAR(50)
 );
-
 
 CREATE TABLE KhachHang
 (
@@ -24,10 +23,11 @@ CREATE TABLE KhachHang
     GioiTinh NVARCHAR(10),
     NamSinh NVARCHAR(10),
     DiaChi NVARCHAR(255),
-    DienThoai NVARCHAR(20),
+    DienThoai INT,
     TenTaiKhoan NVARCHAR(50),
     Email NVARCHAR(100),
-    Password NVARCHAR(50)
+    Password NVARCHAR(50),
+	MaGiamGia Int
 );
 
 INSERT INTO NhanVien (ho_ten, gioi_tinh, nam_sinh, dia_chi, sdt, ten_tai_khoan, email, mat_khau, quyen_han)

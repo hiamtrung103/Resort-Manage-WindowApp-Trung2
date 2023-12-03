@@ -1,16 +1,16 @@
-﻿using baitap.Model;
-using baitap.Object;
-using System;
+﻿using System;
 using System.Data;
+using System.Windows.Forms;
+using baitap.Model;
+using baitap.Object;
 
 namespace baitap.Control
 {
     internal class NhanVienCtr
     {
-        NhanVienMod nvMod = new NhanVienMod();
-        public string tinnhanLoi { get; private set; }
+        private NhanVienMod nvMod = new NhanVienMod();
 
-        public DataTable GetData()
+        public DataTable LayDuLieuNhanVien()
         {
             try
             {
@@ -18,12 +18,12 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                tinnhanLoi = "Lỗi khi lấy dữ liệu: " + ex.Message;
+                MessageBox.Show("Lỗi khi lấy dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
 
-        public bool AddData(NhanvienObj nvobj)
+        public bool ThemDuLieuNhanVien(NhanvienObj nvobj)
         {
             try
             {
@@ -31,12 +31,12 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                tinnhanLoi = "Lỗi khi thêm dữ liệu: " + ex.Message;
+                MessageBox.Show("Lỗi khi thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
 
-        public bool DelData(string id)
+        public bool XoaDuLieuNhanVien(string id)
         {
             try
             {
@@ -44,8 +44,21 @@ namespace baitap.Control
             }
             catch (Exception ex)
             {
-                tinnhanLoi = "Lỗi khi xóa dữ liệu: " + ex.Message;
+                MessageBox.Show("Lỗi khi xóa dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+        }
+
+        public void CapNhatDuLieuNhanVien(NhanvienObj nvobj)
+        {
+            try
+            {
+                nvMod.CapNhatDuLieuNhanVien(nvobj);
+                MessageBox.Show("Cập nhật dữ liệu thành công.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

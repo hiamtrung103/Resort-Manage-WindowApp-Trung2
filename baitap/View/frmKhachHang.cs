@@ -9,8 +9,8 @@ namespace baitap.View
 {
     public partial class frmKhachHang : KryptonForm
     {
-        KhachHangMod khachHangMod = new KhachHangMod();
-        KhachHangCtr KhachHangCtr = new KhachHangCtr();
+        private KhachHangCtr khachHangCtr = new KhachHangCtr();
+
 
         public frmKhachHang()
         {
@@ -19,7 +19,7 @@ namespace baitap.View
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = khachHangMod.LayDuLieuKhachHang();
+            dataGridView1.DataSource = khachHangCtr.LayDuLieuKhachHang();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -67,12 +67,12 @@ namespace baitap.View
             khachHangObj.Password = txtPassword.Text;
             khachHangObj.MaGiamGia = txtGiamGia.Text;
 
-            bool result = khachHangMod.ThemDuLieuKhachHang(khachHangObj);
+            bool result = khachHangCtr.ThemDuLieuKhachHang(khachHangObj);
 
             if (result)
             {
                 MessageBox.Show("Thêm dữ liệu thành công.");
-                dataGridView1.DataSource = khachHangMod.LayDuLieuKhachHang();
+                dataGridView1.DataSource = khachHangCtr.LayDuLieuKhachHang();
             }
             else
             {
@@ -86,13 +86,13 @@ namespace baitap.View
             {
                 string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                bool result = khachHangMod.XoaDuLieuKhachHang(id);
+                bool result = khachHangCtr.XoaDuLieuKhachHang(id);
 
                 if (result)
                 {
                     MessageBox.Show("Xoá dữ liệu thành công.");
                     ClearTextBox();
-                    dataGridView1.DataSource = khachHangMod.LayDuLieuKhachHang();
+                    dataGridView1.DataSource = khachHangCtr.LayDuLieuKhachHang();
                 }
                 else
                 {
@@ -122,8 +122,8 @@ namespace baitap.View
 
                 khachHangObj.MaKhachHang = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                khachHangMod.CapNhatDuLieuKhachHang(khachHangObj);
-                dataGridView1.DataSource = khachHangMod.LayDuLieuKhachHang();
+                khachHangCtr.CapNhatDuLieuKhachHang(khachHangObj);
+                dataGridView1.DataSource = khachHangCtr.LayDuLieuKhachHang();
             }
             else
             {

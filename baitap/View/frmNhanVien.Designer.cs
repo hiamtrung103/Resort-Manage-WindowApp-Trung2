@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             label1 = new Label();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
@@ -60,13 +60,13 @@
             txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
             lb = new Krypton.Toolkit.KryptonLabel();
             txtMatkhau = new Krypton.Toolkit.KryptonTextBox();
-            txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
-            txtNamSinh = new Krypton.Toolkit.KryptonComboBox();
+            kryptonComboBox1 = new Krypton.Toolkit.KryptonComboBox();
+            kryptonComboBox2 = new Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtNamSinh).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonComboBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonComboBox2).BeginInit();
             SuspendLayout();
             // 
             // kryptonCustomPaletteBase1
@@ -153,43 +153,43 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(255, 255, 192);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 255, 192);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(6, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -347,8 +347,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtGioiTinh);
-            groupBox1.Controls.Add(txtNamSinh);
+            groupBox1.Controls.Add(kryptonComboBox2);
+            groupBox1.Controls.Add(kryptonComboBox1);
             groupBox1.Controls.Add(txtQuyenHan);
             groupBox1.Controls.Add(txtDienThoai);
             groupBox1.Controls.Add(txtEmail);
@@ -434,35 +434,33 @@
             txtMatkhau.TabIndex = 2;
             txtMatkhau.UseSystemPasswordChar = true;
             // 
-            // txtGioiTinh
+            // kryptonComboBox1
             // 
-            txtGioiTinh.DropDownWidth = 175;
-            txtGioiTinh.IntegralHeight = false;
-            txtGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
-            txtGioiTinh.Location = new Point(442, 33);
-            txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Size = new Size(183, 29);
-            txtGioiTinh.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtGioiTinh.StateCommon.ComboBox.Border.Rounding = 7F;
-            txtGioiTinh.StateCommon.ComboBox.Border.Width = 2;
-            txtGioiTinh.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            txtGioiTinh.TabIndex = 28;
-            txtGioiTinh.Text = "Khác";
+            kryptonComboBox1.DropDownWidth = 175;
+            kryptonComboBox1.IntegralHeight = false;
+            kryptonComboBox1.Location = new Point(442, 33);
+            kryptonComboBox1.Name = "kryptonComboBox1";
+            kryptonComboBox1.Size = new Size(183, 29);
+            kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 7F;
+            kryptonComboBox1.StateCommon.ComboBox.Border.Width = 2;
+            kryptonComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            kryptonComboBox1.TabIndex = 4;
+            kryptonComboBox1.Text = "kryptonComboBox1";
             // 
-            // txtNamSinh
+            // kryptonComboBox2
             // 
-            txtNamSinh.DropDownWidth = 175;
-            txtNamSinh.IntegralHeight = false;
-            txtNamSinh.Items.AddRange(new object[] { "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970" });
-            txtNamSinh.Location = new Point(744, 82);
-            txtNamSinh.Name = "txtNamSinh";
-            txtNamSinh.Size = new Size(183, 29);
-            txtNamSinh.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtNamSinh.StateCommon.ComboBox.Border.Rounding = 7F;
-            txtNamSinh.StateCommon.ComboBox.Border.Width = 2;
-            txtNamSinh.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            txtNamSinh.TabIndex = 29;
-            txtNamSinh.Text = "2000";
+            kryptonComboBox2.DropDownWidth = 175;
+            kryptonComboBox2.IntegralHeight = false;
+            kryptonComboBox2.Location = new Point(744, 82);
+            kryptonComboBox2.Name = "kryptonComboBox2";
+            kryptonComboBox2.Size = new Size(183, 29);
+            kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 7F;
+            kryptonComboBox2.StateCommon.ComboBox.Border.Width = 2;
+            kryptonComboBox2.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            kryptonComboBox2.TabIndex = 4;
+            kryptonComboBox2.Text = "kryptonComboBox1";
             // 
             // frmNhanVien
             // 
@@ -487,8 +485,8 @@
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)txtGioiTinh).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtNamSinh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonComboBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonComboBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -522,7 +520,7 @@
         private Krypton.Toolkit.KryptonTextBox txtMatkhau;
         private ComboBox txtQuyenHan;
         private Krypton.Toolkit.KryptonLabel lb;
-        private Krypton.Toolkit.KryptonComboBox txtGioiTinh;
-        private Krypton.Toolkit.KryptonComboBox txtNamSinh;
+        private Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
+        private Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
     }
 }

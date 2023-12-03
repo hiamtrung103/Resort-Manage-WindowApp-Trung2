@@ -1,5 +1,9 @@
 Greetings! I'm **Trung** [hiamtrung102], the mind behind the Resort Management System. I'm passionate about technology and dedicated to simplifying resort management for a seamless and enjoyable experience. Welcome to a world where efficiency meets user satisfaction. Enjoy the journey with the Resort Management System!
 
+Chào bạn! Tôi là [**Trung** [hiamtrung102], người sáng tạo đằng sau Hệ thống Quản lý Resort. Với niềm đam mê về công nghệ và mong muốn đơn giản hóa quản lý resort, tôi tạo ra hệ thống này để mang lại trải nghiệm mượt mà và thú vị. Chào mừng bạn đến với một thế giới nơi hiệu suất gặp gỡ sự hài lòng của người dùng. Hãy tận hưởng hành trình với Hệ thống Quản lý Resort!
+
+Hiamtrung102 © 2023
+
 # Introduction / Giới thiệu </h3>
 Welcome to the Resort Management System! This system is a modern platform designed to manage and optimize the operations of resorts, providing a convenient and flexible online booking experience for customers. The system is built with the main goal of offering a comprehensive solution, covering the management of accommodation information, booking, and customer feedback tracking.
 

@@ -35,22 +35,22 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            txtTK = new CustomControls.RJControls.RJTextBox();
-            txtEmail = new CustomControls.RJControls.RJTextBox();
-            txtDienThoai = new CustomControls.RJControls.RJTextBox();
             label6 = new Label();
-            txtMatKhau = new CustomControls.RJControls.RJTextBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            txtDiaChi = new CustomControls.RJControls.RJTextBox();
             rjButton3 = new CustomControls.RJControls.RJButton();
-            rjButton1 = new CustomControls.RJControls.RJButton();
-            txtGioiTinh = new CustomControls.RJControls.RJTextBox();
-            txtNamSinh = new CustomControls.RJControls.RJTextBox();
+            btn_Luu = new CustomControls.RJControls.RJButton();
             label10 = new Label();
             rjButton4 = new CustomControls.RJControls.RJButton();
+            txtTenTaiKhoan = new CustomControls.RJControls.RJTextBox();
             txtHoTen = new CustomControls.RJControls.RJTextBox();
+            txtEmail = new CustomControls.RJControls.RJTextBox();
+            txtDienThoai = new CustomControls.RJControls.RJTextBox();
+            txtPassword = new CustomControls.RJControls.RJTextBox();
+            txtGioiTinh = new CustomControls.RJControls.RJTextBox();
+            txtNamSinh = new CustomControls.RJControls.RJTextBox();
+            txtDiaChi = new CustomControls.RJControls.RJTextBox();
             SuspendLayout();
             // 
             // kryptonCustomPaletteBase1
@@ -87,9 +87,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(93, 32);
+            label1.Size = new Size(235, 32);
             label1.TabIndex = 28;
-            label1.Text = "Cài đặt";
+            label1.Text = "Cài đặt người dùng";
             // 
             // label2
             // 
@@ -131,75 +131,6 @@
             label5.TabIndex = 29;
             label5.Text = "Số ĐT";
             // 
-            // txtTK
-            // 
-            txtTK.BackColor = SystemColors.Window;
-            txtTK.BorderColor = Color.PaleVioletRed;
-            txtTK.BorderFocusColor = Color.HotPink;
-            txtTK.BorderRadius = 5;
-            txtTK.BorderSize = 2;
-            txtTK.Enabled = false;
-            txtTK.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTK.ForeColor = Color.FromArgb(64, 64, 64);
-            txtTK.Location = new Point(113, 75);
-            txtTK.Margin = new Padding(4);
-            txtTK.Multiline = false;
-            txtTK.Name = "txtTK";
-            txtTK.Padding = new Padding(10, 7, 10, 7);
-            txtTK.PasswordChar = false;
-            txtTK.PlaceholderColor = Color.DarkGray;
-            txtTK.PlaceholderText = "";
-            txtTK.Size = new Size(250, 31);
-            txtTK.TabIndex = 30;
-            txtTK.Texts = "1";
-            txtTK.UnderlinedStyle = false;
-            // 
-            // txtEmail
-            // 
-            txtEmail.BackColor = SystemColors.Window;
-            txtEmail.BorderColor = Color.PaleVioletRed;
-            txtEmail.BorderFocusColor = Color.HotPink;
-            txtEmail.BorderRadius = 5;
-            txtEmail.BorderSize = 2;
-            txtEmail.Enabled = false;
-            txtEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtEmail.Location = new Point(113, 175);
-            txtEmail.Margin = new Padding(4);
-            txtEmail.Multiline = false;
-            txtEmail.Name = "txtEmail";
-            txtEmail.Padding = new Padding(10, 7, 10, 7);
-            txtEmail.PasswordChar = false;
-            txtEmail.PlaceholderColor = Color.DarkGray;
-            txtEmail.PlaceholderText = "";
-            txtEmail.Size = new Size(250, 31);
-            txtEmail.TabIndex = 30;
-            txtEmail.Texts = "Trung@Email.com";
-            txtEmail.UnderlinedStyle = false;
-            // 
-            // txtDienThoai
-            // 
-            txtDienThoai.BackColor = SystemColors.Window;
-            txtDienThoai.BorderColor = Color.PaleVioletRed;
-            txtDienThoai.BorderFocusColor = Color.HotPink;
-            txtDienThoai.BorderRadius = 5;
-            txtDienThoai.BorderSize = 2;
-            txtDienThoai.Enabled = false;
-            txtDienThoai.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDienThoai.ForeColor = Color.FromArgb(64, 64, 64);
-            txtDienThoai.Location = new Point(113, 225);
-            txtDienThoai.Margin = new Padding(4);
-            txtDienThoai.Multiline = false;
-            txtDienThoai.Name = "txtDienThoai";
-            txtDienThoai.Padding = new Padding(10, 7, 10, 7);
-            txtDienThoai.PasswordChar = false;
-            txtDienThoai.PlaceholderColor = Color.DarkGray;
-            txtDienThoai.PlaceholderText = "";
-            txtDienThoai.Size = new Size(250, 31);
-            txtDienThoai.TabIndex = 30;
-            txtDienThoai.Texts = "0123456789";
-            txtDienThoai.UnderlinedStyle = false;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -209,28 +140,6 @@
             label6.Size = new Size(76, 21);
             label6.TabIndex = 29;
             label6.Text = "Mật Khẩu";
-            // 
-            // txtMatKhau
-            // 
-            txtMatKhau.BackColor = SystemColors.Window;
-            txtMatKhau.BorderColor = Color.PaleVioletRed;
-            txtMatKhau.BorderFocusColor = Color.HotPink;
-            txtMatKhau.BorderRadius = 5;
-            txtMatKhau.BorderSize = 2;
-            txtMatKhau.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMatKhau.ForeColor = Color.FromArgb(64, 64, 64);
-            txtMatKhau.Location = new Point(113, 275);
-            txtMatKhau.Margin = new Padding(4);
-            txtMatKhau.Multiline = false;
-            txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Padding = new Padding(10, 7, 10, 7);
-            txtMatKhau.PasswordChar = true;
-            txtMatKhau.PlaceholderColor = Color.DarkGray;
-            txtMatKhau.PlaceholderText = "";
-            txtMatKhau.Size = new Size(250, 31);
-            txtMatKhau.TabIndex = 30;
-            txtMatKhau.Texts = "1";
-            txtMatKhau.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -262,29 +171,6 @@
             label9.TabIndex = 29;
             label9.Text = "Địa chỉ";
             // 
-            // txtDiaChi
-            // 
-            txtDiaChi.BackColor = SystemColors.Window;
-            txtDiaChi.BorderColor = Color.PaleVioletRed;
-            txtDiaChi.BorderFocusColor = Color.HotPink;
-            txtDiaChi.BorderRadius = 5;
-            txtDiaChi.BorderSize = 2;
-            txtDiaChi.Enabled = false;
-            txtDiaChi.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDiaChi.ForeColor = Color.FromArgb(64, 64, 64);
-            txtDiaChi.Location = new Point(519, 180);
-            txtDiaChi.Margin = new Padding(4);
-            txtDiaChi.Multiline = false;
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Padding = new Padding(10, 7, 10, 7);
-            txtDiaChi.PasswordChar = false;
-            txtDiaChi.PlaceholderColor = Color.DarkGray;
-            txtDiaChi.PlaceholderText = "";
-            txtDiaChi.Size = new Size(250, 31);
-            txtDiaChi.TabIndex = 30;
-            txtDiaChi.Texts = "HCM";
-            txtDiaChi.UnderlinedStyle = false;
-            // 
             // rjButton3
             // 
             rjButton3.BackColor = Color.FromArgb(13, 135, 242);
@@ -304,70 +190,25 @@
             rjButton3.TextColor = Color.White;
             rjButton3.UseVisualStyleBackColor = false;
             // 
-            // rjButton1
+            // btn_Luu
             // 
-            rjButton1.BackColor = Color.FromArgb(63, 194, 138);
-            rjButton1.BackgroundColor = Color.FromArgb(63, 194, 138);
-            rjButton1.BorderColor = Color.PaleVioletRed;
-            rjButton1.BorderRadius = 5;
-            rjButton1.BorderSize = 0;
-            rjButton1.FlatAppearance.BorderSize = 0;
-            rjButton1.FlatStyle = FlatStyle.Flat;
-            rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(16, 333);
-            rjButton1.Name = "rjButton1";
-            rjButton1.Size = new Size(91, 30);
-            rjButton1.TabIndex = 33;
-            rjButton1.Text = "Lưu";
-            rjButton1.TextColor = Color.White;
-            rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // txtGioiTinh
-            // 
-            txtGioiTinh.BackColor = SystemColors.Window;
-            txtGioiTinh.BorderColor = Color.PaleVioletRed;
-            txtGioiTinh.BorderFocusColor = Color.HotPink;
-            txtGioiTinh.BorderRadius = 5;
-            txtGioiTinh.BorderSize = 2;
-            txtGioiTinh.Enabled = false;
-            txtGioiTinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtGioiTinh.ForeColor = Color.FromArgb(64, 64, 64);
-            txtGioiTinh.Location = new Point(519, 75);
-            txtGioiTinh.Margin = new Padding(4);
-            txtGioiTinh.Multiline = false;
-            txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Padding = new Padding(10, 7, 10, 7);
-            txtGioiTinh.PasswordChar = false;
-            txtGioiTinh.PlaceholderColor = Color.DarkGray;
-            txtGioiTinh.PlaceholderText = "";
-            txtGioiTinh.Size = new Size(250, 31);
-            txtGioiTinh.TabIndex = 30;
-            txtGioiTinh.Texts = "Nam";
-            txtGioiTinh.UnderlinedStyle = false;
-            // 
-            // txtNamSinh
-            // 
-            txtNamSinh.BackColor = SystemColors.Window;
-            txtNamSinh.BorderColor = Color.PaleVioletRed;
-            txtNamSinh.BorderFocusColor = Color.HotPink;
-            txtNamSinh.BorderRadius = 5;
-            txtNamSinh.BorderSize = 2;
-            txtNamSinh.Enabled = false;
-            txtNamSinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNamSinh.ForeColor = Color.FromArgb(64, 64, 64);
-            txtNamSinh.Location = new Point(519, 125);
-            txtNamSinh.Margin = new Padding(4);
-            txtNamSinh.Multiline = false;
-            txtNamSinh.Name = "txtNamSinh";
-            txtNamSinh.Padding = new Padding(10, 7, 10, 7);
-            txtNamSinh.PasswordChar = false;
-            txtNamSinh.PlaceholderColor = Color.DarkGray;
-            txtNamSinh.PlaceholderText = "";
-            txtNamSinh.Size = new Size(250, 31);
-            txtNamSinh.TabIndex = 30;
-            txtNamSinh.Texts = "2002";
-            txtNamSinh.UnderlinedStyle = false;
+            btn_Luu.BackColor = Color.FromArgb(63, 194, 138);
+            btn_Luu.BackgroundColor = Color.FromArgb(63, 194, 138);
+            btn_Luu.BorderColor = Color.PaleVioletRed;
+            btn_Luu.BorderRadius = 5;
+            btn_Luu.BorderSize = 0;
+            btn_Luu.FlatAppearance.BorderSize = 0;
+            btn_Luu.FlatStyle = FlatStyle.Flat;
+            btn_Luu.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Luu.ForeColor = Color.White;
+            btn_Luu.Location = new Point(16, 333);
+            btn_Luu.Name = "btn_Luu";
+            btn_Luu.Size = new Size(91, 30);
+            btn_Luu.TabIndex = 33;
+            btn_Luu.Text = "Lưu";
+            btn_Luu.TextColor = Color.White;
+            btn_Luu.UseVisualStyleBackColor = false;
+            btn_Luu.Click += btn_Luu_Click;
             // 
             // label10
             // 
@@ -399,17 +240,38 @@
             rjButton4.TextColor = Color.White;
             rjButton4.UseVisualStyleBackColor = false;
             // 
+            // txtTenTaiKhoan
+            // 
+            txtTenTaiKhoan.BackColor = SystemColors.Window;
+            txtTenTaiKhoan.BorderColor = Color.MediumSlateBlue;
+            txtTenTaiKhoan.BorderFocusColor = Color.HotPink;
+            txtTenTaiKhoan.BorderRadius = 5;
+            txtTenTaiKhoan.BorderSize = 2;
+            txtTenTaiKhoan.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenTaiKhoan.ForeColor = Color.FromArgb(64, 64, 64);
+            txtTenTaiKhoan.Location = new Point(103, 75);
+            txtTenTaiKhoan.Margin = new Padding(4);
+            txtTenTaiKhoan.Multiline = false;
+            txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            txtTenTaiKhoan.Padding = new Padding(10, 7, 10, 7);
+            txtTenTaiKhoan.PasswordChar = false;
+            txtTenTaiKhoan.PlaceholderColor = Color.DarkGray;
+            txtTenTaiKhoan.PlaceholderText = "";
+            txtTenTaiKhoan.Size = new Size(250, 31);
+            txtTenTaiKhoan.TabIndex = 35;
+            txtTenTaiKhoan.Texts = "";
+            txtTenTaiKhoan.UnderlinedStyle = false;
+            // 
             // txtHoTen
             // 
             txtHoTen.BackColor = SystemColors.Window;
-            txtHoTen.BorderColor = Color.PaleVioletRed;
+            txtHoTen.BorderColor = Color.MediumSlateBlue;
             txtHoTen.BorderFocusColor = Color.HotPink;
             txtHoTen.BorderRadius = 5;
             txtHoTen.BorderSize = 2;
-            txtHoTen.Enabled = false;
             txtHoTen.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtHoTen.ForeColor = Color.FromArgb(64, 64, 64);
-            txtHoTen.Location = new Point(113, 125);
+            txtHoTen.Location = new Point(103, 125);
             txtHoTen.Margin = new Padding(4);
             txtHoTen.Multiline = false;
             txtHoTen.Name = "txtHoTen";
@@ -418,27 +280,159 @@
             txtHoTen.PlaceholderColor = Color.DarkGray;
             txtHoTen.PlaceholderText = "";
             txtHoTen.Size = new Size(250, 31);
-            txtHoTen.TabIndex = 30;
-            txtHoTen.Texts = "Nguyen Trung";
+            txtHoTen.TabIndex = 35;
+            txtHoTen.Texts = "";
             txtHoTen.UnderlinedStyle = false;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BackColor = SystemColors.Window;
+            txtEmail.BorderColor = Color.MediumSlateBlue;
+            txtEmail.BorderFocusColor = Color.HotPink;
+            txtEmail.BorderRadius = 5;
+            txtEmail.BorderSize = 2;
+            txtEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.ForeColor = Color.FromArgb(64, 64, 64);
+            txtEmail.Location = new Point(103, 175);
+            txtEmail.Margin = new Padding(4);
+            txtEmail.Multiline = false;
+            txtEmail.Name = "txtEmail";
+            txtEmail.Padding = new Padding(10, 7, 10, 7);
+            txtEmail.PasswordChar = false;
+            txtEmail.PlaceholderColor = Color.DarkGray;
+            txtEmail.PlaceholderText = "";
+            txtEmail.Size = new Size(250, 31);
+            txtEmail.TabIndex = 35;
+            txtEmail.Texts = "";
+            txtEmail.UnderlinedStyle = false;
+            // 
+            // txtDienThoai
+            // 
+            txtDienThoai.BackColor = SystemColors.Window;
+            txtDienThoai.BorderColor = Color.MediumSlateBlue;
+            txtDienThoai.BorderFocusColor = Color.HotPink;
+            txtDienThoai.BorderRadius = 5;
+            txtDienThoai.BorderSize = 2;
+            txtDienThoai.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDienThoai.ForeColor = Color.FromArgb(64, 64, 64);
+            txtDienThoai.Location = new Point(103, 225);
+            txtDienThoai.Margin = new Padding(4);
+            txtDienThoai.Multiline = false;
+            txtDienThoai.Name = "txtDienThoai";
+            txtDienThoai.Padding = new Padding(10, 7, 10, 7);
+            txtDienThoai.PasswordChar = false;
+            txtDienThoai.PlaceholderColor = Color.DarkGray;
+            txtDienThoai.PlaceholderText = "";
+            txtDienThoai.Size = new Size(250, 31);
+            txtDienThoai.TabIndex = 35;
+            txtDienThoai.Texts = "";
+            txtDienThoai.UnderlinedStyle = false;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = SystemColors.Window;
+            txtPassword.BorderColor = Color.MediumSlateBlue;
+            txtPassword.BorderFocusColor = Color.HotPink;
+            txtPassword.BorderRadius = 5;
+            txtPassword.BorderSize = 2;
+            txtPassword.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.ForeColor = Color.FromArgb(64, 64, 64);
+            txtPassword.Location = new Point(103, 275);
+            txtPassword.Margin = new Padding(4);
+            txtPassword.Multiline = false;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Padding = new Padding(10, 7, 10, 7);
+            txtPassword.PasswordChar = false;
+            txtPassword.PlaceholderColor = Color.DarkGray;
+            txtPassword.PlaceholderText = "";
+            txtPassword.Size = new Size(250, 31);
+            txtPassword.TabIndex = 35;
+            txtPassword.Texts = "";
+            txtPassword.UnderlinedStyle = false;
+            // 
+            // txtGioiTinh
+            // 
+            txtGioiTinh.BackColor = SystemColors.Window;
+            txtGioiTinh.BorderColor = Color.MediumSlateBlue;
+            txtGioiTinh.BorderFocusColor = Color.HotPink;
+            txtGioiTinh.BorderRadius = 5;
+            txtGioiTinh.BorderSize = 2;
+            txtGioiTinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtGioiTinh.ForeColor = Color.FromArgb(64, 64, 64);
+            txtGioiTinh.Location = new Point(509, 75);
+            txtGioiTinh.Margin = new Padding(4);
+            txtGioiTinh.Multiline = false;
+            txtGioiTinh.Name = "txtGioiTinh";
+            txtGioiTinh.Padding = new Padding(10, 7, 10, 7);
+            txtGioiTinh.PasswordChar = false;
+            txtGioiTinh.PlaceholderColor = Color.DarkGray;
+            txtGioiTinh.PlaceholderText = "";
+            txtGioiTinh.Size = new Size(250, 31);
+            txtGioiTinh.TabIndex = 35;
+            txtGioiTinh.Texts = "";
+            txtGioiTinh.UnderlinedStyle = false;
+            // 
+            // txtNamSinh
+            // 
+            txtNamSinh.BackColor = SystemColors.Window;
+            txtNamSinh.BorderColor = Color.MediumSlateBlue;
+            txtNamSinh.BorderFocusColor = Color.HotPink;
+            txtNamSinh.BorderRadius = 5;
+            txtNamSinh.BorderSize = 2;
+            txtNamSinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNamSinh.ForeColor = Color.FromArgb(64, 64, 64);
+            txtNamSinh.Location = new Point(509, 125);
+            txtNamSinh.Margin = new Padding(4);
+            txtNamSinh.Multiline = false;
+            txtNamSinh.Name = "txtNamSinh";
+            txtNamSinh.Padding = new Padding(10, 7, 10, 7);
+            txtNamSinh.PasswordChar = false;
+            txtNamSinh.PlaceholderColor = Color.DarkGray;
+            txtNamSinh.PlaceholderText = "";
+            txtNamSinh.Size = new Size(250, 31);
+            txtNamSinh.TabIndex = 35;
+            txtNamSinh.Texts = "";
+            txtNamSinh.UnderlinedStyle = false;
+            // 
+            // txtDiaChi
+            // 
+            txtDiaChi.BackColor = SystemColors.Window;
+            txtDiaChi.BorderColor = Color.MediumSlateBlue;
+            txtDiaChi.BorderFocusColor = Color.HotPink;
+            txtDiaChi.BorderRadius = 5;
+            txtDiaChi.BorderSize = 2;
+            txtDiaChi.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDiaChi.ForeColor = Color.FromArgb(64, 64, 64);
+            txtDiaChi.Location = new Point(509, 175);
+            txtDiaChi.Margin = new Padding(4);
+            txtDiaChi.Multiline = false;
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Padding = new Padding(10, 7, 10, 7);
+            txtDiaChi.PasswordChar = false;
+            txtDiaChi.PlaceholderColor = Color.DarkGray;
+            txtDiaChi.PlaceholderText = "";
+            txtDiaChi.Size = new Size(250, 31);
+            txtDiaChi.TabIndex = 35;
+            txtDiaChi.Texts = "";
+            txtDiaChi.UnderlinedStyle = false;
             // 
             // frmSettingKhachHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 495);
-            Controls.Add(rjButton4);
-            Controls.Add(rjButton3);
-            Controls.Add(rjButton1);
-            Controls.Add(txtMatKhau);
+            ClientSize = new Size(1534, 690);
+            Controls.Add(txtPassword);
             Controls.Add(txtDienThoai);
             Controls.Add(txtEmail);
-            Controls.Add(label6);
+            Controls.Add(txtHoTen);
+            Controls.Add(txtDiaChi);
             Controls.Add(txtNamSinh);
             Controls.Add(txtGioiTinh);
-            Controls.Add(txtDiaChi);
-            Controls.Add(txtHoTen);
-            Controls.Add(txtTK);
+            Controls.Add(txtTenTaiKhoan);
+            Controls.Add(rjButton4);
+            Controls.Add(rjButton3);
+            Controls.Add(btn_Luu);
+            Controls.Add(label6);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label5);
@@ -448,10 +442,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmSettingKhachHang";
             Palette = kryptonCustomPaletteBase1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             Text = "frmSettingKhachHang";
+            Load += frmSettingKhachHang_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -465,21 +461,27 @@
         private Label label4;
         private Label label5;
         private CustomControls.RJControls.RJTextBox txtTaiKhoan;
-        private CustomControls.RJControls.RJTextBox txtTK;
-        private CustomControls.RJControls.RJTextBox txtEmail;
-        private CustomControls.RJControls.RJTextBox txtDienThoai;
         private Label label6;
-        private CustomControls.RJControls.RJTextBox txtMatKhau;
         private Label label7;
         private Label label8;
         private Label label9;
-        private CustomControls.RJControls.RJTextBox txtDiaChi;
         private CustomControls.RJControls.RJButton rjButton3;
-        private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJTextBox txtGioiTinh;
-        private CustomControls.RJControls.RJTextBox txtNamSinh;
+        private CustomControls.RJControls.RJButton btn_Luu;
         private Label label10;
         private CustomControls.RJControls.RJButton rjButton4;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private CustomControls.RJControls.RJTextBox txtTenTaiKhoan;
         private CustomControls.RJControls.RJTextBox txtHoTen;
+        private CustomControls.RJControls.RJTextBox txtEmail;
+        private CustomControls.RJControls.RJTextBox txtDienThoai;
+        private CustomControls.RJControls.RJTextBox txtPassword;
+        private CustomControls.RJControls.RJTextBox txtGioiTinh;
+        private CustomControls.RJControls.RJTextBox txtNamSinh;
+        private CustomControls.RJControls.RJTextBox txtDiaChi;
     }
 }

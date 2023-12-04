@@ -53,13 +53,14 @@
             pictureBox9 = new PictureBox();
             lbThoat = new Label();
             lbCaiDat = new Label();
-            lbBaoCao = new Label();
+            lbDanhGia = new Label();
             lbThucDon = new Label();
             lbGiaoDich = new Label();
             lbDatPhong = new Label();
             lbTrangChu = new Label();
             lbNhanVien = new Label();
             panelMain = new Panel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -294,9 +295,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(68, 21);
             label1.Name = "label1";
-            label1.Size = new Size(248, 32);
+            label1.Size = new Size(174, 32);
             label1.TabIndex = 0;
-            label1.Text = "Trung Luxury Resort";
+            label1.Text = "Luxury Resort";
             // 
             // panelSidebar
             // 
@@ -309,7 +310,7 @@
             panelSidebar.Controls.Add(pictureBox9);
             panelSidebar.Controls.Add(lbThoat);
             panelSidebar.Controls.Add(lbCaiDat);
-            panelSidebar.Controls.Add(lbBaoCao);
+            panelSidebar.Controls.Add(lbDanhGia);
             panelSidebar.Controls.Add(lbThucDon);
             panelSidebar.Controls.Add(lbGiaoDich);
             panelSidebar.Controls.Add(lbDatPhong);
@@ -394,19 +395,20 @@
             lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
             lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
-            // lbBaoCao
+            // lbDanhGia
             // 
-            lbBaoCao.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbBaoCao.Image = baitap.Properties.Resources.report_24;
-            lbBaoCao.ImageAlign = ContentAlignment.MiddleLeft;
-            lbBaoCao.Location = new Point(9, 333);
-            lbBaoCao.Name = "lbBaoCao";
-            lbBaoCao.Size = new Size(211, 32);
-            lbBaoCao.TabIndex = 0;
-            lbBaoCao.Text = "Báo cáo";
-            lbBaoCao.TextAlign = ContentAlignment.MiddleCenter;
-            lbBaoCao.MouseEnter += DoiMauLabel_MouseEnter;
-            lbBaoCao.MouseLeave += DoiMauLabel_MouseLeave;
+            lbDanhGia.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbDanhGia.Image = baitap.Properties.Resources.feedback_24;
+            lbDanhGia.ImageAlign = ContentAlignment.MiddleLeft;
+            lbDanhGia.Location = new Point(9, 333);
+            lbDanhGia.Name = "lbDanhGia";
+            lbDanhGia.Size = new Size(211, 32);
+            lbDanhGia.TabIndex = 0;
+            lbDanhGia.Text = "Báo cáo";
+            lbDanhGia.TextAlign = ContentAlignment.MiddleCenter;
+            lbDanhGia.Click += DanhGiaOpen;
+            lbDanhGia.MouseEnter += DoiMauLabel_MouseEnter;
+            lbDanhGia.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbThucDon
             // 
@@ -540,7 +542,7 @@
         private PictureBox pictureBox9;
         private Label lbThoat;
         private Label lbCaiDat;
-        private Label lbBaoCao;
+        private Label lbDanhGia;
         private Label lbThucDon;
         private Label lbGiaoDich;
         private Label lbDatPhong;
@@ -553,5 +555,6 @@
         private Label label6;
         private Panel panel2;
         private Label label7;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

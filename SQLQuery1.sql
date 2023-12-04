@@ -69,14 +69,13 @@ INSERT INTO bookingsinfo
     (N'MDP001', N'MKN001', N'MP001', N'Vinpearl Nha Trang', 375, N'Platinum', 500,'03-12-2023', '10-12-2023', N'CheckedOut');
 
 CREATE TABLE feedback (
-    MaPhanHoi INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-    MaNguoiDung NVARCHAR(100) NULL,
-    PhanHoi NVARCHAR(MAX) NULL,
-    NgayGui DATE NULL
+    ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    TenKhachHang NVARCHAR(100) ,
+	Danhgia NVARCHAR(100),
+	TieuDe NVARCHAR(100),
+    PhanHoi NVARCHAR(MAX),
+    NgayGui DATETIME NOT NULL
 );
-
-INSERT INTO feedback (MaNguoiDung, PhanHoi, NgayGui) VALUES 
-    (N'001', N'Chúng tôi chọn Goa. Dịch vụ của họ rất tốt', '2008-02-18');
 
 
 CREATE TABLE ThongTinDangNhap (
@@ -84,7 +83,7 @@ CREATE TABLE ThongTinDangNhap (
     TenTaiKhoan NVARCHAR(50) NOT NULL,
     ThoiGianDangNhap DATETIME NOT NULL
 );
+
 select * from ThongTinDangNhap;
 select * from KhachHang;
 select * from NhanVien;
-SELECT * FROM KhachHang WHERE TenTaiKhoan='1';

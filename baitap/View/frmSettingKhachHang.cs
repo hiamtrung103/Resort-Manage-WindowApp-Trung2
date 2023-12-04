@@ -1,4 +1,6 @@
-﻿using Krypton.Toolkit;
+﻿using baitap.Model;
+using baitap.Object;
+using Krypton.Toolkit;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -15,57 +17,49 @@ namespace baitap.View
 {
     public partial class frmSettingKhachHang : KryptonForm
     {
-        private int userId;
-        public frmSettingKhachHang(int userId = 1)
+        private frmKhachHang kh = new frmKhachHang();
+        private ConnectToSQL conn = new ConnectToSQL();
+        public frmSettingKhachHang()
         {
             InitializeComponent();
-
-            this.userId = userId;
-
-            HienThiThongTinTaiKhoan();
         }
 
-
-        private void HienThiThongTinTaiKhoan()
+        private void frmSettingKhachHang_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM KhachHang WHERE ID=@userId";
-
-            using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
             {
-                try
+                string tenTaiKhoan = Session.TenTaiKhoan;
+
+                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
                 {
-                    conn.Open();
+                    conn.MoKetNoi();
+                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
 
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
                     {
-                        cmd.Parameters.AddWithValue("@userId", userId);
+                        DataTable khachHangDataTable = new DataTable();
+                        khachHangDataAdapter.Fill(khachHangDataTable);
 
-                        using (SqlDataAdapter dta = new SqlDataAdapter(cmd))
+                        if (khachHangDataTable.Rows.Count > 0)
                         {
-                            DataTable dataTable = new DataTable();
-                            dta.Fill(dataTable);
-
-                            if (dataTable.Rows.Count > 0)
-                            {
-                                DataRow row = dataTable.Rows[0];
-
-                                // Hiển thị thông tin người dùng trong các textbox
-                                txtHoTen.Text = row["HoTen"].ToString();
-                                txtGioiTinh.Text = row["GioiTinh"].ToString();
-                                // Thêm các dòng này cho các textbox khác để hiển thị thông tin khác của người dùng
-                            }
-                            else
-                            {
-                                // Xử lý trường hợp không tìm thấy thông tin người dùng
-                            }
+                            txtTenTaiKhoan.Texts = khachHangDataTable.Rows[0]["TenTaiKhoan"].ToString();
+                            txtHoTen.Texts = khachHangDataTable.Rows[0]["HoTen"].ToString();
+                            txtGioiTinh.Texts = khachHangDataTable.Rows[0]["GioiTinh"].ToString();
+                            txtNamSinh.Texts = khachHangDataTable.Rows[0]["NamSinh"].ToString();
+                            txtDiaChi.Texts = khachHangDataTable.Rows[0]["DiaChi"].ToString();
+                            txtDienThoai.Texts = khachHangDataTable.Rows[0]["DienThoai"].ToString();
+                            txtEmail.Texts = khachHangDataTable.Rows[0]["Email"].ToString();
+                            txtPassword.Texts = khachHangDataTable.Rows[0]["Password"].ToString();
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi kết nối: " + ex.Message);
-                }
             }
+        }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            kh.SuaKhachHang();
         }
     }
 }

@@ -100,7 +100,7 @@ namespace QL_QuanCafe_Trung_Hai.View
             {
                 panel1.BackColor = Color.FromArgb(51, 51, 51);
                 panelSidebar.BackColor = Color.FromArgb(51, 51, 51);
-                Doimaulabel(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbBaoCao, lbCaiDat, lbThoat);
+                Doimaulabel(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbDanhGia, lbCaiDat, lbThoat);
                 pictureBox5.Image = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\Day.gif");
 
             }
@@ -108,7 +108,7 @@ namespace QL_QuanCafe_Trung_Hai.View
             {
                 panel1.BackColor = SystemColors.Control;
                 panelSidebar.BackColor = Color.FromArgb(1, 126, 245);
-                Doimaulabel2(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbBaoCao, lbCaiDat, lbThoat);
+                Doimaulabel2(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbDanhGia, lbCaiDat, lbThoat);
                 pictureBox5.Image = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\dark.gif");
 
             }
@@ -185,6 +185,11 @@ namespace QL_QuanCafe_Trung_Hai.View
         private void NhaHangOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmNhaHang());
+        }
+
+        private void DanhGiaOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmDanhGia());
         }
 
         private void NhanVienOpen(object sender, EventArgs e)

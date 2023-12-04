@@ -51,7 +51,7 @@ namespace baitap.View
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                panel1.BackgroundImage= Properties.Resources._5153829;
+                panel1.BackgroundImage = Properties.Resources._5153829;
             }
         }
         public static string TenTaiKhoanDangNhap { get; private set; }
@@ -123,5 +123,11 @@ namespace baitap.View
             UI.Show();
         }
 
+        private void administratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginNhanVien loginNhanVien = new LoginNhanVien();
+            loginNhanVien.Show();
+        }
     }
 }

@@ -43,11 +43,13 @@
             pictureBox4 = new PictureBox();
             label5 = new Label();
             txtPassword = new Krypton.Toolkit.KryptonTextBox();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             label2 = new Label();
             label3 = new Label();
             panel1 = new Panel();
             label8 = new Label();
             label7 = new Label();
+            rjButton2 = new CustomControls.RJControls.RJButton();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             báoCáoSựCốToolStripMenuItem = new ToolStripMenuItem();
@@ -57,8 +59,6 @@
             staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
-            rjButton1 = new CustomControls.RJControls.RJButton();
-            rjButton2 = new CustomControls.RJControls.RJButton();
             panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -236,6 +236,26 @@
             txtPassword.TabIndex = 6;
             txtPassword.UseSystemPasswordChar = true;
             // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.DeepSkyBlue;
+            rjButton1.BackgroundColor = Color.DeepSkyBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(509, 324);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(100, 40);
+            rjButton1.TabIndex = 7;
+            rjButton1.Text = "Đăng nhập";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnDangNhap_Click;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -296,82 +316,6 @@
             label7.Text = "Nhập thông tin cá nhân của bạn và \r\ntạo tài khoản mới để kết nối với chúng tôi";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // bunifuElipse1
-            // 
-            bunifuElipse1.ElipseRadius = 40;
-            bunifuElipse1.TargetControl = this;
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { báoCáoSựCốToolStripMenuItem, chuyểnDạngĐăngNhậpToolStripMenuItem, chếĐộTốiToolStripMenuItem, thoátToolStripMenuItem });
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(206, 92);
-            // 
-            // báoCáoSựCốToolStripMenuItem
-            // 
-            báoCáoSựCốToolStripMenuItem.Name = "báoCáoSựCốToolStripMenuItem";
-            báoCáoSựCốToolStripMenuItem.Size = new Size(205, 22);
-            báoCáoSựCốToolStripMenuItem.Text = "Báo cáo sự cố";
-            // 
-            // chuyểnDạngĐăngNhậpToolStripMenuItem
-            // 
-            chuyểnDạngĐăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { administratorToolStripMenuItem, staffToolStripMenuItem, staffToolStripMenuItem1 });
-            chuyểnDạngĐăngNhậpToolStripMenuItem.Name = "chuyểnDạngĐăngNhậpToolStripMenuItem";
-            chuyểnDạngĐăngNhậpToolStripMenuItem.Size = new Size(205, 22);
-            chuyểnDạngĐăngNhậpToolStripMenuItem.Text = "Chuyển dạng đăng nhập";
-            // 
-            // administratorToolStripMenuItem
-            // 
-            administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
-            administratorToolStripMenuItem.Size = new Size(147, 22);
-            administratorToolStripMenuItem.Text = "Administrator";
-            // 
-            // staffToolStripMenuItem
-            // 
-            staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            staffToolStripMenuItem.Size = new Size(147, 22);
-            staffToolStripMenuItem.Text = "Manager";
-            // 
-            // staffToolStripMenuItem1
-            // 
-            staffToolStripMenuItem1.Name = "staffToolStripMenuItem1";
-            staffToolStripMenuItem1.Size = new Size(147, 22);
-            staffToolStripMenuItem1.Text = "Staff";
-            // 
-            // chếĐộTốiToolStripMenuItem
-            // 
-            chếĐộTốiToolStripMenuItem.Name = "chếĐộTốiToolStripMenuItem";
-            chếĐộTốiToolStripMenuItem.Size = new Size(205, 22);
-            chếĐộTốiToolStripMenuItem.Text = "Chế độ tối";
-            chếĐộTốiToolStripMenuItem.Click += chếĐộTốiToolStripMenuItem_Click;
-            // 
-            // thoátToolStripMenuItem
-            // 
-            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(205, 22);
-            thoátToolStripMenuItem.Text = "Thoát";
-            // 
-            // rjButton1
-            // 
-            rjButton1.BackColor = Color.DeepSkyBlue;
-            rjButton1.BackgroundColor = Color.DeepSkyBlue;
-            rjButton1.BorderColor = Color.PaleVioletRed;
-            rjButton1.BorderRadius = 5;
-            rjButton1.BorderSize = 0;
-            rjButton1.FlatAppearance.BorderSize = 0;
-            rjButton1.FlatStyle = FlatStyle.Flat;
-            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(509, 324);
-            rjButton1.Name = "rjButton1";
-            rjButton1.Size = new Size(100, 40);
-            rjButton1.TabIndex = 7;
-            rjButton1.Text = "Đăng nhập";
-            rjButton1.TextColor = Color.White;
-            rjButton1.UseVisualStyleBackColor = false;
-            rjButton1.Click += btnDangNhap_Click;
-            // 
             // rjButton2
             // 
             rjButton2.BackColor = Color.Crimson;
@@ -391,6 +335,63 @@
             rjButton2.TextColor = Color.White;
             rjButton2.UseVisualStyleBackColor = false;
             rjButton2.Click += btnDangKy_click;
+            // 
+            // bunifuElipse1
+            // 
+            bunifuElipse1.ElipseRadius = 40;
+            bunifuElipse1.TargetControl = this;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { báoCáoSựCốToolStripMenuItem, chuyểnDạngĐăngNhậpToolStripMenuItem, chếĐộTốiToolStripMenuItem, thoátToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(206, 114);
+            // 
+            // báoCáoSựCốToolStripMenuItem
+            // 
+            báoCáoSựCốToolStripMenuItem.Name = "báoCáoSựCốToolStripMenuItem";
+            báoCáoSựCốToolStripMenuItem.Size = new Size(205, 22);
+            báoCáoSựCốToolStripMenuItem.Text = "Báo cáo sự cố";
+            // 
+            // chuyểnDạngĐăngNhậpToolStripMenuItem
+            // 
+            chuyểnDạngĐăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { administratorToolStripMenuItem, staffToolStripMenuItem, staffToolStripMenuItem1 });
+            chuyểnDạngĐăngNhậpToolStripMenuItem.Name = "chuyểnDạngĐăngNhậpToolStripMenuItem";
+            chuyểnDạngĐăngNhậpToolStripMenuItem.Size = new Size(205, 22);
+            chuyểnDạngĐăngNhậpToolStripMenuItem.Text = "Chuyển dạng đăng nhập";
+            // 
+            // administratorToolStripMenuItem
+            // 
+            administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
+            administratorToolStripMenuItem.Size = new Size(180, 22);
+            administratorToolStripMenuItem.Text = "Administrator";
+            administratorToolStripMenuItem.Click += administratorToolStripMenuItem_Click;
+            // 
+            // staffToolStripMenuItem
+            // 
+            staffToolStripMenuItem.Name = "staffToolStripMenuItem";
+            staffToolStripMenuItem.Size = new Size(180, 22);
+            staffToolStripMenuItem.Text = "Manager";
+            // 
+            // staffToolStripMenuItem1
+            // 
+            staffToolStripMenuItem1.Name = "staffToolStripMenuItem1";
+            staffToolStripMenuItem1.Size = new Size(180, 22);
+            staffToolStripMenuItem1.Text = "Staff";
+            // 
+            // chếĐộTốiToolStripMenuItem
+            // 
+            chếĐộTốiToolStripMenuItem.Name = "chếĐộTốiToolStripMenuItem";
+            chếĐộTốiToolStripMenuItem.Size = new Size(205, 22);
+            chếĐộTốiToolStripMenuItem.Text = "Chế độ tối";
+            chếĐộTốiToolStripMenuItem.Click += chếĐộTốiToolStripMenuItem_Click;
+            // 
+            // thoátToolStripMenuItem
+            // 
+            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            thoátToolStripMenuItem.Size = new Size(205, 22);
+            thoátToolStripMenuItem.Text = "Thoát";
             // 
             // Login
             // 

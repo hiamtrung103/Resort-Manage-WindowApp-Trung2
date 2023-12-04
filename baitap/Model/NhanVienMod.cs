@@ -8,7 +8,7 @@ namespace baitap.Model
 {
     class NhanVienMod
     {
-        private ConnectToSQL conn = new ConnectToSQL();
+        public ConnectToSQL conn = new ConnectToSQL();
 
         public DataTable LayDuLieuNhanVien()
         {

@@ -28,23 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhaHang));
             panel1 = new Panel();
-            bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox4 = new PictureBox();
-            bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox2 = new PictureBox();
-            bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox3 = new PictureBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
+            lbTen = new Label();
+            cardd = new Bunifu.Framework.UI.BunifuCards();
+            lbMoTa3 = new Label();
+            lbMoTa2 = new Label();
+            lbMoTa = new Label();
+            lbThoiGian2 = new Label();
+            lbThoiGian = new Label();
+            lbGioiThieu = new Label();
             groupBox1 = new GroupBox();
             label10 = new Label();
             txtHoTen = new Krypton.Toolkit.KryptonTextBox();
@@ -60,35 +54,44 @@
             label15 = new Label();
             label16 = new Label();
             txtMaGiamGia = new Krypton.Toolkit.KryptonTextBox();
-            bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox1 = new PictureBox();
+            bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            card_3 = new Bunifu.Framework.UI.BunifuCards();
+            card_2 = new Bunifu.Framework.UI.BunifuCards();
+            bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            card_1 = new PictureBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            lb_RiverviewDining = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
-            bunifuCards5.SuspendLayout();
-            bunifuCards4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            bunifuCards2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            bunifuCards6.SuspendLayout();
             groupBox1.SuspendLayout();
-            bunifuCards3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            bunifuCards5.SuspendLayout();
+            bunifuCards1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)card_1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(125, 0, 46);
+            panel1.BackColor = Color.White;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(bunifuCards6);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(bunifuCards5);
-            panel1.Controls.Add(bunifuCards4);
-            panel1.Controls.Add(bunifuCards3);
             panel1.Controls.Add(bunifuCards2);
+            panel1.Controls.Add(card_3);
+            panel1.Controls.Add(card_2);
             panel1.Controls.Add(bunifuCards1);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lb_RiverviewDining);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -96,219 +99,133 @@
             panel1.Size = new Size(1534, 690);
             panel1.TabIndex = 3;
             // 
-            // bunifuCards5
+            // bunifuCards6
             // 
-            bunifuCards5.BackColor = Color.FromArgb(102, 0, 39);
-            bunifuCards5.BorderRadius = 20;
-            bunifuCards5.BottomSahddow = true;
-            bunifuCards5.BottomShadow = true;
-            bunifuCards5.color = Color.Transparent;
-            bunifuCards5.Controls.Add(label9);
-            bunifuCards5.Controls.Add(label8);
-            bunifuCards5.Controls.Add(label7);
-            bunifuCards5.Controls.Add(label6);
-            bunifuCards5.IndicatorColor = Color.Transparent;
-            bunifuCards5.LeftSahddow = false;
-            bunifuCards5.LeftShadow = false;
-            bunifuCards5.Location = new Point(12, 569);
-            bunifuCards5.Name = "bunifuCards5";
-            bunifuCards5.RightSahddow = true;
-            bunifuCards5.RightShadow = true;
-            bunifuCards5.ShadowDepth = 20;
-            bunifuCards5.Size = new Size(535, 118);
-            bunifuCards5.TabIndex = 2;
+            bunifuCards6.BackColor = Color.FromArgb(102, 0, 39);
+            bunifuCards6.BorderRadius = 20;
+            bunifuCards6.BottomSahddow = true;
+            bunifuCards6.BottomShadow = true;
+            bunifuCards6.color = Color.Transparent;
+            bunifuCards6.Controls.Add(lbTen);
+            bunifuCards6.Controls.Add(cardd);
+            bunifuCards6.Controls.Add(lbMoTa3);
+            bunifuCards6.Controls.Add(lbMoTa2);
+            bunifuCards6.Controls.Add(lbMoTa);
+            bunifuCards6.Controls.Add(lbThoiGian2);
+            bunifuCards6.Controls.Add(lbThoiGian);
+            bunifuCards6.Controls.Add(lbGioiThieu);
+            bunifuCards6.IndicatorColor = Color.Transparent;
+            bunifuCards6.LeftSahddow = false;
+            bunifuCards6.LeftShadow = false;
+            bunifuCards6.Location = new Point(912, 36);
+            bunifuCards6.Name = "bunifuCards6";
+            bunifuCards6.RightSahddow = true;
+            bunifuCards6.RightShadow = true;
+            bunifuCards6.ShadowDepth = 20;
+            bunifuCards6.Size = new Size(595, 589);
+            bunifuCards6.TabIndex = 13;
             // 
-            // label9
+            // lbTen
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(13, 84);
-            label9.Name = "label9";
-            label9.Size = new Size(328, 17);
-            label9.TabIndex = 0;
-            label9.Text = "A: Số 1. Phường 1, Quận 1, Thành phố Hồ Chí Minh";
+            lbTen.AutoSize = true;
+            lbTen.BackColor = Color.Transparent;
+            lbTen.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTen.ForeColor = Color.White;
+            lbTen.Location = new Point(14, 10);
+            lbTen.Name = "lbTen";
+            lbTen.Size = new Size(210, 32);
+            lbTen.TabIndex = 3;
+            lbTen.Text = "Riverview Dining";
             // 
-            // label8
+            // cardd
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(244, 57);
-            label8.Name = "label8";
-            label8.Size = new Size(200, 17);
-            label8.TabIndex = 0;
-            label8.Text = "E: Trung@hiamtrung102.online";
+            cardd.BackColor = Color.White;
+            cardd.BackgroundImage = Properties.Resources.restaurant_1_1;
+            cardd.BackgroundImageLayout = ImageLayout.Stretch;
+            cardd.BorderRadius = 20;
+            cardd.BottomSahddow = true;
+            cardd.BottomShadow = true;
+            cardd.color = Color.Transparent;
+            cardd.IndicatorColor = Color.Transparent;
+            cardd.LeftSahddow = false;
+            cardd.LeftShadow = false;
+            cardd.Location = new Point(112, 60);
+            cardd.Name = "cardd";
+            cardd.RightSahddow = true;
+            cardd.RightShadow = true;
+            cardd.ShadowDepth = 20;
+            cardd.Size = new Size(473, 254);
+            cardd.TabIndex = 2;
             // 
-            // label7
+            // lbMoTa3
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(13, 57);
-            label7.Name = "label7";
-            label7.Size = new Size(213, 17);
-            label7.TabIndex = 0;
-            label7.Text = "T: 0853-0403-79 - (028) 1234-0001";
+            lbMoTa3.AutoSize = true;
+            lbMoTa3.BackColor = Color.Transparent;
+            lbMoTa3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbMoTa3.ForeColor = Color.White;
+            lbMoTa3.Location = new Point(330, 467);
+            lbMoTa3.Name = "lbMoTa3";
+            lbMoTa3.Size = new Size(0, 15);
+            lbMoTa3.TabIndex = 3;
             // 
-            // label6
+            // lbMoTa2
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(13, 11);
-            label6.Name = "label6";
-            label6.Size = new Size(218, 32);
-            label6.TabIndex = 0;
-            label6.Text = "Trung Restaurant ";
+            lbMoTa2.AutoSize = true;
+            lbMoTa2.BackColor = Color.Transparent;
+            lbMoTa2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbMoTa2.ForeColor = Color.White;
+            lbMoTa2.Location = new Point(330, 364);
+            lbMoTa2.Name = "lbMoTa2";
+            lbMoTa2.Size = new Size(255, 60);
+            lbMoTa2.TabIndex = 3;
+            lbMoTa2.Text = "Hoạt động từ 6:30 đến 23:00 mỗi ngày\r\nTrải nghiệm vị giác phong phú với các món ăn \r\nvà rượu thượng hạng được phục vụ theo thực \r\nđơn đặc biệt.";
             // 
-            // bunifuCards4
+            // lbMoTa
             // 
-            bunifuCards4.BackColor = Color.White;
-            bunifuCards4.BackgroundImage = Properties.Resources.restaurant_4;
-            bunifuCards4.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuCards4.BorderRadius = 20;
-            bunifuCards4.BottomSahddow = true;
-            bunifuCards4.BottomShadow = true;
-            bunifuCards4.color = Color.Transparent;
-            bunifuCards4.Controls.Add(pictureBox4);
-            bunifuCards4.IndicatorColor = Color.Transparent;
-            bunifuCards4.LeftSahddow = false;
-            bunifuCards4.LeftShadow = false;
-            bunifuCards4.Location = new Point(762, 100);
-            bunifuCards4.Name = "bunifuCards4";
-            bunifuCards4.RightSahddow = true;
-            bunifuCards4.RightShadow = true;
-            bunifuCards4.ShadowDepth = 20;
-            bunifuCards4.Size = new Size(200, 250);
-            bunifuCards4.TabIndex = 1;
+            lbMoTa.AutoSize = true;
+            lbMoTa.BackColor = Color.Transparent;
+            lbMoTa.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbMoTa.ForeColor = Color.White;
+            lbMoTa.Location = new Point(14, 364);
+            lbMoTa.Name = "lbMoTa";
+            lbMoTa.Size = new Size(310, 195);
+            lbMoTa.TabIndex = 3;
+            lbMoTa.Text = resources.GetString("lbMoTa.Text");
             // 
-            // pictureBox4
+            // lbThoiGian2
             // 
-            pictureBox4.Image = Properties.Resources.restaurant_4;
-            pictureBox4.Location = new Point(0, 0);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(200, 250);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
+            lbThoiGian2.AutoSize = true;
+            lbThoiGian2.BackColor = Color.Transparent;
+            lbThoiGian2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbThoiGian2.ForeColor = Color.White;
+            lbThoiGian2.Location = new Point(330, 441);
+            lbThoiGian2.Name = "lbThoiGian2";
+            lbThoiGian2.Size = new Size(0, 25);
+            lbThoiGian2.TabIndex = 3;
             // 
-            // bunifuCards2
+            // lbThoiGian
             // 
-            bunifuCards2.BackColor = Color.White;
-            bunifuCards2.BackgroundImage = Properties.Resources.restaurant_2;
-            bunifuCards2.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuCards2.BorderRadius = 20;
-            bunifuCards2.BottomSahddow = true;
-            bunifuCards2.BottomShadow = true;
-            bunifuCards2.color = Color.Transparent;
-            bunifuCards2.Controls.Add(pictureBox2);
-            bunifuCards2.IndicatorColor = Color.Transparent;
-            bunifuCards2.LeftSahddow = false;
-            bunifuCards2.LeftShadow = false;
-            bunifuCards2.Location = new Point(262, 100);
-            bunifuCards2.Name = "bunifuCards2";
-            bunifuCards2.RightSahddow = true;
-            bunifuCards2.RightShadow = true;
-            bunifuCards2.ShadowDepth = 20;
-            bunifuCards2.Size = new Size(200, 250);
-            bunifuCards2.TabIndex = 1;
+            lbThoiGian.AutoSize = true;
+            lbThoiGian.BackColor = Color.Transparent;
+            lbThoiGian.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbThoiGian.ForeColor = Color.White;
+            lbThoiGian.Location = new Point(330, 339);
+            lbThoiGian.Name = "lbThoiGian";
+            lbThoiGian.Size = new Size(171, 25);
+            lbThoiGian.TabIndex = 3;
+            lbThoiGian.Text = "Thời gian phục vụ";
             // 
-            // pictureBox2
+            // lbGioiThieu
             // 
-            pictureBox2.Image = Properties.Resources.restaurant_2;
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(200, 250);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            // 
-            // bunifuCards1
-            // 
-            bunifuCards1.BackColor = Color.White;
-            bunifuCards1.BackgroundImage = Properties.Resources.restaurant_1;
-            bunifuCards1.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuCards1.BorderRadius = 20;
-            bunifuCards1.BottomSahddow = true;
-            bunifuCards1.BottomShadow = true;
-            bunifuCards1.color = Color.Transparent;
-            bunifuCards1.Controls.Add(pictureBox3);
-            bunifuCards1.IndicatorColor = Color.Transparent;
-            bunifuCards1.LeftSahddow = false;
-            bunifuCards1.LeftShadow = false;
-            bunifuCards1.Location = new Point(12, 100);
-            bunifuCards1.Name = "bunifuCards1";
-            bunifuCards1.RightSahddow = true;
-            bunifuCards1.RightShadow = true;
-            bunifuCards1.ShadowDepth = 20;
-            bunifuCards1.Size = new Size(200, 250);
-            bunifuCards1.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.restaurant_1;
-            pictureBox3.Location = new Point(0, 0);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(200, 250);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(762, 77);
-            label5.Name = "label5";
-            label5.Size = new Size(127, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Tiệc trưa chủ nhật";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(512, 78);
-            label4.Name = "label4";
-            label4.Size = new Size(112, 20);
-            label4.TabIndex = 0;
-            label4.Text = "Rooftop Dining";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(262, 78);
-            label3.Name = "label3";
-            label3.Size = new Size(176, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Red Chilli Seafood Buffet";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 77);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Riverview Dining";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Ẩm Thực";
+            lbGioiThieu.AutoSize = true;
+            lbGioiThieu.BackColor = Color.Transparent;
+            lbGioiThieu.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbGioiThieu.ForeColor = Color.White;
+            lbGioiThieu.Location = new Point(14, 339);
+            lbGioiThieu.Name = "lbGioiThieu";
+            lbGioiThieu.Size = new Size(220, 25);
+            lbGioiThieu.TabIndex = 3;
+            lbGioiThieu.Text = "Đối thoại cùng ẩm thực";
             // 
             // groupBox1
             // 
@@ -495,36 +412,225 @@
             txtMaGiamGia.StateCommon.Content.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtMaGiamGia.TabIndex = 9;
             // 
-            // bunifuCards3
+            // bunifuCards5
             // 
-            bunifuCards3.BackColor = Color.White;
-            bunifuCards3.BackgroundImage = Properties.Resources.restaurant_3;
-            bunifuCards3.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuCards3.BorderRadius = 20;
-            bunifuCards3.BottomSahddow = true;
-            bunifuCards3.BottomShadow = true;
-            bunifuCards3.color = Color.Transparent;
-            bunifuCards3.Controls.Add(pictureBox1);
-            bunifuCards3.IndicatorColor = Color.Transparent;
-            bunifuCards3.LeftSahddow = false;
-            bunifuCards3.LeftShadow = false;
-            bunifuCards3.Location = new Point(512, 101);
-            bunifuCards3.Name = "bunifuCards3";
-            bunifuCards3.RightSahddow = true;
-            bunifuCards3.RightShadow = true;
-            bunifuCards3.ShadowDepth = 20;
-            bunifuCards3.Size = new Size(200, 250);
-            bunifuCards3.TabIndex = 1;
+            bunifuCards5.BackColor = Color.FromArgb(102, 0, 39);
+            bunifuCards5.BorderRadius = 20;
+            bunifuCards5.BottomSahddow = true;
+            bunifuCards5.BottomShadow = true;
+            bunifuCards5.color = Color.Transparent;
+            bunifuCards5.Controls.Add(label9);
+            bunifuCards5.Controls.Add(label8);
+            bunifuCards5.Controls.Add(label7);
+            bunifuCards5.Controls.Add(label6);
+            bunifuCards5.IndicatorColor = Color.Transparent;
+            bunifuCards5.LeftSahddow = false;
+            bunifuCards5.LeftShadow = false;
+            bunifuCards5.Location = new Point(12, 569);
+            bunifuCards5.Name = "bunifuCards5";
+            bunifuCards5.RightSahddow = true;
+            bunifuCards5.RightShadow = true;
+            bunifuCards5.ShadowDepth = 20;
+            bunifuCards5.Size = new Size(535, 118);
+            bunifuCards5.TabIndex = 2;
             // 
-            // pictureBox1
+            // label9
             // 
-            pictureBox1.Image = Properties.Resources.restaurant_3;
-            pictureBox1.Location = new Point(0, -3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 250);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(13, 84);
+            label9.Name = "label9";
+            label9.Size = new Size(328, 17);
+            label9.TabIndex = 0;
+            label9.Text = "A: Số 1. Phường 1, Quận 1, Thành phố Hồ Chí Minh";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(244, 57);
+            label8.Name = "label8";
+            label8.Size = new Size(200, 17);
+            label8.TabIndex = 0;
+            label8.Text = "E: Trung@hiamtrung102.online";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(13, 57);
+            label7.Name = "label7";
+            label7.Size = new Size(213, 17);
+            label7.TabIndex = 0;
+            label7.Text = "T: 0853-0403-79 - (028) 1234-0001";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(13, 11);
+            label6.Name = "label6";
+            label6.Size = new Size(144, 32);
+            label6.TabIndex = 0;
+            label6.Text = "Restaurant ";
+            // 
+            // bunifuCards2
+            // 
+            bunifuCards2.BackColor = Color.White;
+            bunifuCards2.BackgroundImage = Properties.Resources.restaurant_4;
+            bunifuCards2.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuCards2.BorderRadius = 20;
+            bunifuCards2.BottomSahddow = true;
+            bunifuCards2.BottomShadow = true;
+            bunifuCards2.color = Color.Transparent;
+            bunifuCards2.Cursor = Cursors.Hand;
+            bunifuCards2.IndicatorColor = Color.Transparent;
+            bunifuCards2.LeftSahddow = false;
+            bunifuCards2.LeftShadow = false;
+            bunifuCards2.Location = new Point(695, 101);
+            bunifuCards2.Name = "bunifuCards2";
+            bunifuCards2.RightSahddow = true;
+            bunifuCards2.RightShadow = true;
+            bunifuCards2.ShadowDepth = 20;
+            bunifuCards2.Size = new Size(200, 250);
+            bunifuCards2.TabIndex = 1;
+            bunifuCards2.Click += card_4_Click;
+            // 
+            // card_3
+            // 
+            card_3.BackColor = Color.White;
+            card_3.BackgroundImage = Properties.Resources.restaurant_3;
+            card_3.BackgroundImageLayout = ImageLayout.Stretch;
+            card_3.BorderRadius = 20;
+            card_3.BottomSahddow = true;
+            card_3.BottomShadow = true;
+            card_3.color = Color.Transparent;
+            card_3.Cursor = Cursors.Hand;
+            card_3.IndicatorColor = Color.Transparent;
+            card_3.LeftSahddow = false;
+            card_3.LeftShadow = false;
+            card_3.Location = new Point(473, 101);
+            card_3.Name = "card_3";
+            card_3.RightSahddow = true;
+            card_3.RightShadow = true;
+            card_3.ShadowDepth = 20;
+            card_3.Size = new Size(200, 250);
+            card_3.TabIndex = 1;
+            card_3.Click += card_3_Click;
+            // 
+            // card_2
+            // 
+            card_2.BackColor = Color.White;
+            card_2.BackgroundImage = Properties.Resources.restaurant_2;
+            card_2.BackgroundImageLayout = ImageLayout.Stretch;
+            card_2.BorderRadius = 20;
+            card_2.BottomSahddow = true;
+            card_2.BottomShadow = true;
+            card_2.color = Color.Transparent;
+            card_2.Cursor = Cursors.Hand;
+            card_2.IndicatorColor = Color.Transparent;
+            card_2.LeftSahddow = false;
+            card_2.LeftShadow = false;
+            card_2.Location = new Point(246, 100);
+            card_2.Name = "card_2";
+            card_2.RightSahddow = true;
+            card_2.RightShadow = true;
+            card_2.ShadowDepth = 20;
+            card_2.Size = new Size(200, 250);
+            card_2.TabIndex = 1;
+            card_2.Click += card_2_Click;
+            // 
+            // bunifuCards1
+            // 
+            bunifuCards1.BackColor = Color.White;
+            bunifuCards1.BackgroundImage = Properties.Resources.restaurant_1;
+            bunifuCards1.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuCards1.BorderRadius = 20;
+            bunifuCards1.BottomSahddow = true;
+            bunifuCards1.BottomShadow = true;
+            bunifuCards1.color = Color.Transparent;
+            bunifuCards1.Controls.Add(card_1);
+            bunifuCards1.IndicatorColor = Color.Transparent;
+            bunifuCards1.LeftSahddow = false;
+            bunifuCards1.LeftShadow = false;
+            bunifuCards1.Location = new Point(12, 100);
+            bunifuCards1.Name = "bunifuCards1";
+            bunifuCards1.RightSahddow = true;
+            bunifuCards1.RightShadow = true;
+            bunifuCards1.ShadowDepth = 20;
+            bunifuCards1.Size = new Size(200, 250);
+            bunifuCards1.TabIndex = 1;
+            // 
+            // card_1
+            // 
+            card_1.Cursor = Cursors.Hand;
+            card_1.Image = Properties.Resources.restaurant_1;
+            card_1.Location = new Point(0, 0);
+            card_1.Name = "card_1";
+            card_1.Size = new Size(200, 250);
+            card_1.SizeMode = PictureBoxSizeMode.StretchImage;
+            card_1.TabIndex = 1;
+            card_1.TabStop = false;
+            card_1.Click += card_1_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(695, 78);
+            label5.Name = "label5";
+            label5.Size = new Size(136, 20);
+            label5.TabIndex = 0;
+            label5.Text = "Tiệc trưa chủ nhật";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(473, 78);
+            label4.Name = "label4";
+            label4.Size = new Size(117, 20);
+            label4.TabIndex = 0;
+            label4.Text = "Rooftop Dining";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(246, 78);
+            label3.Name = "label3";
+            label3.Size = new Size(184, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Red Chilli Seafood Buffet";
+            // 
+            // lb_RiverviewDining
+            // 
+            lb_RiverviewDining.AutoSize = true;
+            lb_RiverviewDining.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_RiverviewDining.ForeColor = Color.Black;
+            lb_RiverviewDining.Location = new Point(12, 78);
+            lb_RiverviewDining.Name = "lb_RiverviewDining";
+            lb_RiverviewDining.Size = new Size(128, 20);
+            lb_RiverviewDining.TabIndex = 0;
+            lb_RiverviewDining.Text = "Riverview Dining";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Ẩm Thực";
             // 
             // frmNhaHang
             // 
@@ -535,20 +641,17 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmNhaHang";
             Text = "frmNhaHang";
+            Load += frmNhaHang_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            bunifuCards5.ResumeLayout(false);
-            bunifuCards5.PerformLayout();
-            bunifuCards4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            bunifuCards2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            bunifuCards1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            bunifuCards6.ResumeLayout(false);
+            bunifuCards6.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            bunifuCards3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            bunifuCards5.ResumeLayout(false);
+            bunifuCards5.PerformLayout();
+            bunifuCards1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)card_1).EndInit();
             ResumeLayout(false);
         }
 
@@ -556,10 +659,10 @@
 
         private Panel panel1;
         private Label label1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private Bunifu.Framework.UI.BunifuCards card_2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Label label3;
-        private Label label2;
+        private Label lb_RiverviewDining;
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
         private Label label7;
         private Label label6;
@@ -569,8 +672,7 @@
         private Label label9;
         private Label label8;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private PictureBox card_1;
         private GroupBox groupBox1;
         private Label label10;
         private Krypton.Toolkit.KryptonTextBox txtHoTen;
@@ -586,7 +688,17 @@
         private Label label15;
         private Label label16;
         private Krypton.Toolkit.KryptonTextBox txtMaGiamGia;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
+        private Bunifu.Framework.UI.BunifuCards card_3;
         private PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards6;
+        private Bunifu.Framework.UI.BunifuCards cardd;
+        private Label lbTen;
+        private Label lbMoTa2;
+        private Label lbMoTa;
+        private Label lbThoiGian;
+        private Label lbGioiThieu;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private Label lbMoTa3;
+        private Label lbThoiGian2;
     }
 }

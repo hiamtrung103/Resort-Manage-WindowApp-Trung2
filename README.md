@@ -4,10 +4,10 @@ Chào bạn! Tôi là [**Trung** [hiamtrung102], người sáng tạo đằng sa
 
 Hiamtrung102 © 2023
 
-# Introduction / Giới thiệu </h3>
+# Introduction / Giới thiệu
 Welcome to the Resort Management System! This system is a modern platform designed to manage and optimize the operations of resorts, providing a convenient and flexible online booking experience for customers. The system is built with the main goal of offering a comprehensive solution, covering the management of accommodation information, booking, and customer feedback tracking.
 
-## Key Features: </h3>
+## Key Features:
 
 ### 1. Accommodation Management
 The system helps manage detailed information about resorts, including location, images, and descriptions for each destination. Administrators can easily update information and images to vividly showcase each location to customers.

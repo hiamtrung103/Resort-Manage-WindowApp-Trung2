@@ -103,7 +103,7 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(784, 461);
             panelMain.TabIndex = 3;
-            panelMain.Click += btnDangNhap_click;
+            panelMain.Click += btnDangNhap_Click;
             // 
             // pic
             // 
@@ -370,7 +370,7 @@
             rjButton1.Text = "Đăng nhập";
             rjButton1.TextColor = Color.White;
             rjButton1.UseVisualStyleBackColor = false;
-            rjButton1.Click += btnDangNhap_click;
+            rjButton1.Click += btnDangNhap_Click;
             // 
             // rjButton2
             // 

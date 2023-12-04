@@ -52,8 +52,8 @@
             groupBox2 = new GroupBox();
             kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
             groupBox1 = new GroupBox();
+            txtNamSinh = new ComboBox();
             txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
-            txtNamSinh = new Krypton.Toolkit.KryptonComboBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             lbEmail = new Krypton.Toolkit.KryptonLabel();
             txtGiamGia = new Krypton.Toolkit.KryptonTextBox();
@@ -64,7 +64,6 @@
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtNamSinh).BeginInit();
             SuspendLayout();
             // 
             // txtTenTaiKhoan
@@ -316,8 +315,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtGioiTinh);
             groupBox1.Controls.Add(txtNamSinh);
+            groupBox1.Controls.Add(txtGioiTinh);
             groupBox1.Controls.Add(txtDienThoai);
             groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(txtTenTaiKhoan);
@@ -341,6 +340,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Chỉnh sửa";
             // 
+            // txtNamSinh
+            // 
+            txtNamSinh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNamSinh.FormattingEnabled = true;
+            txtNamSinh.Items.AddRange(new object[] { "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980" });
+            txtNamSinh.Location = new Point(744, 82);
+            txtNamSinh.Name = "txtNamSinh";
+            txtNamSinh.Size = new Size(183, 29);
+            txtNamSinh.TabIndex = 21;
+            // 
             // txtGioiTinh
             // 
             txtGioiTinh.DropDownWidth = 175;
@@ -355,21 +364,6 @@
             txtGioiTinh.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             txtGioiTinh.TabIndex = 5;
             txtGioiTinh.Text = "Khác";
-            // 
-            // txtNamSinh
-            // 
-            txtNamSinh.DropDownWidth = 175;
-            txtNamSinh.IntegralHeight = false;
-            txtNamSinh.Items.AddRange(new object[] { "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970" });
-            txtNamSinh.Location = new Point(744, 82);
-            txtNamSinh.Name = "txtNamSinh";
-            txtNamSinh.Size = new Size(183, 29);
-            txtNamSinh.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtNamSinh.StateCommon.ComboBox.Border.Rounding = 7F;
-            txtNamSinh.StateCommon.ComboBox.Border.Width = 2;
-            txtNamSinh.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            txtNamSinh.TabIndex = 5;
-            txtNamSinh.Text = "2000";
             // 
             // txtEmail
             // 
@@ -465,7 +459,6 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtNamSinh).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -497,7 +490,7 @@
         private Krypton.Toolkit.KryptonLabel lbEmail;
         private Krypton.Toolkit.KryptonTextBox txtGiamGia;
         private Krypton.Toolkit.KryptonLabel txtXacNhanPass;
-        private Krypton.Toolkit.KryptonComboBox txtNamSinh;
         private Krypton.Toolkit.KryptonComboBox txtGioiTinh;
+        private ComboBox txtNamSinh;
     }
 }

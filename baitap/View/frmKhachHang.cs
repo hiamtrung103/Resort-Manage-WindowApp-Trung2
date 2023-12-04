@@ -86,10 +86,10 @@ namespace baitap.View
             {
                 string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                bool result = khachHangCtr.XoaDuLieuKhachHang(id);
-
-                if (result)
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá người dùng này?", "Xoá người dùng!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
+                    khachHangCtr.XoaDuLieuKhachHang(id);
                     MessageBox.Show("Xoá dữ liệu thành công.");
                     ClearTextBox();
                     dataGridView1.DataSource = khachHangCtr.LayDuLieuKhachHang();

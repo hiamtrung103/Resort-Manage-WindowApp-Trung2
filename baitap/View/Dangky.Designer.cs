@@ -32,10 +32,9 @@
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1 = new Panel();
             label8 = new Label();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             label7 = new Label();
             panelMain = new Panel();
-            txtGioiTinh = new ComboBox();
+            txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
             txtNgaySinh = new Krypton.Toolkit.KryptonDateTimePicker();
@@ -52,7 +51,6 @@
             label5 = new Label();
             label6 = new Label();
             pictureBox2 = new PictureBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             label12 = new Label();
             txtHoTen = new Krypton.Toolkit.KryptonTextBox();
             label4 = new Label();
@@ -71,8 +69,11 @@
             staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            rjButton2 = new CustomControls.RJControls.RJButton();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             panel1.SuspendLayout();
             panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -93,8 +94,8 @@
             // 
             panel1.BackgroundImage = Properties.Resources.sign_up1;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(rjButton1);
             panel1.Controls.Add(label8);
-            panel1.Controls.Add(kryptonButton2);
             panel1.Controls.Add(label7);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -114,18 +115,6 @@
             label8.TabIndex = 2;
             label8.Text = "Đăng Nhập";
             // 
-            // kryptonButton2
-            // 
-            kryptonButton2.Location = new Point(113, 252);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(100, 30);
-            kryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton2.StateCommon.Border.Rounding = 7F;
-            kryptonButton2.StateCommon.Border.Width = 1;
-            kryptonButton2.TabIndex = 5;
-            kryptonButton2.Values.Text = "Đăng Nhập";
-            kryptonButton2.Click += btnDangNhap_click;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -141,6 +130,7 @@
             // panelMain
             // 
             panelMain.BackColor = Color.WhiteSmoke;
+            panelMain.Controls.Add(rjButton2);
             panelMain.Controls.Add(txtGioiTinh);
             panelMain.Controls.Add(txtEmail);
             panelMain.Controls.Add(txtDiaChi);
@@ -158,7 +148,6 @@
             panelMain.Controls.Add(label5);
             panelMain.Controls.Add(label6);
             panelMain.Controls.Add(pictureBox2);
-            panelMain.Controls.Add(kryptonButton1);
             panelMain.Controls.Add(label12);
             panelMain.Controls.Add(txtHoTen);
             panelMain.Controls.Add(label4);
@@ -177,18 +166,27 @@
             // 
             // txtGioiTinh
             // 
-            txtGioiTinh.FormattingEnabled = true;
+            txtGioiTinh.DropDownWidth = 191;
+            txtGioiTinh.IntegralHeight = false;
             txtGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
             txtGioiTinh.Location = new Point(586, 294);
             txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Size = new Size(182, 23);
+            txtGioiTinh.Size = new Size(197, 27);
+            txtGioiTinh.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtGioiTinh.StateCommon.ComboBox.Border.Rounding = 5F;
+            txtGioiTinh.StateCommon.ComboBox.Border.Width = 2;
+            txtGioiTinh.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            txtGioiTinh.StateNormal.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtGioiTinh.StateNormal.ComboBox.Border.Rounding = 5F;
+            txtGioiTinh.StateNormal.ComboBox.Border.Width = 2;
+            txtGioiTinh.StateNormal.ComboBox.Content.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtGioiTinh.TabIndex = 12;
             // 
             // txtEmail
             // 
             txtEmail.Location = new Point(369, 188);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(200, 29);
+            txtEmail.Size = new Size(203, 29);
             txtEmail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtEmail.StateCommon.Border.Rounding = 5F;
             txtEmail.StateCommon.Border.Width = 2;
@@ -206,13 +204,14 @@
             // 
             // txtNgaySinh
             // 
-            txtNgaySinh.CustomFormat = "yyyy";
+            txtNgaySinh.CustomFormat = "dddd, dd-MM- yyyy";
             txtNgaySinh.Format = DateTimePickerFormat.Custom;
-            txtNgaySinh.Location = new Point(370, 294);
+            txtNgaySinh.Location = new Point(368, 294);
             txtNgaySinh.Name = "txtNgaySinh";
-            txtNgaySinh.Size = new Size(199, 31);
+            txtNgaySinh.Size = new Size(201, 27);
             txtNgaySinh.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtNgaySinh.StateCommon.Border.Rounding = 16F;
+            txtNgaySinh.StateCommon.Border.Rounding = 5F;
+            txtNgaySinh.StateCommon.Border.Width = 2;
             txtNgaySinh.TabIndex = 8;
             // 
             // pictureBox7
@@ -359,18 +358,6 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // kryptonButton1
-            // 
-            kryptonButton1.Location = new Point(543, 392);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(100, 30);
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.Rounding = 7F;
-            kryptonButton1.StateCommon.Border.Width = 1;
-            kryptonButton1.TabIndex = 5;
-            kryptonButton1.Values.Text = "Đăng Ký";
-            kryptonButton1.Click += btnDangKy_click;
-            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -449,9 +436,8 @@
             // 
             // txtDienThoai
             // 
-            txtDienThoai.Location = new Point(582, 188);
+            txtDienThoai.Location = new Point(581, 188);
             txtDienThoai.Name = "txtDienThoai";
-            txtDienThoai.PasswordChar = '●';
             txtDienThoai.Size = new Size(206, 31);
             txtDienThoai.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtDienThoai.StateCommon.Border.Rounding = 7F;
@@ -473,7 +459,7 @@
             txtPassword.Location = new Point(368, 240);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '●';
-            txtPassword.Size = new Size(203, 31);
+            txtPassword.Size = new Size(204, 31);
             txtPassword.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtPassword.StateCommon.Border.Rounding = 7F;
             txtPassword.StateCommon.Border.Width = 2;
@@ -530,6 +516,46 @@
             thoátToolStripMenuItem.Size = new Size(205, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // rjButton2
+            // 
+            rjButton2.BackColor = Color.Crimson;
+            rjButton2.BackgroundColor = Color.Crimson;
+            rjButton2.BorderColor = Color.PaleVioletRed;
+            rjButton2.BorderRadius = 5;
+            rjButton2.BorderSize = 0;
+            rjButton2.FlatAppearance.BorderSize = 0;
+            rjButton2.FlatStyle = FlatStyle.Flat;
+            rjButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton2.ForeColor = Color.White;
+            rjButton2.Location = new Point(538, 382);
+            rjButton2.Name = "rjButton2";
+            rjButton2.Size = new Size(100, 40);
+            rjButton2.TabIndex = 13;
+            rjButton2.Text = "Đăng ký";
+            rjButton2.TextColor = Color.White;
+            rjButton2.UseVisualStyleBackColor = false;
+            rjButton2.Click += btnDangKy_click;
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.DeepSkyBlue;
+            rjButton1.BackgroundColor = Color.DeepSkyBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(123, 242);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(100, 40);
+            rjButton1.TabIndex = 8;
+            rjButton1.Text = "Đăng nhập";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnDangNhap_click;
+            // 
             // Dangky
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -545,6 +571,7 @@
             panel1.PerformLayout();
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txtGioiTinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -562,7 +589,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Panel panel1;
         private Label label8;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Label label7;
         private Panel panelMain;
         private PictureBox pictureBox7;
@@ -571,7 +597,6 @@
         private Label label1;
         private Label label6;
         private PictureBox pictureBox2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Label label4;
         private Krypton.Toolkit.KryptonTextBox txtUserName;
         private PictureBox pictureBox3;
@@ -590,7 +615,6 @@
         private ToolStripMenuItem chếĐộTốiToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Krypton.Toolkit.KryptonDateTimePicker txtNgaySinh;
-        private ComboBox txtGioiTinh;
         private Krypton.Toolkit.KryptonTextBox txtDiaChi;
         private Krypton.Toolkit.KryptonTextBox txtEmail;
         private Label label3;
@@ -601,5 +625,8 @@
         private Krypton.Toolkit.KryptonTextBox txtDienThoai;
         private Label label12;
         private Krypton.Toolkit.KryptonTextBox txtHoTen;
+        private Krypton.Toolkit.KryptonComboBox txtGioiTinh;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }

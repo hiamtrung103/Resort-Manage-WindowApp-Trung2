@@ -35,4 +35,9 @@ namespace baitap.Object
             MaGiamGia = maGiamGia;
         }
     }
+    public static class Session
+    {
+        public static string TenTaiKhoan { get; set; }
+    }
+
 }

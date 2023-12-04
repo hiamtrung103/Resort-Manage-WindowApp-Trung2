@@ -1,4 +1,5 @@
-﻿using System;
+﻿using baitap.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,7 @@ namespace baitap.View
                 label6.ForeColor = Color.White;
                 label7.ForeColor = Color.White;
                 label8.ForeColor = Color.White;
-                panel1.BackgroundImage = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\5166950.jpg");
+                panel1.BackgroundImage = Properties.Resources._5166950;
 
             }
             else
@@ -50,11 +51,11 @@ namespace baitap.View
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                panel1.BackgroundImage = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\5153829.jpg");
+                panel1.BackgroundImage= Properties.Resources._5153829;
             }
         }
-
-        private void btnDangNhap_click(object sender, EventArgs e)
+        public static string TenTaiKhoanDangNhap { get; private set; }
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
             {
@@ -63,23 +64,34 @@ namespace baitap.View
                     conn.Open();
                     string tk = txtUserName.Text;
                     string mk = txtPassword.Text;
-                    string sql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tk AND Password=@mk";
+                    string selectSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tk AND Password=@mk";
 
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlCommand selectCmd = new SqlCommand(selectSql, conn))
                     {
-                        cmd.Parameters.AddWithValue("@tk", tk);
-                        cmd.Parameters.AddWithValue("@mk", mk);
+                        selectCmd.Parameters.AddWithValue("@tk", tk);
+                        selectCmd.Parameters.AddWithValue("@mk", mk);
 
-                        using (SqlDataAdapter dta = new SqlDataAdapter(cmd))
+                        using (SqlDataAdapter dta = new SqlDataAdapter(selectCmd))
                         {
                             DataTable dataTable = new DataTable();
                             dta.Fill(dataTable);
 
                             if (dataTable.Rows.Count > 0)
                             {
+                                Session.TenTaiKhoan = tk;
+                                string tenTaiKhoan = dataTable.Rows[0]["TenTaiKhoan"].ToString();
+
+                                string insertSql = "INSERT INTO ThongTinDangNhap (TenTaiKhoan, ThoiGianDangNhap) VALUES (@tenTaiKhoan, GETDATE())";
+                                using (SqlCommand insertCmd = new SqlCommand(insertSql, conn))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+                                    insertCmd.ExecuteNonQuery();
+                                }
+
                                 this.Hide();
                                 loadingUI UI = new loadingUI();
                                 UI.Show();
+
                                 MessageBox.Show("Đăng nhập thành công");
                             }
                             else if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))

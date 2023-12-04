@@ -69,6 +69,18 @@ namespace baitap.View
                 Application.Exit();
             }
         }
+        private void ClearTextBox()
+        {
+            txtUserName.Text = "";
+            txtPassword.Text = "";
+            txtPassword2.Text = "";
+            txtHoTen.Text = "";
+            txtNgaySinh.Text = "";
+            txtGioiTinh.Text = "";
+            txtDiaChi.Text = "";
+            txtEmail.Text = "";
+            txtDienThoai.Text = "";
+        }
 
         private void btnDangKy_click(object sender, EventArgs e)
         {
@@ -121,7 +133,7 @@ namespace baitap.View
                     }
 
                     MessageBox.Show("Đăng ký thành công");
-                    frmNV.ClearTextBox();
+                    ClearTextBox();
                 }
                 catch (Exception ex)
                 {

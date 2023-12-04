@@ -56,7 +56,7 @@
             lbBaoCao = new Label();
             lbThucDon = new Label();
             lbGiaoDich = new Label();
-            lbDieuKhien = new Label();
+            lbDatPhong = new Label();
             lbTrangChu = new Label();
             lbNhanVien = new Label();
             panelMain = new Panel();
@@ -312,7 +312,7 @@
             panelSidebar.Controls.Add(lbBaoCao);
             panelSidebar.Controls.Add(lbThucDon);
             panelSidebar.Controls.Add(lbGiaoDich);
-            panelSidebar.Controls.Add(lbDieuKhien);
+            panelSidebar.Controls.Add(lbDatPhong);
             panelSidebar.Controls.Add(lbTrangChu);
             panelSidebar.Controls.Add(lbNhanVien);
             panelSidebar.Dock = DockStyle.Left;
@@ -419,7 +419,7 @@
             lbThucDon.TabIndex = 0;
             lbThucDon.Text = "Thực đơn";
             lbThucDon.TextAlign = ContentAlignment.MiddleCenter;
-            lbThucDon.Click += KhachHangOpen;
+            lbThucDon.Click += NhaHangOpen;
             lbThucDon.MouseEnter += DoiMauLabel_MouseEnter;
             lbThucDon.MouseLeave += DoiMauLabel_MouseLeave;
             // 
@@ -434,22 +434,24 @@
             lbGiaoDich.TabIndex = 0;
             lbGiaoDich.Text = "Giao dịch";
             lbGiaoDich.TextAlign = ContentAlignment.MiddleCenter;
+            lbGiaoDich.Click += KhachHangOpen;
             lbGiaoDich.MouseEnter += DoiMauLabel_MouseEnter;
             lbGiaoDich.MouseLeave += DoiMauLabel_MouseLeave;
             // 
-            // lbDieuKhien
+            // lbDatPhong
             // 
-            lbDieuKhien.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDieuKhien.Image = baitap.Properties.Resources.dashboard_24;
-            lbDieuKhien.ImageAlign = ContentAlignment.MiddleLeft;
-            lbDieuKhien.Location = new Point(9, 133);
-            lbDieuKhien.Name = "lbDieuKhien";
-            lbDieuKhien.Size = new Size(211, 32);
-            lbDieuKhien.TabIndex = 0;
-            lbDieuKhien.Text = "Điều khiển";
-            lbDieuKhien.TextAlign = ContentAlignment.MiddleCenter;
-            lbDieuKhien.MouseEnter += DoiMauLabel_MouseEnter;
-            lbDieuKhien.MouseLeave += DoiMauLabel_MouseLeave;
+            lbDatPhong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbDatPhong.Image = baitap.Properties.Resources.booking_24;
+            lbDatPhong.ImageAlign = ContentAlignment.MiddleLeft;
+            lbDatPhong.Location = new Point(9, 133);
+            lbDatPhong.Name = "lbDatPhong";
+            lbDatPhong.Size = new Size(211, 32);
+            lbDatPhong.TabIndex = 0;
+            lbDatPhong.Text = "Đặt Phòng";
+            lbDatPhong.TextAlign = ContentAlignment.MiddleCenter;
+            lbDatPhong.Click += ThueResortOpen;
+            lbDatPhong.MouseEnter += DoiMauLabel_MouseEnter;
+            lbDatPhong.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbTrangChu
             // 
@@ -541,7 +543,7 @@
         private Label lbBaoCao;
         private Label lbThucDon;
         private Label lbGiaoDich;
-        private Label lbDieuKhien;
+        private Label lbDatPhong;
         private Label lbTrangChu;
         private Label lbNhanVien;
         private Panel panelMain;

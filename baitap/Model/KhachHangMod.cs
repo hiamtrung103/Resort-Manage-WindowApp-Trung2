@@ -38,8 +38,40 @@ namespace baitap.Model
             return dt;
         }
 
+        public bool KiemTraTonTai(string tenTaiKhoan, string email)
+        {
+            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM NhanVien WHERE TenTaiKhoan = @TenTaiKhoan OR Email = @Email", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+                cmd.Parameters.AddWithValue("@Email", email);
+
+                try
+                {
+                    conn.MoKetNoi();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc kiểm tra tài khoản/email", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
+
+            return false;
+        }
+
         public bool ThemDuLieuKhachHang(KhachHangObj khObj)
         {
+            if (KiemTraTonTai(khObj.TenTaiKhoan, khObj.Email))
+            {
+                MessageBox.Show("Tài khoản hoặc email đã tồn tại. Vui lòng chọn tài khoản hoặc email khác.");
+                return false;
+            }
+
             using (SqlCommand cmd = new SqlCommand("INSERT INTO KhachHang (HoTen, GioiTinh, NamSinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password, MaGiamGia) " +
                                                   "VALUES (@HoTen, @GioiTinh, @NamSinh, @DiaChi, @DienThoai, @TenTaiKhoan, @Email, @Password, @MaGiamGia)", conn.KetNoi))
             {

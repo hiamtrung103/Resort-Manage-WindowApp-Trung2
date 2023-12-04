@@ -63,6 +63,16 @@ namespace baitap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _505930882 {
+            get {
+                object obj = ResourceManager.GetObject("505930882", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5153829 {
             get {
                 object obj = ResourceManager.GetObject("5153829", resourceCulture);
@@ -76,6 +86,16 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap _5166950 {
             get {
                 object obj = ResourceManager.GetObject("5166950", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap booking_24 {
+            get {
+                object obj = ResourceManager.GetObject("booking-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,26 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap home_24 {
             get {
                 object obj = ResourceManager.GetObject("home-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star {
+            get {
+                object obj = ResourceManager.GetObject("icons8-star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-star-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +246,46 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap report_24 {
             get {
                 object obj = ResourceManager.GetObject("report-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurant_1 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurant_2 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurant_3 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurant_4 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant-4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

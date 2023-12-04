@@ -35,7 +35,7 @@ namespace baitap.View
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 txtTenNV.Text = row.Cells["ho_ten"].Value.ToString();
-                txtNamSinh.Text = row.Cells["gioi_tinh"].Value.ToString();
+                txtGioiTinh.Text = row.Cells["gioi_tinh"].Value.ToString();
                 txtNamSinh.Text = row.Cells["nam_sinh"].Value.ToString();
                 txtDiaChi.Text = row.Cells["dia_chi"].Value.ToString();
                 txtDienThoai.Text = row.Cells["sdt"].Value.ToString();
@@ -49,7 +49,7 @@ namespace baitap.View
         public void btnThem()
         {
             if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
-                string.IsNullOrWhiteSpace(txtNamSinh.Text) ||
+                string.IsNullOrWhiteSpace(txtGioiTinh.Text) ||
                 string.IsNullOrWhiteSpace(txtNamSinh.Text) ||
                 string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
                 string.IsNullOrWhiteSpace(txtDienThoai.Text) ||
@@ -64,7 +64,7 @@ namespace baitap.View
 
             NhanvienObj nvObj = new NhanvienObj();
             nvObj.TenNhanVien = txtTenNV.Text;
-            nvObj.GioiTinh = txtNamSinh.Text;
+            nvObj.GioiTinh = txtGioiTinh.Text;
             nvObj.NamSinh = txtNamSinh.Text;
             nvObj.DiaChi = txtDiaChi.Text;
             nvObj.DienThoai = txtDienThoai.Text;
@@ -92,10 +92,11 @@ namespace baitap.View
             {
                 string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                bool result = nhanVienMod.XoaDuLieuNhanVien(id);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá người dùng này?", "Xoá người dùng!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result)
+                if (result == DialogResult.Yes)
                 {
+                    nhanVienMod.XoaDuLieuNhanVien(id);
                     MessageBox.Show("Xoá dữ liệu thành công.");
                     ClearTextBox();
                     dataGridView1.DataSource = nhanVienMod.LayDuLieuNhanVien();
@@ -117,7 +118,7 @@ namespace baitap.View
             {
                 NhanvienObj nvObj = new NhanvienObj();
                 nvObj.TenNhanVien = txtTenNV.Text;
-                nvObj.GioiTinh = txtNamSinh.Text;
+                nvObj.GioiTinh = txtGioiTinh.Text;
                 nvObj.NamSinh = txtNamSinh.Text;
                 nvObj.DiaChi = txtDiaChi.Text;
                 nvObj.DienThoai = txtDienThoai.Text;
@@ -141,7 +142,7 @@ namespace baitap.View
         {
             txtTenNV.Text = "";
             txtMatkhau.Text = "";
-            txtNamSinh.Text = "";
+            txtGioiTinh.Text = "";
             txtNamSinh.Text = "";
             txtDiaChi.Text = "";
             txtDienThoai.Text = "";

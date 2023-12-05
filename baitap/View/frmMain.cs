@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using baitap.Model;
+using baitap.Object;
 using baitap.View;
 using Bunifu.Framework.UI;
 using Krypton.Toolkit;
@@ -17,6 +20,7 @@ namespace QL_QuanCafe_Trung_Hai.View
     public partial class frmMain : KryptonForm
     {
         private Form frmConHientai;
+        private ConnectToSQL conn = new ConnectToSQL();
         public frmMain()
         {
             InitializeComponent();
@@ -42,15 +46,6 @@ namespace QL_QuanCafe_Trung_Hai.View
             }
         }
 
-        private void DoiMauLabel3_MouseEnter(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.LightBlue;
-            }
-        }
-
         private void DoiMauLabel_MouseLeave(object sender, EventArgs e)
         {
             Label label = sender as Label;
@@ -61,60 +56,7 @@ namespace QL_QuanCafe_Trung_Hai.View
             }
         }
 
-        private void DoiMauLabel2_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.Black;
-            }
-        }
-
-        private void Doimaulabel(params Label[] labels)
-        {
-            foreach (Label label in labels)
-            {
-                if (label != null)
-                {
-                    label.ForeColor = Color.White;
-                }
-            }
-        }
-
-        private void Doimaulabel2(params Label[] labels)
-        {
-            foreach (Label label in labels)
-            {
-                if (label != null)
-                {
-                    label.ForeColor = Color.Black;
-                }
-            }
-        }
-
         private bool anhClick = false;
-
-        private void CheDoToi_Click(object sender, EventArgs e)
-        {
-            if (!anhClick)
-            {
-                panel1.BackColor = Color.FromArgb(51, 51, 51);
-                panelSidebar.BackColor = Color.FromArgb(51, 51, 51);
-                Doimaulabel(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbDanhGia, lbCaiDat, lbThoat);
-                pictureBox5.Image = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\Day.gif");
-
-            }
-            else
-            {
-                panel1.BackColor = SystemColors.Control;
-                panelSidebar.BackColor = Color.FromArgb(1, 126, 245);
-                Doimaulabel2(label1, label2, lbTrangChu, lbDatPhong, lbThucDon, lbNhanVien, lbGiaoDich, lbDanhGia, lbCaiDat, lbThoat);
-                pictureBox5.Image = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\dark.gif");
-
-            }
-
-            anhClick = !anhClick;
-        }
 
         private void btnToggleSidebar_Click(object sender, EventArgs e)
         {
@@ -127,20 +69,6 @@ namespace QL_QuanCafe_Trung_Hai.View
             else
             {
                 panelSidebar.Width = minSize;
-            }
-        }
-
-        private void btnToggleSidebar2_Click(object sender, EventArgs e)
-        {
-            int minSize = 10;
-
-            if (panel2.Height == minSize)
-            {
-                panel2.Height = 100;
-            }
-            else
-            {
-                panel2.Height = minSize;
             }
         }
 
@@ -187,6 +115,11 @@ namespace QL_QuanCafe_Trung_Hai.View
             MofrmCon(new frmNhaHang());
         }
 
+        private void NhaHang2Open(object sender, EventArgs e)
+        {
+            MofrmCon(new frmCafe());
+        }
+
         private void DanhGiaOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmDanhGia());
@@ -220,5 +153,30 @@ namespace QL_QuanCafe_Trung_Hai.View
             }
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
+            {
+                string tenTaiKhoan = Session.TenTaiKhoan;
+
+                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
+                {
+                    conn.MoKetNoi();
+                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+
+                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
+                    {
+                        DataTable khachHangDataTable = new DataTable();
+                        khachHangDataAdapter.Fill(khachHangDataTable);
+
+                        if (khachHangDataTable.Rows.Count > 0)
+                        {
+                            label2.Text = khachHangDataTable.Rows[0]["HoTen"].ToString();
+                        }
+                    }
+                }
+            }
+        }
     }
 }

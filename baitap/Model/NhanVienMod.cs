@@ -37,7 +37,7 @@ namespace baitap.Model
 
         public bool KiemTraTonTai(string tenTaiKhoan, string email)
         {
-            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM NhanVien WHERE ten_tai_khoan = @TenTaiKhoan OR email = @Email", conn.KetNoi))
+            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM NhanVien WHERE TenTaiKhoan = @TenTaiKhoan OR email = @Email", conn.KetNoi))
             {
                 cmd.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
                 cmd.Parameters.AddWithValue("@Email", email);
@@ -68,7 +68,7 @@ namespace baitap.Model
                 MessageBox.Show("Tài khoản hoặc email đã tồn tại. Vui lòng chọn tài khoản hoặc email khác.");
                 return false;
             }
-            using (SqlCommand cmd = new SqlCommand("INSERT INTO NhanVien (ho_ten, gioi_tinh, nam_sinh, dia_chi, sdt, mat_khau, ten_tai_khoan, quyen_han, email) " +
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO NhanVien (HoTen, GioiTinh, NamSinh, DiaChi, DienThoai, MatKhau, TenTaiKhoan, quyenhan, email) " +
                                                   "VALUES (@TenNhanVien, @GioiTinh, @NamSinh, @DiaChi, @DienThoai, @MatKhau, @TenTaiKhoan, @QuyenHan, @Email)", conn.KetNoi))
             {
                 DuLieuNhanVienParameter(cmd, nvobj);
@@ -94,8 +94,8 @@ namespace baitap.Model
 
         public void CapNhatDuLieuNhanVien(NhanvienObj nvobj)
         {
-            using (SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET ho_ten = @TenNhanVien, gioi_tinh = @GioiTinh, nam_sinh = @NamSinh, " +
-                                                  "dia_chi = @DiaChi, sdt = @DienThoai, mat_khau = @MatKhau, quyen_han = @QuyenHan, email = @Email WHERE ID = @ID", conn.KetNoi))
+            using (SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET HoTen = @TenNhanVien, GioiTinh = @GioiTinh, NamSinh = @NamSinh, " +
+                                                  "DiaChi = @DiaChi, DienThoai = @DienThoai, MatKhau = @MatKhau, QuyenHan = @QuyenHan, email = @Email WHERE ID = @ID", conn.KetNoi))
             {
                 DuLieuNhanVienParameter(cmd, nvobj);
                 cmd.Parameters.AddWithValue("@ID", nvobj.MaNhanVien);

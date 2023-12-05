@@ -1,6 +1,6 @@
-﻿namespace QL_QuanCafe_Trung_Hai.View
+﻿namespace baitap.View
 {
-    partial class frmMain
+    partial class frmMain2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain2));
             panel1 = new Panel();
             rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             label5 = new Label();
@@ -51,11 +50,11 @@
             pictureBox9 = new PictureBox();
             lbThoat = new Label();
             lbCaiDat = new Label();
-            lbDanhGia = new Label();
-            label7 = new Label();
-            lbThucDon = new Label();
-            lbDatPhong = new Label();
+            lbLuong = new Label();
             lbTrangChu = new Label();
+            label7 = new Label();
+            lbNhanVien = new Label();
+            kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             panelMain = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -68,34 +67,6 @@
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
-            // 
-            // kryptonCustomPaletteBase1
-            // 
-            kryptonCustomPaletteBase1.BaseFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonCustomPaletteBase1.BaseFontSize = 9F;
-            kryptonCustomPaletteBase1.BasePaletteType = Krypton.Toolkit.BasePaletteType.Custom;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormClose.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormClose.Image = baitap.Properties.Resources.red_16;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormMax.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormMax.Image = baitap.Properties.Resources.yellow_16;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormMin.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormMin.Image = baitap.Properties.Resources.green16;
-            kryptonCustomPaletteBase1.ButtonSpecs.FormRestore.Image = baitap.Properties.Resources.yellow_16;
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Rounding = 16F;
-            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Width = 1;
-            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonCustomPaletteBase1.ThemeName = "";
-            kryptonCustomPaletteBase1.UseKryptonFileDialogs = true;
             // 
             // panel1
             // 
@@ -119,7 +90,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1584, 71);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 2;
             // 
             // rjTextBox1
             // 
@@ -182,7 +153,6 @@
             label6.Size = new Size(104, 25);
             label6.TabIndex = 5;
             label6.Text = "Trang Chủ";
-            label6.Click += TrangChuOpen;
             // 
             // panel3
             // 
@@ -295,11 +265,10 @@
             panelSidebar.Controls.Add(pictureBox9);
             panelSidebar.Controls.Add(lbThoat);
             panelSidebar.Controls.Add(lbCaiDat);
-            panelSidebar.Controls.Add(lbDanhGia);
-            panelSidebar.Controls.Add(label7);
-            panelSidebar.Controls.Add(lbThucDon);
-            panelSidebar.Controls.Add(lbDatPhong);
+            panelSidebar.Controls.Add(lbLuong);
             panelSidebar.Controls.Add(lbTrangChu);
+            panelSidebar.Controls.Add(label7);
+            panelSidebar.Controls.Add(lbNhanVien);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.IndicatorColor = Color.Transparent;
             panelSidebar.LeftSahddow = false;
@@ -310,12 +279,12 @@
             panelSidebar.RightShadow = true;
             panelSidebar.ShadowDepth = 20;
             panelSidebar.Size = new Size(50, 690);
-            panelSidebar.TabIndex = 13;
+            panelSidebar.TabIndex = 14;
             // 
             // pictureBox9
             // 
             pictureBox9.Cursor = Cursors.Hand;
-            pictureBox9.Image = baitap.Properties.Resources.more_24;
+            pictureBox9.Image = Properties.Resources.more_24;
             pictureBox9.Location = new Point(12, 33);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(24, 24);
@@ -323,13 +292,11 @@
             pictureBox9.TabIndex = 1;
             pictureBox9.TabStop = false;
             pictureBox9.Click += btnToggleSidebar_Click;
-            pictureBox9.MouseEnter += DoiMauLabel_MouseEnter;
-            pictureBox9.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbThoat
             // 
             lbThoat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbThoat.Image = baitap.Properties.Resources.logout_24;
+            lbThoat.Image = Properties.Resources.logout_24;
             lbThoat.ImageAlign = ContentAlignment.MiddleLeft;
             lbThoat.Location = new Point(9, 632);
             lbThoat.Name = "lbThoat";
@@ -337,89 +304,42 @@
             lbThoat.TabIndex = 0;
             lbThoat.Text = "Đăng xuất";
             lbThoat.TextAlign = ContentAlignment.MiddleCenter;
-            lbThoat.Click += thoat_Click;
             lbThoat.MouseEnter += DoiMauLabel2_MouseEnter;
             lbThoat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbCaiDat
             // 
             lbCaiDat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbCaiDat.Image = baitap.Properties.Resources.settings_24;
+            lbCaiDat.Image = Properties.Resources.settings_24;
             lbCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbCaiDat.Location = new Point(9, 333);
+            lbCaiDat.Location = new Point(9, 283);
             lbCaiDat.Name = "lbCaiDat";
             lbCaiDat.Size = new Size(211, 32);
             lbCaiDat.TabIndex = 0;
             lbCaiDat.Text = "Cài đặt";
             lbCaiDat.TextAlign = ContentAlignment.MiddleCenter;
-            lbCaiDat.Click += SettingKhachHangOpen;
             lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
             lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
-            // lbDanhGia
+            // lbLuong
             // 
-            lbDanhGia.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDanhGia.Image = baitap.Properties.Resources.feedback_24;
-            lbDanhGia.ImageAlign = ContentAlignment.MiddleLeft;
-            lbDanhGia.Location = new Point(9, 283);
-            lbDanhGia.Name = "lbDanhGia";
-            lbDanhGia.Size = new Size(211, 32);
-            lbDanhGia.TabIndex = 0;
-            lbDanhGia.Text = "Báo cáo";
-            lbDanhGia.TextAlign = ContentAlignment.MiddleCenter;
-            lbDanhGia.Click += DanhGiaOpen;
-            lbDanhGia.MouseEnter += DoiMauLabel_MouseEnter;
-            lbDanhGia.MouseLeave += DoiMauLabel_MouseLeave;
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Image = baitap.Properties.Resources.cafe_24;
-            label7.ImageAlign = ContentAlignment.MiddleLeft;
-            label7.Location = new Point(9, 233);
-            label7.Name = "label7";
-            label7.Size = new Size(211, 32);
-            label7.TabIndex = 0;
-            label7.Text = "Cafe";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            label7.Click += NhaHang2Open;
-            label7.MouseEnter += DoiMauLabel_MouseEnter;
-            label7.MouseLeave += DoiMauLabel_MouseLeave;
-            // 
-            // lbThucDon
-            // 
-            lbThucDon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbThucDon.Image = baitap.Properties.Resources.restaurant_menu_24;
-            lbThucDon.ImageAlign = ContentAlignment.MiddleLeft;
-            lbThucDon.Location = new Point(9, 183);
-            lbThucDon.Name = "lbThucDon";
-            lbThucDon.Size = new Size(211, 32);
-            lbThucDon.TabIndex = 0;
-            lbThucDon.Text = "Thực đơn";
-            lbThucDon.TextAlign = ContentAlignment.MiddleCenter;
-            lbThucDon.Click += NhaHangOpen;
-            lbThucDon.MouseEnter += DoiMauLabel_MouseEnter;
-            lbThucDon.MouseLeave += DoiMauLabel_MouseLeave;
-            // 
-            // lbDatPhong
-            // 
-            lbDatPhong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDatPhong.Image = baitap.Properties.Resources.booking_24;
-            lbDatPhong.ImageAlign = ContentAlignment.MiddleLeft;
-            lbDatPhong.Location = new Point(9, 133);
-            lbDatPhong.Name = "lbDatPhong";
-            lbDatPhong.Size = new Size(211, 32);
-            lbDatPhong.TabIndex = 0;
-            lbDatPhong.Text = "Đặt Phòng";
-            lbDatPhong.TextAlign = ContentAlignment.MiddleCenter;
-            lbDatPhong.Click += ThueResortOpen;
-            lbDatPhong.MouseEnter += DoiMauLabel_MouseEnter;
-            lbDatPhong.MouseLeave += DoiMauLabel_MouseLeave;
+            lbLuong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbLuong.Image = Properties.Resources.transaction_24;
+            lbLuong.ImageAlign = ContentAlignment.MiddleLeft;
+            lbLuong.Location = new Point(9, 233);
+            lbLuong.Name = "lbLuong";
+            lbLuong.Size = new Size(211, 32);
+            lbLuong.TabIndex = 0;
+            lbLuong.Text = "Accountant";
+            lbLuong.TextAlign = ContentAlignment.MiddleCenter;
+            lbLuong.Click += KeToanOpen;
+            lbLuong.MouseEnter += DoiMauLabel_MouseEnter;
+            lbLuong.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbTrangChu
             // 
             lbTrangChu.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbTrangChu.Image = baitap.Properties.Resources.home_24;
+            lbTrangChu.Image = Properties.Resources.home_24;
             lbTrangChu.ImageAlign = ContentAlignment.MiddleLeft;
             lbTrangChu.Location = new Point(9, 83);
             lbTrangChu.Name = "lbTrangChu";
@@ -431,15 +351,73 @@
             lbTrangChu.MouseEnter += DoiMauLabel_MouseEnter;
             lbTrangChu.MouseLeave += DoiMauLabel_MouseLeave;
             // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Image = Properties.Resources.staff_24;
+            label7.ImageAlign = ContentAlignment.MiddleLeft;
+            label7.Location = new Point(9, 183);
+            label7.Name = "label7";
+            label7.Size = new Size(211, 32);
+            label7.TabIndex = 0;
+            label7.Text = "Nhân viên";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.Click += NhanVienOpen;
+            label7.MouseEnter += DoiMauLabel_MouseEnter;
+            label7.MouseLeave += DoiMauLabel_MouseLeave;
+            // 
+            // lbNhanVien
+            // 
+            lbNhanVien.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbNhanVien.Image = Properties.Resources.user_24;
+            lbNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
+            lbNhanVien.Location = new Point(9, 133);
+            lbNhanVien.Name = "lbNhanVien";
+            lbNhanVien.Size = new Size(211, 32);
+            lbNhanVien.TabIndex = 0;
+            lbNhanVien.Text = "Khách Hàng";
+            lbNhanVien.TextAlign = ContentAlignment.MiddleCenter;
+            lbNhanVien.Click += KhachHangOpen;
+            lbNhanVien.MouseEnter += DoiMauLabel_MouseEnter;
+            lbNhanVien.MouseLeave += DoiMauLabel_MouseLeave;
+            // 
+            // kryptonCustomPaletteBase1
+            // 
+            kryptonCustomPaletteBase1.BaseFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            kryptonCustomPaletteBase1.BaseFontSize = 9F;
+            kryptonCustomPaletteBase1.BasePaletteType = Krypton.Toolkit.BasePaletteType.Custom;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormClose.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormClose.Image = Properties.Resources.red_16;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormMax.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormMax.Image = Properties.Resources.yellow_16;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormMin.Edge = Krypton.Toolkit.PaletteRelativeEdgeAlign.Near;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormMin.Image = Properties.Resources.green16;
+            kryptonCustomPaletteBase1.ButtonSpecs.FormRestore.Image = Properties.Resources.yellow_16;
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Rounding = 16F;
+            kryptonCustomPaletteBase1.FormStyles.FormMain.StateCommon.Border.Width = 1;
+            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonCustomPaletteBase1.HeaderStyles.HeaderForm.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonCustomPaletteBase1.ThemeName = "";
+            kryptonCustomPaletteBase1.UseKryptonFileDialogs = true;
+            // 
             // panelMain
             // 
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(50, 71);
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1534, 690);
-            panelMain.TabIndex = 14;
+            panelMain.TabIndex = 16;
             // 
-            // frmMain
+            // frmMain2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -448,13 +426,13 @@
             Controls.Add(panelSidebar);
             Controls.Add(panel1);
             IsMdiContainer = true;
-            Name = "frmMain";
+            Name = "frmMain2";
             Palette = kryptonCustomPaletteBase1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmMain";
-            Load += frmMain_Load;
+            Text = "frmMain2";
+            Load += frmMain2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -471,32 +449,31 @@
 
         #endregion
 
-        private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
         private Panel panel1;
-        private Label label1;
         private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private Label label2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private Panel panel3;
-        private Bunifu.Framework.UI.BunifuCards panelSidebar;
-        private PictureBox pictureBox9;
-        private Label lbThoat;
-        private Label lbCaiDat;
-        private Label lbDanhGia;
-        private Label lbThucDon;
-        private Label lbDatPhong;
-        private Label lbTrangChu;
-        private Panel panelMain;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label6;
+        private Panel panel3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox1;
+        private Label label2;
+        private Label label1;
+        private Bunifu.Framework.UI.BunifuCards panelSidebar;
+        private PictureBox pictureBox9;
+        private Label lbThoat;
+        private Label lbCaiDat;
+        private Label lbLuong;
+        private Label lbTrangChu;
+        private Label lbNhanVien;
+        private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
         private Label label7;
+        private Panel panelMain;
     }
 }

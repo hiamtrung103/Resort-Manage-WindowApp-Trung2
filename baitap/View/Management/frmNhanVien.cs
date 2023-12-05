@@ -1,4 +1,5 @@
-﻿using baitap.Model;
+﻿using baitap.Control;
+using baitap.Model;
 using baitap.Object;
 using Krypton.Toolkit;
 using System;
@@ -16,7 +17,7 @@ namespace baitap.View
 {
     public partial class frmNhanVien : KryptonForm
     {
-        NhanVienMod nhanVienMod = new NhanVienMod();
+        NhanVienCtr nhanVienCtr = new NhanVienCtr();
 
         public frmNhanVien()
         {
@@ -25,7 +26,7 @@ namespace baitap.View
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = nhanVienMod.LayDuLieuNhanVien();
+            dataGridView1.DataSource = nhanVienCtr.LayDuLieuNhanVien();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -34,15 +35,15 @@ namespace baitap.View
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                txtTenNV.Text = row.Cells["ho_ten"].Value.ToString();
-                txtGioiTinh.Text = row.Cells["gioi_tinh"].Value.ToString();
-                txtNamSinh.Text = row.Cells["nam_sinh"].Value.ToString();
-                txtDiaChi.Text = row.Cells["dia_chi"].Value.ToString();
-                txtDienThoai.Text = row.Cells["sdt"].Value.ToString();
-                txtMatkhau.Text = row.Cells["mat_khau"].Value.ToString();
-                txtTenTaiKhoan.Text = row.Cells["ten_tai_khoan"].Value.ToString();
-                txtEmail.Text = row.Cells["email"].Value.ToString();
-                txtQuyenHan.Text = row.Cells["quyen_han"].Value.ToString();
+                txtTenNV.Text = row.Cells["HoTen"].Value.ToString();
+                txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
+                txtNamSinh.Text = row.Cells["NamSinh"].Value.ToString();
+                txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+                txtDienThoai.Text = row.Cells["DienTHoai"].Value.ToString();
+                txtMatkhau.Text = row.Cells["MatKhau"].Value.ToString();
+                txtTenTaiKhoan.Text = row.Cells["TenTaiKhoan"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+                txtQuyenHan.Text = row.Cells["quyenhan"].Value.ToString();
             }
         }
 
@@ -73,12 +74,13 @@ namespace baitap.View
             nvObj.Email = txtEmail.Text;
             nvObj.QuyenHan = txtQuyenHan.Text;
 
-            bool result = nhanVienMod.ThemDuLieuNhanVien(nvObj);
+
+            bool result = nhanVienCtr.ThemDuLieuNhanVien(nvObj);
 
             if (result)
             {
                 MessageBox.Show("Thêm dữ liệu thành công.");
-                dataGridView1.DataSource = nhanVienMod.LayDuLieuNhanVien();
+                dataGridView1.DataSource = nhanVienCtr.LayDuLieuNhanVien();
             }
             else
             {
@@ -96,10 +98,10 @@ namespace baitap.View
 
                 if (result == DialogResult.Yes)
                 {
-                    nhanVienMod.XoaDuLieuNhanVien(id);
+                    nhanVienCtr.XoaDuLieuNhanVien(id);
                     MessageBox.Show("Xoá dữ liệu thành công.");
                     ClearTextBox();
-                    dataGridView1.DataSource = nhanVienMod.LayDuLieuNhanVien();
+                    dataGridView1.DataSource = nhanVienCtr.LayDuLieuNhanVien();
                 }
                 else
                 {
@@ -129,8 +131,8 @@ namespace baitap.View
 
                 nvObj.MaNhanVien = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                nhanVienMod.CapNhatDuLieuNhanVien(nvObj);
-                dataGridView1.DataSource = nhanVienMod.LayDuLieuNhanVien();
+                nhanVienCtr.CapNhatDuLieuNhanVien(nvObj);
+                dataGridView1.DataSource = nhanVienCtr.LayDuLieuNhanVien();
             }
             else
             {

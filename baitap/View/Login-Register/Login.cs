@@ -119,7 +119,7 @@ namespace baitap.View
         private void btnDangKy_click(object sender, EventArgs e)
         {
             this.Hide();
-            Dangky UI = new Dangky();
+            Register UI = new Register();
             UI.Show();
         }
 
@@ -128,6 +128,13 @@ namespace baitap.View
             this.Hide();
             LoginNhanVien loginNhanVien = new LoginNhanVien();
             loginNhanVien.Show();
+        }
+
+        private void lbQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            ForgetPassword forgetPassword = new ForgetPassword();
+            forgetPassword.Show();
         }
     }
 }

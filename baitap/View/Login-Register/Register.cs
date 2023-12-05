@@ -11,12 +11,10 @@ using System.Windows.Forms;
 
 namespace baitap.View
 {
-    public partial class Dangky : Form
+    public partial class Register : Form
     {
         private bool isDarkMode = false;
-        frmNhanVien frmNV;
-
-        public Dangky()
+        public Register()
         {
             InitializeComponent();
         }

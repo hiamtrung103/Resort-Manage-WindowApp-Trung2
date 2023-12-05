@@ -63,9 +63,10 @@
             label15 = new Label();
             groupBox1 = new GroupBox();
             bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            lbTenResort = new Label();
-            lbGioiThieu = new Label();
             lbMieuTa = new Label();
+            lbGioiThieu = new Label();
+            lbTenResort = new Label();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ComboBox_SoNguoi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ComboBox_DiaDiem).BeginInit();
@@ -528,15 +529,15 @@
             bunifuCards1.Size = new Size(731, 397);
             bunifuCards1.TabIndex = 12;
             // 
-            // lbTenResort
+            // lbMieuTa
             // 
-            lbTenResort.AutoSize = true;
-            lbTenResort.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbTenResort.Location = new Point(15, 13);
-            lbTenResort.Name = "lbTenResort";
-            lbTenResort.Size = new Size(112, 25);
-            lbTenResort.TabIndex = 1;
-            lbTenResort.Text = "Resort ABC";
+            lbMieuTa.AutoSize = true;
+            lbMieuTa.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbMieuTa.Location = new Point(15, 77);
+            lbMieuTa.Name = "lbMieuTa";
+            lbMieuTa.Size = new Size(31, 17);
+            lbMieuTa.TabIndex = 1;
+            lbMieuTa.Text = "ABC";
             // 
             // lbGioiThieu
             // 
@@ -548,15 +549,34 @@
             lbGioiThieu.TabIndex = 1;
             lbGioiThieu.Text = "ABC";
             // 
-            // lbMieuTa
+            // lbTenResort
             // 
-            lbMieuTa.AutoSize = true;
-            lbMieuTa.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lbMieuTa.Location = new Point(15, 77);
-            lbMieuTa.Name = "lbMieuTa";
-            lbMieuTa.Size = new Size(31, 17);
-            lbMieuTa.TabIndex = 1;
-            lbMieuTa.Text = "ABC";
+            lbTenResort.AutoSize = true;
+            lbTenResort.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTenResort.Location = new Point(15, 13);
+            lbTenResort.Name = "lbTenResort";
+            lbTenResort.Size = new Size(112, 25);
+            lbTenResort.TabIndex = 1;
+            lbTenResort.Text = "Resort ABC";
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.MediumSlateBlue;
+            rjButton1.BackgroundColor = Color.MediumSlateBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(1359, 196);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(100, 40);
+            rjButton1.TabIndex = 13;
+            rjButton1.Text = "Đặt phòng";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
             // 
             // frmDatPhong
             // 
@@ -564,6 +584,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1534, 690);
+            Controls.Add(rjButton1);
             Controls.Add(bunifuCards1);
             Controls.Add(groupBox1);
             Controls.Add(txtTenDiaDiem);
@@ -629,5 +650,6 @@
         private Label lbTenResort;
         private Label lbMieuTa;
         private Label lbGioiThieu;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }

@@ -47,10 +47,10 @@
             txtHoTen = new CustomControls.RJControls.RJTextBox();
             txtEmail = new CustomControls.RJControls.RJTextBox();
             txtDienThoai = new CustomControls.RJControls.RJTextBox();
-            txtPassword = new CustomControls.RJControls.RJTextBox();
             txtGioiTinh = new CustomControls.RJControls.RJTextBox();
             txtNamSinh = new CustomControls.RJControls.RJTextBox();
             txtDiaChi = new CustomControls.RJControls.RJTextBox();
+            txtPassword = new TextBox();
             SuspendLayout();
             // 
             // kryptonCustomPaletteBase1
@@ -247,6 +247,7 @@
             txtTenTaiKhoan.BorderFocusColor = Color.HotPink;
             txtTenTaiKhoan.BorderRadius = 5;
             txtTenTaiKhoan.BorderSize = 2;
+            txtTenTaiKhoan.Enabled = false;
             txtTenTaiKhoan.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtTenTaiKhoan.ForeColor = Color.FromArgb(64, 64, 64);
             txtTenTaiKhoan.Location = new Point(103, 75);
@@ -313,6 +314,7 @@
             txtDienThoai.BorderFocusColor = Color.HotPink;
             txtDienThoai.BorderRadius = 5;
             txtDienThoai.BorderSize = 2;
+            txtDienThoai.Enabled = false;
             txtDienThoai.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtDienThoai.ForeColor = Color.FromArgb(64, 64, 64);
             txtDienThoai.Location = new Point(103, 225);
@@ -328,28 +330,6 @@
             txtDienThoai.Texts = "";
             txtDienThoai.UnderlinedStyle = false;
             // 
-            // txtPassword
-            // 
-            txtPassword.BackColor = SystemColors.Window;
-            txtPassword.BorderColor = Color.MediumSlateBlue;
-            txtPassword.BorderFocusColor = Color.HotPink;
-            txtPassword.BorderRadius = 5;
-            txtPassword.BorderSize = 2;
-            txtPassword.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.ForeColor = Color.FromArgb(64, 64, 64);
-            txtPassword.Location = new Point(103, 275);
-            txtPassword.Margin = new Padding(4);
-            txtPassword.Multiline = false;
-            txtPassword.Name = "txtPassword";
-            txtPassword.Padding = new Padding(10, 7, 10, 7);
-            txtPassword.PasswordChar = false;
-            txtPassword.PlaceholderColor = Color.DarkGray;
-            txtPassword.PlaceholderText = "";
-            txtPassword.Size = new Size(250, 31);
-            txtPassword.TabIndex = 35;
-            txtPassword.Texts = "";
-            txtPassword.UnderlinedStyle = false;
-            // 
             // txtGioiTinh
             // 
             txtGioiTinh.BackColor = SystemColors.Window;
@@ -357,6 +337,7 @@
             txtGioiTinh.BorderFocusColor = Color.HotPink;
             txtGioiTinh.BorderRadius = 5;
             txtGioiTinh.BorderSize = 2;
+            txtGioiTinh.Enabled = false;
             txtGioiTinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtGioiTinh.ForeColor = Color.FromArgb(64, 64, 64);
             txtGioiTinh.Location = new Point(509, 75);
@@ -379,6 +360,7 @@
             txtNamSinh.BorderFocusColor = Color.HotPink;
             txtNamSinh.BorderRadius = 5;
             txtNamSinh.BorderSize = 2;
+            txtNamSinh.Enabled = false;
             txtNamSinh.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtNamSinh.ForeColor = Color.FromArgb(64, 64, 64);
             txtNamSinh.Location = new Point(509, 125);
@@ -415,6 +397,13 @@
             txtDiaChi.TabIndex = 35;
             txtDiaChi.Texts = "";
             txtDiaChi.UnderlinedStyle = false;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(103, 282);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(251, 23);
+            txtPassword.TabIndex = 36;
             // 
             // frmSettingKhachHang
             // 
@@ -460,7 +449,9 @@
         private Label label3;
         private Label label4;
         private Label label5;
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.txtTaiKhoan' is never used
         private CustomControls.RJControls.RJTextBox txtTaiKhoan;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.txtTaiKhoan' is never used
         private Label label6;
         private Label label7;
         private Label label8;
@@ -469,19 +460,31 @@
         private CustomControls.RJControls.RJButton btn_Luu;
         private Label label10;
         private CustomControls.RJControls.RJButton rjButton4;
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox1' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox1' is never used
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox2' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox2' is never used
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox3' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox3' is never used
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox4' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox4' is never used
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox5' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox5' is never used
+#pragma warning disable CS0169 // The field 'frmSettingKhachHang.kryptonTextBox6' is never used
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+#pragma warning restore CS0169 // The field 'frmSettingKhachHang.kryptonTextBox6' is never used
         private CustomControls.RJControls.RJTextBox txtTenTaiKhoan;
         private CustomControls.RJControls.RJTextBox txtHoTen;
         private CustomControls.RJControls.RJTextBox txtEmail;
         private CustomControls.RJControls.RJTextBox txtDienThoai;
-        private CustomControls.RJControls.RJTextBox txtPassword;
         private CustomControls.RJControls.RJTextBox txtGioiTinh;
         private CustomControls.RJControls.RJTextBox txtNamSinh;
         private CustomControls.RJControls.RJTextBox txtDiaChi;
+        private TextBox txtPassword;
     }
 }

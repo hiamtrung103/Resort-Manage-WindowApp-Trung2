@@ -666,12 +666,16 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
         private Label label7;
         private Label label6;
+#pragma warning disable CS0169 // The field 'frmNhaHang.bunifuCards4' is never used
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
+#pragma warning restore CS0169 // The field 'frmNhaHang.bunifuCards4' is never used
         private Label label5;
         private Label label4;
         private Label label9;
         private Label label8;
+#pragma warning disable CS0169 // The field 'frmNhaHang.pictureBox4' is never used
         private PictureBox pictureBox4;
+#pragma warning restore CS0169 // The field 'frmNhaHang.pictureBox4' is never used
         private PictureBox card_1;
         private GroupBox groupBox1;
         private Label label10;
@@ -689,7 +693,9 @@
         private Label label16;
         private Krypton.Toolkit.KryptonTextBox txtMaGiamGia;
         private Bunifu.Framework.UI.BunifuCards card_3;
+#pragma warning disable CS0169 // The field 'frmNhaHang.pictureBox1' is never used
         private PictureBox pictureBox1;
+#pragma warning restore CS0169 // The field 'frmNhaHang.pictureBox1' is never used
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
         private Bunifu.Framework.UI.BunifuCards cardd;
         private Label lbTen;

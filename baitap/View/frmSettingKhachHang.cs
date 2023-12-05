@@ -1,4 +1,5 @@
-﻿using baitap.Model;
+﻿using baitap.Control;
+using baitap.Model;
 using baitap.Object;
 using Krypton.Toolkit;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -19,6 +20,7 @@ namespace baitap.View
     {
         private frmKhachHang kh = new frmKhachHang();
         private ConnectToSQL conn = new ConnectToSQL();
+        private KhachHangCtr khachHangCtr = new KhachHangCtr();
         public frmSettingKhachHang()
         {
             InitializeComponent();
@@ -50,7 +52,7 @@ namespace baitap.View
                             txtDiaChi.Texts = khachHangDataTable.Rows[0]["DiaChi"].ToString();
                             txtDienThoai.Texts = khachHangDataTable.Rows[0]["DienThoai"].ToString();
                             txtEmail.Texts = khachHangDataTable.Rows[0]["Email"].ToString();
-                            txtPassword.Texts = khachHangDataTable.Rows[0]["Password"].ToString();
+                            txtPassword.Text = khachHangDataTable.Rows[0]["Password"].ToString();
                         }
                     }
                 }
@@ -59,7 +61,13 @@ namespace baitap.View
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            kh.SuaKhachHang();
+            KhachHangObj khachHangObj = new KhachHangObj();
+            khachHangObj.HoTen = txtHoTen.Texts;
+            khachHangObj.DiaChi = txtDiaChi.Texts;
+            khachHangObj.Email = txtEmail.Texts;
+            khachHangObj.Password = txtPassword.Text;
+
+            khachHangCtr.CapNhatDuLieuKhachHang(khachHangObj);
         }
     }
 }

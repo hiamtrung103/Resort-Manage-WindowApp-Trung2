@@ -1,6 +1,6 @@
 ﻿namespace baitap.View
 {
-    partial class Dangky
+    partial class Register
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,11 @@
             components = new System.ComponentModel.Container();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1 = new Panel();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             label8 = new Label();
             label7 = new Label();
             panelMain = new Panel();
+            rjButton2 = new CustomControls.RJControls.RJButton();
             txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
@@ -69,8 +71,6 @@
             staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
-            rjButton2 = new CustomControls.RJControls.RJButton();
-            rjButton1 = new CustomControls.RJControls.RJButton();
             panel1.SuspendLayout();
             panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
@@ -103,6 +103,26 @@
             panel1.Size = new Size(350, 450);
             panel1.TabIndex = 6;
             // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.DeepSkyBlue;
+            rjButton1.BackgroundColor = Color.DeepSkyBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(123, 242);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(100, 40);
+            rjButton1.TabIndex = 8;
+            rjButton1.Text = "Đăng nhập";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnDangNhap_click;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -130,10 +150,10 @@
             // panelMain
             // 
             panelMain.BackColor = Color.WhiteSmoke;
+            panelMain.Controls.Add(txtDiaChi);
             panelMain.Controls.Add(rjButton2);
             panelMain.Controls.Add(txtGioiTinh);
             panelMain.Controls.Add(txtEmail);
-            panelMain.Controls.Add(txtDiaChi);
             panelMain.Controls.Add(txtNgaySinh);
             panelMain.Controls.Add(pictureBox7);
             panelMain.Controls.Add(pictureBox1);
@@ -163,6 +183,26 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(800, 450);
             panelMain.TabIndex = 5;
+            // 
+            // rjButton2
+            // 
+            rjButton2.BackColor = Color.Crimson;
+            rjButton2.BackgroundColor = Color.Crimson;
+            rjButton2.BorderColor = Color.PaleVioletRed;
+            rjButton2.BorderRadius = 5;
+            rjButton2.BorderSize = 0;
+            rjButton2.FlatAppearance.BorderSize = 0;
+            rjButton2.FlatStyle = FlatStyle.Flat;
+            rjButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton2.ForeColor = Color.White;
+            rjButton2.Location = new Point(538, 382);
+            rjButton2.Name = "rjButton2";
+            rjButton2.Size = new Size(100, 40);
+            rjButton2.TabIndex = 13;
+            rjButton2.Text = "Đăng ký";
+            rjButton2.TextColor = Color.White;
+            rjButton2.UseVisualStyleBackColor = false;
+            rjButton2.Click += btnDangKy_click;
             // 
             // txtGioiTinh
             // 
@@ -516,47 +556,7 @@
             thoátToolStripMenuItem.Size = new Size(205, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
-            // rjButton2
-            // 
-            rjButton2.BackColor = Color.Crimson;
-            rjButton2.BackgroundColor = Color.Crimson;
-            rjButton2.BorderColor = Color.PaleVioletRed;
-            rjButton2.BorderRadius = 5;
-            rjButton2.BorderSize = 0;
-            rjButton2.FlatAppearance.BorderSize = 0;
-            rjButton2.FlatStyle = FlatStyle.Flat;
-            rjButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton2.ForeColor = Color.White;
-            rjButton2.Location = new Point(538, 382);
-            rjButton2.Name = "rjButton2";
-            rjButton2.Size = new Size(100, 40);
-            rjButton2.TabIndex = 13;
-            rjButton2.Text = "Đăng ký";
-            rjButton2.TextColor = Color.White;
-            rjButton2.UseVisualStyleBackColor = false;
-            rjButton2.Click += btnDangKy_click;
-            // 
-            // rjButton1
-            // 
-            rjButton1.BackColor = Color.DeepSkyBlue;
-            rjButton1.BackgroundColor = Color.DeepSkyBlue;
-            rjButton1.BorderColor = Color.PaleVioletRed;
-            rjButton1.BorderRadius = 5;
-            rjButton1.BorderSize = 0;
-            rjButton1.FlatAppearance.BorderSize = 0;
-            rjButton1.FlatStyle = FlatStyle.Flat;
-            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(123, 242);
-            rjButton1.Name = "rjButton1";
-            rjButton1.Size = new Size(100, 40);
-            rjButton1.TabIndex = 8;
-            rjButton1.Text = "Đăng nhập";
-            rjButton1.TextColor = Color.White;
-            rjButton1.UseVisualStyleBackColor = false;
-            rjButton1.Click += btnDangNhap_click;
-            // 
-            // Dangky
+            // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -564,7 +564,7 @@
             Controls.Add(panel1);
             Controls.Add(panelMain);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Dangky";
+            Name = "Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dangky";
             panel1.ResumeLayout(false);

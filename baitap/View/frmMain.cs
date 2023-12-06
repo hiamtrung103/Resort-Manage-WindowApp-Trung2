@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using baitap.Model;
 using baitap.Object;
 using baitap.View;
+using baitap.View.Nha_Hang___Cafe;
 using Bunifu.Framework.UI;
 using Krypton.Toolkit;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -19,8 +20,9 @@ namespace QL_QuanCafe_Trung_Hai.View
 {
     public partial class frmMain : KryptonForm
     {
-        private Form frmConHientai;
+        public Form frmConHientai;
         private ConnectToSQL conn = new ConnectToSQL();
+
         public frmMain()
         {
             InitializeComponent();
@@ -29,50 +31,38 @@ namespace QL_QuanCafe_Trung_Hai.View
 
         private void DoiMauLabel_MouseEnter(object sender, EventArgs e)
         {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.LightBlue;
-                label.BackColor = Color.Gray;
-            }
+            ThayDoiMauLabel(sender, Color.LightBlue, Color.Gray);
         }
 
         private void DoiMauLabel2_MouseEnter(object sender, EventArgs e)
         {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.Red;
-            }
+            ThayDoiMauLabel(sender, Color.Red);
         }
 
         private void DoiMauLabel_MouseLeave(object sender, EventArgs e)
         {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = anhClick ? Color.White : SystemColors.ControlText;
-                label.BackColor = anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245);
-            }
+            ThayDoiMauLabel(sender, anhClick ? Color.White : SystemColors.ControlText, anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245));
         }
 
         private bool anhClick = false;
 
-        private void btnToggleSidebar_Click(object sender, EventArgs e)
+        private void ThayDoiMauLabel(object sender, Color foreColor, Color? backColor = null)
         {
-            int minSize = 50;
-
-            if (panelSidebar.Width == minSize)
+            Label label = sender as Label;
+            if (label != null)
             {
-                panelSidebar.Width = 200;
-            }
-            else
-            {
-                panelSidebar.Width = minSize;
+                label.ForeColor = foreColor;
+                label.BackColor = backColor ?? (foreColor == Color.LightBlue ? Color.Gray : Color.FromArgb(1, 126, 245));
             }
         }
 
-        private void MofrmCon(Form frmCon)
+        private void btnToggleSidebar_Click(object sender, EventArgs e)
+        {
+            int minSize = 50;
+            panelSidebar.Width = (panelSidebar.Width == minSize) ? 200 : minSize;
+        }
+
+        public void MofrmCon(Form frmCon)
         {
             if (frmConHientai != null)
             {
@@ -82,6 +72,8 @@ namespace QL_QuanCafe_Trung_Hai.View
 
             frmConHientai = frmCon;
             frmConHientai.FormClosed += frmCon_Tat;
+
+//            ThayDoiMauLabel(sender, anhClick ? Color.White : SystemColors.ControlText, anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245));
 
             frmCon.TopLevel = false;
             frmCon.FormBorderStyle = FormBorderStyle.None;
@@ -93,7 +85,7 @@ namespace QL_QuanCafe_Trung_Hai.View
             frmCon.Show();
         }
 
-        private void frmCon_Tat(object sender, FormClosedEventArgs e)
+        public void frmCon_Tat(object sender, FormClosedEventArgs e)
         {
             Form closedForm = sender as Form;
             if (closedForm != null)
@@ -101,10 +93,12 @@ namespace QL_QuanCafe_Trung_Hai.View
                 closedForm.Dispose();
             }
         }
+
         private void TrangChuOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmTrangChu());
         }
+
         private void ThueResortOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmDatPhong());
@@ -140,7 +134,6 @@ namespace QL_QuanCafe_Trung_Hai.View
             MofrmCon(new frmSettingKhachHang());
         }
 
-
         private void thoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất khỏi ứng dụng vừa đăng nhập không?", "Đăng xuất khỏi ứng dụng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -155,11 +148,16 @@ namespace QL_QuanCafe_Trung_Hai.View
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            LoadThongTinKhachHang();
+        }
+
+        private void LoadThongTinKhachHang()
+        {
             if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
             {
                 string tenTaiKhoan = Session.TenTaiKhoan;
-
                 string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+
                 using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
                 {
                     conn.MoKetNoi();

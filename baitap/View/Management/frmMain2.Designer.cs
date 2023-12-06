@@ -292,6 +292,7 @@
             pictureBox9.TabIndex = 1;
             pictureBox9.TabStop = false;
             pictureBox9.Click += btnToggleSidebar_Click;
+            pictureBox9.MouseEnter += DoiMauLabel_MouseEnter;
             // 
             // lbThoat
             // 
@@ -304,6 +305,7 @@
             lbThoat.TabIndex = 0;
             lbThoat.Text = "Đăng xuất";
             lbThoat.TextAlign = ContentAlignment.MiddleCenter;
+            lbThoat.Click += thoat_Click;
             lbThoat.MouseEnter += DoiMauLabel2_MouseEnter;
             lbThoat.MouseLeave += DoiMauLabel_MouseLeave;
             // 
@@ -377,7 +379,7 @@
             lbNhanVien.TabIndex = 0;
             lbNhanVien.Text = "Khách Hàng";
             lbNhanVien.TextAlign = ContentAlignment.MiddleCenter;
-            lbNhanVien.Click += KhachHangOpen;
+            lbNhanVien.Click += KhachhangOpen;
             lbNhanVien.MouseEnter += DoiMauLabel_MouseEnter;
             lbNhanVien.MouseLeave += DoiMauLabel_MouseLeave;
             // 

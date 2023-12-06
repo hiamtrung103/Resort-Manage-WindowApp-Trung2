@@ -47,13 +47,16 @@
             label9 = new Label();
             label5 = new Label();
             label8 = new Label();
+            pictureBox3 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
+            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label19);
@@ -272,19 +275,30 @@
             label8.TabIndex = 1;
             label8.Text = "● Sparkling High Tea VND 1.190.000 cho 1 người";
             // 
-            // NhaHang2
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.back;
+            pictureBox3.Location = new Point(12, 12);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(50, 50);
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
+            // Cafe2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1534, 648);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "NhaHang2";
+            Name = "Cafe2";
             Text = "NhaHang2";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -308,5 +322,6 @@
         private Label label9;
         private Label label5;
         private Label label8;
+        private PictureBox pictureBox3;
     }
 }

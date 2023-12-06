@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cafe));
             panel4 = new Panel();
+            pictureBox1 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             panel6 = new Panel();
             panel8 = new Panel();
             panel7 = new Panel();
             panel5 = new Panel();
-            pictureBox5 = new PictureBox();
             label15 = new Label();
             label28 = new Label();
             label18 = new Label();
@@ -59,20 +59,20 @@
             label31 = new Label();
             label11 = new Label();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // panel4
             // 
+            panel4.Controls.Add(pictureBox1);
             panel4.Controls.Add(pictureBox6);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(panel8);
             panel4.Controls.Add(panel7);
             panel4.Controls.Add(panel5);
-            panel4.Controls.Add(pictureBox5);
             panel4.Controls.Add(label15);
             panel4.Controls.Add(label28);
             panel4.Controls.Add(label18);
@@ -100,6 +100,16 @@
             panel4.Size = new Size(1534, 646);
             panel4.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.next;
+            pictureBox1.Location = new Point(1472, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(50, 50);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.kem_dua;
@@ -112,9 +122,11 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.Image = Properties.Resources.user_male;
             pictureBox4.Location = new Point(32, 120);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(150, 150);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
             // 
@@ -131,7 +143,7 @@
             panel8.BackColor = Color.FromArgb(141, 122, 74);
             panel8.Location = new Point(1221, 75);
             panel8.Name = "panel8";
-            panel8.Size = new Size(50, 3);
+            panel8.Size = new Size(50, 2);
             panel8.TabIndex = 6;
             // 
             // panel7
@@ -139,7 +151,7 @@
             panel7.BackColor = Color.FromArgb(141, 122, 74);
             panel7.Location = new Point(1128, 155);
             panel7.Name = "panel7";
-            panel7.Size = new Size(50, 3);
+            panel7.Size = new Size(50, 2);
             panel7.TabIndex = 6;
             // 
             // panel5
@@ -147,18 +159,8 @@
             panel5.BackColor = Color.FromArgb(141, 122, 74);
             panel5.Location = new Point(206, 150);
             panel5.Name = "panel5";
-            panel5.Size = new Size(50, 3);
+            panel5.Size = new Size(50, 2);
             panel5.TabIndex = 6;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.logout_24;
-            pictureBox5.Location = new Point(774, 560);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(50, 50);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 5;
-            pictureBox5.TabStop = false;
             // 
             // label15
             // 
@@ -277,9 +279,9 @@
             label24.ForeColor = Color.Black;
             label24.Location = new Point(363, 391);
             label24.Name = "label24";
-            label24.Size = new Size(93, 21);
+            label24.Size = new Size(58, 21);
             label24.TabIndex = 1;
-            label24.Text = "7:00 - 24:00";
+            label24.Text = "Lịch sự";
             // 
             // label20
             // 
@@ -376,9 +378,9 @@
             label31.ForeColor = Color.Black;
             label31.Location = new Point(1140, 40);
             label31.Name = "label31";
-            label31.Size = new Size(218, 32);
+            label31.Size = new Size(221, 32);
             label31.TabIndex = 1;
-            label31.Text = "Món ăn đặt trưng";
+            label31.Text = "Món ăn đặc trưng";
             // 
             // label11
             // 
@@ -391,20 +393,20 @@
             label11.TabIndex = 1;
             label11.Text = "HT Lounge";
             // 
-            // frmNhaHang3
+            // Cafe
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1534, 646);
             Controls.Add(panel4);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmNhaHang3";
+            Name = "Cafe";
             Text = "frmNhaHang3";
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 
@@ -417,7 +419,6 @@
         private Panel panel8;
         private Panel panel7;
         private Panel panel5;
-        private PictureBox pictureBox5;
         private Label label15;
         private Label label28;
         private Label label18;
@@ -439,5 +440,6 @@
         private Label label32;
         private Label label31;
         private Label label11;
+        private PictureBox pictureBox1;
     }
 }

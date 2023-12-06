@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace baitap.Model
 {
-    class ConnectToSQL
+    public class ConnectToSQL
     {
         private SqlConnection Conn;
         public string StrCon = null;

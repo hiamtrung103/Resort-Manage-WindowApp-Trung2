@@ -9,22 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace baitap.View
+namespace baitap.View.Nha_Hang___Cafe
 {
-    public partial class frmNhaHang2 : Form
+    public partial class frmCafe : Form
     {
         private Form frmConHientai;
-        public frmNhaHang2()
+        public frmCafe()
         {
             InitializeComponent();
         }
 
-        private void frmNhaHang2_Load(object sender, EventArgs e)
-        {
-            MofrmCon(new NhaHang());
-        }
-
-        private void MofrmCon(Form frmCon)
+        public void MofrmCon(Form frmCon)
         {
             if (frmConHientai != null)
             {
@@ -43,14 +38,18 @@ namespace baitap.View
             frmCon.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void frmCafe_Load(object sender, EventArgs e)
         {
-            MofrmCon(new NhaHang());
+            MofrmCon(new Cafe());
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void CafeOpen(object sender, EventArgs e)
         {
-            MofrmCon(new NhaHang2());
+            MofrmCon(new Cafe());
+        }
+        private void Cafe3Open(object sender, EventArgs e)
+        {
+            MofrmCon(new Cafe3());
         }
     }
 }

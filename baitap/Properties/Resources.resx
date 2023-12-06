@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cf3-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cf3-3.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="setting-gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting-gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-star.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5166950" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5166950.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,23 +136,20 @@
   <data name="eye-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurant-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restaurant-3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-3-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="happy-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\happy-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="google-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cafe-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cafe-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="restaurant-2-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-2-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unhappy-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unhappy-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lounge-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lounge-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +163,17 @@
   <data name="kem-dua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kem-dua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="happy-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\happy-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="password-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bored-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bored-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurant-menu-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-menu-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lounge_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lounge-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,23 +184,32 @@
   <data name="pablita-loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pablita-loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="network-robot-assistant-working-on-laptop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\network-robot-assistant-working-on-laptop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="smiling-face-with-heart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smiling-face-with-heart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cf3-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cf3-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="twitter-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twitter-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-male.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign-up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-up1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restaurant-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feedback-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feedback-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unhappy-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unhappy-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cf3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cf3-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="staff-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\staff-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,35 +223,44 @@
   <data name="505930882" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\505930882.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feedback-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feedback-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restaurant-2-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-2-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurant-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restaurant-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaction-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="facebook-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facebook-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="more-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\more-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lounge_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lounge-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sign-up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-up1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="booking-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\booking-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sign-up2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign-up2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurant-3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-3-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="network-robot-assistant-working-on-laptop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\network-robot-assistant-working-on-laptop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="smiling-face-with-heart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smiling-face-with-heart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="booking-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\booking-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restaurant-menu-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-menu-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restaurant-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lounge_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lounge-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +268,8 @@
   <data name="5153829" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5153829.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="facebook-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\facebook-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-star-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-star-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,11 +280,8 @@
   <data name="yellow-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurant-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurant-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-male.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,7 +289,7 @@
   <data name="lounge_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lounge-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cafe-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cafe-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

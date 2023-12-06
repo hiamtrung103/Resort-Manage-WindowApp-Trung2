@@ -1,6 +1,7 @@
 ﻿using baitap.Model;
 using baitap.Object;
 using Krypton.Toolkit;
+using QL_QuanCafe_Trung_Hai.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace baitap.View
     {
         private ConnectToSQL conn = new ConnectToSQL();
         private Form frmConHientai;
+
         public frmMain2()
         {
             InitializeComponent();
@@ -26,45 +28,33 @@ namespace baitap.View
 
         private void DoiMauLabel_MouseEnter(object sender, EventArgs e)
         {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.LightBlue;
-                label.BackColor = Color.Gray;
-            }
+            ThayDoiMauLabel(sender, Color.LightBlue, Color.Gray);
         }
 
         private void DoiMauLabel2_MouseEnter(object sender, EventArgs e)
         {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = Color.Red;
-            }
+            ThayDoiMauLabel(sender, Color.Red);
         }
 
         private void DoiMauLabel_MouseLeave(object sender, EventArgs e)
         {
+            ThayDoiMauLabel(sender, Color.Black, Color.FromArgb(1, 126, 245));
+        }
+
+        private void ThayDoiMauLabel(object sender, Color foreColor, Color? backColor = null)
+        {
             Label label = sender as Label;
             if (label != null)
             {
-                label.ForeColor = Color.Black;
-                label.BackColor = Color.FromArgb(1, 126, 245);
+                label.ForeColor = foreColor;
+                label.BackColor = backColor ?? (foreColor == Color.LightBlue ? Color.Gray : Color.FromArgb(1, 126, 245));
             }
         }
 
         private void btnToggleSidebar_Click(object sender, EventArgs e)
         {
             int minSize = 50;
-
-            if (panelSidebar.Width == minSize)
-            {
-                panelSidebar.Width = 200;
-            }
-            else
-            {
-                panelSidebar.Width = minSize;
-            }
+            panelSidebar.Width = (panelSidebar.Width == minSize) ? 200 : minSize;
         }
 
         private void MofrmCon(Form frmCon)
@@ -86,93 +76,68 @@ namespace baitap.View
             frmCon.Show();
         }
 
+        private void CheckQuyenHan(string role, Form form)
+        {
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
+            {
+                string tenTaiKhoan = Session.TenTaiKhoan;
+                string selectKhachHangSql = "SELECT * FROM NhanVien WHERE TenTaiKhoan=@tenTaiKhoan";
+
+                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
+                {
+                    conn.MoKetNoi();
+                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+
+                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
+                    {
+                        DataTable khachHangDataTable = new DataTable();
+                        khachHangDataAdapter.Fill(khachHangDataTable);
+
+                        if (khachHangDataTable.Rows.Count > 0)
+                        {
+                            string quyenHan = khachHangDataTable.Rows[0]["QuyenHan"].ToString();
+
+                            if (quyenHan.ToLower() == "admin" || quyenHan.ToLower() == role.ToLower())
+                            {
+                                MofrmCon(form);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Bạn không có quyền truy cập vào. Chỉ có Admin/{role}", "Từ chối truy cập!");
+                            }
+                        }
+                    }
+                }
+            }
+        }
         private void TrangChuOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmTrangChu2());
         }
-        private void KhachHangOpen(object sender, EventArgs e)
+        private void KhachhangOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmKhachHang());
         }
 
         private void NhanVienOpen(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
-            {
-                string tenTaiKhoan = Session.TenTaiKhoan;
-
-                string selectKhachHangSql = "SELECT * FROM NhanVien WHERE TenTaiKhoan=@tenTaiKhoan";
-                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
-                {
-                    conn.MoKetNoi();
-                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
-
-                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
-                    {
-                        DataTable khachHangDataTable = new DataTable();
-                        khachHangDataAdapter.Fill(khachHangDataTable);
-
-                        if (khachHangDataTable.Rows.Count > 0)
-                        {
-                            string quyenHan = khachHangDataTable.Rows[0]["QuyenHan"].ToString();
-
-                            if (quyenHan.ToLower() == "admin" || quyenHan.ToLower() == "manager")
-                            {
-                                MofrmCon(new frmNhanVien());
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn không có quyền truy cập vào. Chỉ có Admin/Manager", "Từ chối truy cập!");
-                            }
-                        }
-                    }
-                }
-            }
+            CheckQuyenHan("manager", new frmNhanVien());
         }
 
         private void KeToanOpen(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
-            {
-                string tenTaiKhoan = Session.TenTaiKhoan;
-
-                string selectKhachHangSql = "SELECT * FROM NhanVien WHERE TenTaiKhoan=@tenTaiKhoan";
-                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
-                {
-                    conn.MoKetNoi();
-                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
-
-                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
-                    {
-                        DataTable khachHangDataTable = new DataTable();
-                        khachHangDataAdapter.Fill(khachHangDataTable);
-
-                        if (khachHangDataTable.Rows.Count > 0)
-                        {
-                            string quyenHan = khachHangDataTable.Rows[0]["QuyenHan"].ToString();
-
-                            if (quyenHan.ToLower() == "admin" || quyenHan.ToLower() == "Accountant")
-                            {
-                                MofrmCon(new frmKeToan());
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn không có quyền truy cập vào. Chỉ có Admin/Accountant", "Từ chối truy cập!");
-                            }
-                        }
-                    }
-                }
-            }
+            CheckQuyenHan("accountant", new frmKeToan());
         }
 
         private void frmMain2_Load(object sender, EventArgs e)
         {
             MofrmCon(new frmTrangChu2());
+
             if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
             {
                 string tenTaiKhoan = Session.TenTaiKhoan;
-
                 string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+
                 using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
                 {
                     conn.MoKetNoi();
@@ -203,8 +168,5 @@ namespace baitap.View
                 frm1.Show();
             }
         }
-
-
-
     }
 }

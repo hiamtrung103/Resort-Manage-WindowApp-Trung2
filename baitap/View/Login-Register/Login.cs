@@ -28,32 +28,46 @@ namespace baitap.View
 
         private void chếĐộTốiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BatTatMode();
+        }
+
+        private void BatTatMode()
+        {
             isDarkMode = !isDarkMode;
 
             if (isDarkMode)
             {
-                panelMain.BackColor = Color.FromArgb(51, 51, 51);
-                label1.ForeColor = Color.White;
-                label4.ForeColor = Color.White;
-                label5.ForeColor = Color.White;
-                label6.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
-                label8.ForeColor = Color.White;
-                panel1.BackgroundImage = Properties.Resources._5166950;
-
+                CheDoToi();
             }
             else
             {
-                panelMain.BackColor = System.Drawing.SystemColors.Control;
-                label1.ForeColor = Color.Black;
-                label4.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
-                label6.ForeColor = Color.Black;
-                label7.ForeColor = Color.Black;
-                label8.ForeColor = Color.Black;
-                panel1.BackgroundImage = Properties.Resources._5153829;
+                CheDoSang();
             }
         }
+
+        private void CheDoToi()
+        {
+            panelMain.BackColor = Color.FromArgb(51, 51, 51);
+            ApDungMaulb(Color.White);
+            panel1.BackgroundImage = Properties.Resources._5166950;
+        }
+
+        private void CheDoSang()
+        {
+            panelMain.BackColor = SystemColors.Control;
+            ApDungMaulb(Color.Black);
+            panel1.BackgroundImage = Properties.Resources._5153829;
+        }
+        private void ApDungMaulb(Color color)
+        {
+            label1.ForeColor = color;
+            label4.ForeColor = color;
+            label5.ForeColor = color;
+            label6.ForeColor = color;
+            label7.ForeColor = color;
+            label8.ForeColor = color;
+        }
+
         public static string TenTaiKhoanDangNhap { get; private set; }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {

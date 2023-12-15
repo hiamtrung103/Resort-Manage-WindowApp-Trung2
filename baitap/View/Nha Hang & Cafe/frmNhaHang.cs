@@ -1,4 +1,5 @@
-﻿using baitap.Object;
+﻿using baitap.Model;
+using baitap.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace baitap.View
 {
     public partial class frmNhaHang : Form
     {
+        private ConnectToSQL conn = new ConnectToSQL();
         public frmNhaHang()
         {
             InitializeComponent();
@@ -27,11 +29,7 @@ namespace baitap.View
                 string tenTaiKhoan = Session.TenTaiKhoan;
 
                 string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
-                using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
-                {
-                    conn.Open();
-
-                    using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn))
+                    using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
                     {
                         selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
 
@@ -52,7 +50,6 @@ namespace baitap.View
                             }
                         }
                     }
-                }
             }
         }
 

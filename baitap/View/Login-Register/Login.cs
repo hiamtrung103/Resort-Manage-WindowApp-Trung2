@@ -1,4 +1,5 @@
-﻿using baitap.Object;
+﻿using baitap.Model;
+using baitap.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,20 +68,18 @@ namespace baitap.View
             label7.ForeColor = color;
             label8.ForeColor = color;
         }
-
+        private ConnectToSQL conn = new ConnectToSQL();
         public static string TenTaiKhoanDangNhap { get; private set; }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
-            {
                 try
                 {
-                    conn.Open();
+                    conn.MoKetNoi();
                     string tk = txtUserName.Text;
                     string mk = txtPassword.Text;
                     string selectSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tk AND Password=@mk";
 
-                    using (SqlCommand selectCmd = new SqlCommand(selectSql, conn))
+                    using (SqlCommand selectCmd = new SqlCommand(selectSql, conn.KetNoi))
                     {
                         selectCmd.Parameters.AddWithValue("@tk", tk);
                         selectCmd.Parameters.AddWithValue("@mk", mk);
@@ -96,7 +95,7 @@ namespace baitap.View
                                 string tenTaiKhoan = dataTable.Rows[0]["TenTaiKhoan"].ToString();
 
                                 string insertSql = "INSERT INTO ThongTinDangNhap (TenTaiKhoan, ThoiGianDangNhap) VALUES (@tenTaiKhoan, GETDATE())";
-                                using (SqlCommand insertCmd = new SqlCommand(insertSql, conn))
+                                using (SqlCommand insertCmd = new SqlCommand(insertSql, conn.KetNoi))
                                 {
                                     insertCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
                                     insertCmd.ExecuteNonQuery();
@@ -127,7 +126,6 @@ namespace baitap.View
                 {
                     MessageBox.Show("Lỗi kết nối: " + ex.Message);
                 }
-            }
         }
 
         private void btnDangKy_click(object sender, EventArgs e)

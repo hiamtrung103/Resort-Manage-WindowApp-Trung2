@@ -331,7 +331,7 @@
             lbThoat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbThoat.Image = baitap.Properties.Resources.logout_24;
             lbThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbThoat.Location = new Point(9, 632);
+            lbThoat.Location = new Point(12, 636);
             lbThoat.Name = "lbThoat";
             lbThoat.Size = new Size(184, 32);
             lbThoat.TabIndex = 0;

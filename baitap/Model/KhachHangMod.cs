@@ -14,24 +14,21 @@ namespace baitap.Model
         {
             DataTable dt = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(conn.StrCon))
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM KhachHang", conn.KetNoi))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM KhachHang", connection))
+                try
                 {
-                    try
-                    {
-                        conn.MoKetNoi();
-                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                        sda.Fill(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        XuLyLoi("Lỗi kết nối hoặc đọc dữ liệu", ex);
-                    }
-                    finally
-                    {
-                        conn.DongKetNoi();
-                    }
+                    conn.MoKetNoi();
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    sda.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc đọc dữ liệu", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
                 }
             }
 

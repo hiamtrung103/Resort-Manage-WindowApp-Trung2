@@ -173,7 +173,12 @@ namespace baitap.View
             ClearTextBox();
         }
 
-        private void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
+        public void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ChiNhapSo(e);
+        }
+
+        public void ChiNhapSo(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

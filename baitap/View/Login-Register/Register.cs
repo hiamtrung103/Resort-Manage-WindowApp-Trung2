@@ -1,4 +1,5 @@
-﻿using System;
+﻿using baitap.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace baitap.View
     public partial class Register : Form
     {
         private bool isDarkMode = false;
+        private frmNhanVien nv = new frmNhanVien();
         public Register()
         {
             InitializeComponent();
@@ -80,64 +82,67 @@ namespace baitap.View
             txtDienThoai.Text = "";
         }
 
+        private ConnectToSQL conn = new ConnectToSQL();
         private void btnDangKy_click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    string tkMoi = txtUserName.Text;
-                    string mkMoi = txtPassword.Text;
-                    string mkXacNhan = txtPassword2.Text;
-                    string hoTen = txtHoTen.Text;
-                    string namSinh = txtNgaySinh.Text;
-                    string gioiTinh = txtGioiTinh.Text;
-                    string diaChi = txtDiaChi.Text;
-                    string email = txtEmail.Text;
+                conn.MoKetNoi();
+                string tkMoi = txtUserName.Text;
+                string mkMoi = txtPassword.Text;
+                string mkXacNhan = txtPassword2.Text;
+                string hoTen = txtHoTen.Text;
+                string namSinh = txtNgaySinh.Text;
+                string gioiTinh = txtGioiTinh.Text;
+                string diaChi = txtDiaChi.Text;
+                string email = txtEmail.Text;
 
-                    if (mkMoi != mkXacNhan)
+                if (mkMoi != mkXacNhan)
+                {
+                    MessageBox.Show("Mật khẩu mới và xác nhận mật khẩu không khớp. Vui lòng nhập lại.", "Sai mật khẩu");
+                    return;
+                }
+
+                string truyVanKiemTraKhachHang = "SELECT COUNT(*) FROM KhachHang WHERE TenTaiKhoan=@tkMoi";
+
+                using (SqlCommand cmdKiemTraKhachHang = new SqlCommand(truyVanKiemTraKhachHang, conn.KetNoi))
+                {
+                    cmdKiemTraKhachHang.Parameters.AddWithValue("@tkMoi", tkMoi);
+                    int soLuongKhachHang = (int)cmdKiemTraKhachHang.ExecuteScalar();
+
+                    if (soLuongKhachHang > 0)
                     {
-                        MessageBox.Show("Mật khẩu mới và xác nhận mật khẩu không khớp. Vui lòng nhập lại.", "Sai mật khẩu");
+                        MessageBox.Show("Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
                         return;
                     }
-
-                    string truyVanKiemTraKhachHang = "SELECT COUNT(*) FROM KhachHang WHERE TenTaiKhoan=@tkMoi";
-
-                    using (SqlCommand cmdKiemTraKhachHang = new SqlCommand(truyVanKiemTraKhachHang, conn))
-                    {
-                        cmdKiemTraKhachHang.Parameters.AddWithValue("@tkMoi", tkMoi);
-                        int soLuongKhachHang = (int)cmdKiemTraKhachHang.ExecuteScalar();
-
-                        if (soLuongKhachHang > 0)
-                        {
-                            MessageBox.Show("Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
-                            return;
-                        }
-                    }
-
-                    string truyVanThemMoiKhachHang = "INSERT INTO KhachHang (HoTen, NamSinh, GioiTinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password) " +
-                                                    "VALUES (@hoTen, @NamSinh, @gioiTinh, @diaChi, '', @tkMoi, @email, @mkMoi)";
-                    using (SqlCommand cmdThemMoiKhachHang = new SqlCommand(truyVanThemMoiKhachHang, conn))
-                    {
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@hoTen", hoTen);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@NamSinh", namSinh);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@gioiTinh", gioiTinh);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@diaChi", diaChi);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@tkMoi", tkMoi);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@email", email);
-                        cmdThemMoiKhachHang.Parameters.AddWithValue("@mkMoi", mkMoi);
-                        cmdThemMoiKhachHang.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Đăng ký thành công");
-                    ClearTextBox();
                 }
-                catch (Exception ex)
+
+                string truyVanThemMoiKhachHang = "INSERT INTO KhachHang (HoTen, NamSinh, GioiTinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password) " +
+                                                "VALUES (@hoTen, @NamSinh, @gioiTinh, @diaChi, '', @tkMoi, @email, @mkMoi)";
+                using (SqlCommand cmdThemMoiKhachHang = new SqlCommand(truyVanThemMoiKhachHang, conn.KetNoi))
                 {
-                    MessageBox.Show("Lỗi kết nối hoặc thêm dữ liệu: " + ex.Message);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@hoTen", hoTen);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@NamSinh", namSinh);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@gioiTinh", gioiTinh);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@diaChi", diaChi);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@tkMoi", tkMoi);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@email", email);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@mkMoi", mkMoi);
+                    cmdThemMoiKhachHang.ExecuteNonQuery();
                 }
+
+                MessageBox.Show("Đăng ký thành công");
+                ClearTextBox();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối hoặc thêm dữ liệu: " + ex.Message);
+            }
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            nv.ChiNhapSo(e);
         }
 
     }

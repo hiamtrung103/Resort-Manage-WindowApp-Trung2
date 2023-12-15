@@ -164,12 +164,10 @@ namespace baitap.View
             ClearTextBox();
         }
 
+        private frmNhanVien nv = new frmNhanVien();
         private void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            nv.ChiNhapSo(e);
         }
     }
 }

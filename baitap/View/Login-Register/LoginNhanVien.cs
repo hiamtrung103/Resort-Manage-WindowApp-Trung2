@@ -36,16 +36,14 @@ namespace baitap.View
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True"))
-            {
                 try
                 {
-                    conn.Open();
+                    conn.MoKetNoi();
                     string taikhoan = txtUserName1.Texts;
                     string matkhau = txtPassword1.Texts;
                     string selectSql = "SELECT * FROM NhanVien WHERE TenTaiKhoan=@taikhoan AND MatKhau=@matkhau";
 
-                    using (SqlCommand selectCmd = new SqlCommand(selectSql, conn))
+                    using (SqlCommand selectCmd = new SqlCommand(selectSql, conn.KetNoi))
                     {
                         selectCmd.Parameters.AddWithValue("@taikhoan", taikhoan);
                         selectCmd.Parameters.AddWithValue("@matkhau", matkhau);
@@ -61,7 +59,7 @@ namespace baitap.View
                                 string tenTaiKhoan = dataTable.Rows[0]["TenTaiKhoan"].ToString();
 
                                 string insertSql = "INSERT INTO ThongTinDangNhap (TenTaiKhoan, ThoiGianDangNhap) VALUES (@tenTaiKhoan, GETDATE())";
-                                using (SqlCommand insertCmd = new SqlCommand(insertSql, conn))
+                                using (SqlCommand insertCmd = new SqlCommand(insertSql, conn.KetNoi))
                                 {
                                     insertCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
                                     insertCmd.ExecuteNonQuery();
@@ -94,5 +92,4 @@ namespace baitap.View
                 }
             }
         }
-    }
 }

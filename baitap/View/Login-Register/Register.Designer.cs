@@ -35,10 +35,10 @@
             label8 = new Label();
             label7 = new Label();
             panelMain = new Panel();
+            txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
             rjButton2 = new CustomControls.RJControls.RJButton();
             txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
-            txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
             txtNgaySinh = new Krypton.Toolkit.KryptonDateTimePicker();
             pictureBox7 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -184,6 +184,16 @@
             panelMain.Size = new Size(800, 450);
             panelMain.TabIndex = 5;
             // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Location = new Point(369, 348);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(417, 29);
+            txtDiaChi.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtDiaChi.StateCommon.Border.Rounding = 5F;
+            txtDiaChi.StateCommon.Border.Width = 2;
+            txtDiaChi.TabIndex = 11;
+            // 
             // rjButton2
             // 
             rjButton2.BackColor = Color.Crimson;
@@ -231,16 +241,6 @@
             txtEmail.StateCommon.Border.Rounding = 5F;
             txtEmail.StateCommon.Border.Width = 2;
             txtEmail.TabIndex = 11;
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.Location = new Point(369, 348);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(417, 29);
-            txtDiaChi.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtDiaChi.StateCommon.Border.Rounding = 5F;
-            txtDiaChi.StateCommon.Border.Width = 2;
-            txtDiaChi.TabIndex = 11;
             // 
             // txtNgaySinh
             // 
@@ -483,6 +483,7 @@
             txtDienThoai.StateCommon.Border.Rounding = 7F;
             txtDienThoai.StateCommon.Border.Width = 2;
             txtDienThoai.TabIndex = 6;
+            txtDienThoai.KeyPress += txtDienThoai_KeyPress;
             // 
             // pictureBox4
             // 

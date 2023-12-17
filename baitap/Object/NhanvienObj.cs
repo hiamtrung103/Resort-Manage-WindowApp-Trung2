@@ -1,6 +1,6 @@
 ﻿namespace baitap.Object
 {
-    public class NhanvienObj
+    internal class NhanvienObj
     {
         public string MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }

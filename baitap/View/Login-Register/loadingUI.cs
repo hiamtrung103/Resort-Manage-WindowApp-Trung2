@@ -41,7 +41,6 @@ namespace baitap.View
                 if (progressValue == 50)
                 {
                     label4.Text = "Mọi ưu tiên trải nghiệm của \nkhách hàng đặt lên mọi hàng đầu!!";
-                    pictureBox2.Image = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\dazzle-cloud-software.gif");
                 }
             }
             else

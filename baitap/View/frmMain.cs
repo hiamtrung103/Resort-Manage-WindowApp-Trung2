@@ -134,6 +134,11 @@ namespace QL_QuanCafe_Trung_Hai.View
             MofrmCon(new frmSettingKhachHang());
         }
 
+        private void HangHoaOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmHangHoa());
+        }
+
         private void thoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất khỏi ứng dụng vừa đăng nhập không?", "Đăng xuất khỏi ứng dụng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

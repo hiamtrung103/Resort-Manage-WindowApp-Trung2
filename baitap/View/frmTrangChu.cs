@@ -7,14 +7,7 @@ namespace baitap.View
     public partial class frmTrangChu : Form
     {
         private int currentImageIndex = 0;
-        private string[] imagePaths = {
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort.jpg",
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort 2.jpg",
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort 3.jpg",
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort 4.jpg",
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort 5.jpg",
-            @"D:\Visual studio\Repo\Resort-Manage-WindowApp-H-T\Resort-Manage-WindowApp-H-T\icons\resort 6.jpg",
-        };
+        private string[] imageNames = { "rs1", "rs2", "rs3", "rs4", "rs5", "rs6", "rs7" };
 
         public frmTrangChu()
         {
@@ -34,16 +27,9 @@ namespace baitap.View
         {
             try
             {
-                if (currentImageIndex < imagePaths.Length - 1)
-                {
-                    currentImageIndex++;
-                }
-                else
-                {
-                    currentImageIndex = 0;
-                }
+                currentImageIndex = (currentImageIndex + 1) % imageNames.Length;
 
-                Image backgroundImage = Image.FromFile(imagePaths[currentImageIndex]);
+                Image backgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(imageNames[currentImageIndex]);
                 bunifuCards2.BackgroundImage = backgroundImage;
             }
             catch (Exception ex)

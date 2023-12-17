@@ -189,7 +189,7 @@
             // bunifuCards2
             // 
             bunifuCards2.BackColor = Color.White;
-            bunifuCards2.BackgroundImage = (Image)resources.GetObject("bunifuCards2.BackgroundImage");
+            bunifuCards2.BackgroundImage = Properties.Resources.rs1;
             bunifuCards2.BackgroundImageLayout = ImageLayout.Stretch;
             bunifuCards2.BorderRadius = 40;
             bunifuCards2.BottomSahddow = true;

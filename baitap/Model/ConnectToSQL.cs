@@ -28,7 +28,7 @@ namespace baitap.Model
 
         public ConnectToSQL()
         {
-            StrCon = "Data Source=Trunq;Initial Catalog=ql_resort;Integrated Security=True";
+            StrCon = "Data Source=TRUNQ\\MSSQLSERVER01;Initial Catalog=ql_resort;Integrated Security=True;"; 
             Conn = new SqlConnection(StrCon);
         }
 

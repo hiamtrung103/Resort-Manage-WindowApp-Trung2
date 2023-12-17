@@ -53,7 +53,7 @@
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             label15 = new Label();
             label16 = new Label();
-            txtMaGiamGia = new Krypton.Toolkit.KryptonTextBox();
+            txtTen = new Krypton.Toolkit.KryptonTextBox();
             bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
             label9 = new Label();
             label8 = new Label();
@@ -242,7 +242,7 @@
             groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(label15);
             groupBox1.Controls.Add(label16);
-            groupBox1.Controls.Add(txtMaGiamGia);
+            groupBox1.Controls.Add(txtTen);
             groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 356);
             groupBox1.Name = "groupBox1";
@@ -385,9 +385,9 @@
             label15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label15.Location = new Point(404, 139);
             label15.Name = "label15";
-            label15.Size = new Size(96, 21);
+            label15.Size = new Size(67, 21);
             label15.TabIndex = 8;
-            label15.Text = "Mã giảm giá";
+            label15.Text = "Loại tiệc";
             // 
             // label16
             // 
@@ -399,18 +399,18 @@
             label16.TabIndex = 8;
             label16.Text = "Email";
             // 
-            // txtMaGiamGia
+            // txtTen
             // 
-            txtMaGiamGia.Enabled = false;
-            txtMaGiamGia.Location = new Point(402, 163);
-            txtMaGiamGia.Name = "txtMaGiamGia";
-            txtMaGiamGia.Size = new Size(326, 33);
-            txtMaGiamGia.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtMaGiamGia.StateCommon.Border.Rounding = 2F;
-            txtMaGiamGia.StateCommon.Border.Width = 2;
-            txtMaGiamGia.StateCommon.Content.Color1 = Color.Black;
-            txtMaGiamGia.StateCommon.Content.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMaGiamGia.TabIndex = 9;
+            txtTen.Enabled = false;
+            txtTen.Location = new Point(402, 163);
+            txtTen.Name = "txtTen";
+            txtTen.Size = new Size(326, 33);
+            txtTen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtTen.StateCommon.Border.Rounding = 2F;
+            txtTen.StateCommon.Border.Width = 2;
+            txtTen.StateCommon.Content.Color1 = Color.Black;
+            txtTen.StateCommon.Content.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTen.TabIndex = 9;
             // 
             // bunifuCards5
             // 
@@ -691,7 +691,7 @@
         private Krypton.Toolkit.KryptonTextBox txtEmail;
         private Label label15;
         private Label label16;
-        private Krypton.Toolkit.KryptonTextBox txtMaGiamGia;
+        private Krypton.Toolkit.KryptonTextBox txtTen;
         private Bunifu.Framework.UI.BunifuCards card_3;
 #pragma warning disable CS0169 // The field 'frmNhaHang.pictureBox1' is never used
         private PictureBox pictureBox1;

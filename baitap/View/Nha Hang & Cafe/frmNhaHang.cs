@@ -46,11 +46,13 @@ namespace baitap.View
                                 txtDiaChi.Text = khachHangDataTable.Rows[0]["DiaChi"].ToString();
                                 txtDienThoai.Text = khachHangDataTable.Rows[0]["DienThoai"].ToString();
                                 txtEmail.Text = khachHangDataTable.Rows[0]["Email"].ToString();
-                                txtMaGiamGia.Text = khachHangDataTable.Rows[0]["MaGiamGia"].ToString();
+                                txtTen.Text = khachHangDataTable.Rows[0]["MaGiamGia"].ToString();
+                                txtTen.Text = "Riverview Dining";
                             }
                         }
                     }
             }
+
         }
 
         private void card_1_Click(object sender, EventArgs e)
@@ -78,6 +80,7 @@ namespace baitap.View
                 "\nthực đơn đặc biệt.";
             lbThoiGian2.Text = "";
             lbMoTa3.Text = "";
+            txtTen.Text = "Riverview Dining";
             cardd.BackgroundImage = Properties.Resources.restaurant_1_1;
 
         }
@@ -108,6 +111,7 @@ namespace baitap.View
                 "\nBuffet Hải Sản 590.000vnd++" +
                 "\nBuffet Hải Sản Tôm Hùm 880.000vnd++" +
                 "\nBBQ Buffet 690.000vnd++";
+            txtTen.Text = "Red Chilli Seafood Buffet";
             cardd.BackgroundImage = Properties.Resources.restaurant_2_1;
 
         }
@@ -135,6 +139,7 @@ namespace baitap.View
                 "\nthực đơn đặc biệt.";
             lbThoiGian2.Text = "";
             lbMoTa3.Text = "";
+            txtTen.Text = "Rooftop Dining";
             cardd.BackgroundImage = Properties.Resources.restaurant_3_1;
 
         }
@@ -153,6 +158,7 @@ namespace baitap.View
                 "\nvào chủ nhật mỗi tuần.";
             lbThoiGian2.Text = "";
             lbMoTa3.Text = "";
+            txtTen.Text = "Tiệc Trưa Chủ Nhật";
             cardd.BackgroundImage = Properties.Resources.restaurant_4_1;
 
         }

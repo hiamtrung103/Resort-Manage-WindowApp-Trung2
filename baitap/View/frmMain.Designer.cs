@@ -50,6 +50,7 @@
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
             pictureBox9 = new PictureBox();
             lbThoat = new Label();
+            label8 = new Label();
             lbCaiDat = new Label();
             lbDanhGia = new Label();
             label7 = new Label();
@@ -294,6 +295,7 @@
             panelSidebar.color = Color.Transparent;
             panelSidebar.Controls.Add(pictureBox9);
             panelSidebar.Controls.Add(lbThoat);
+            panelSidebar.Controls.Add(label8);
             panelSidebar.Controls.Add(lbCaiDat);
             panelSidebar.Controls.Add(lbDanhGia);
             panelSidebar.Controls.Add(label7);
@@ -340,6 +342,21 @@
             lbThoat.Click += thoat_Click;
             lbThoat.MouseEnter += DoiMauLabel2_MouseEnter;
             lbThoat.MouseLeave += DoiMauLabel_MouseLeave;
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Image = baitap.Properties.Resources.settings_24;
+            label8.ImageAlign = ContentAlignment.MiddleLeft;
+            label8.Location = new Point(9, 441);
+            label8.Name = "label8";
+            label8.Size = new Size(211, 32);
+            label8.TabIndex = 0;
+            label8.Text = "Hàng Hóa";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            label8.Click += HangHoaOpen;
+            label8.MouseEnter += DoiMauLabel_MouseEnter;
+            label8.MouseLeave += DoiMauLabel_MouseLeave;
             // 
             // lbCaiDat
             // 
@@ -498,5 +515,6 @@
         private Label label3;
         private Label label6;
         private Label label7;
+        private Label label8;
     }
 }

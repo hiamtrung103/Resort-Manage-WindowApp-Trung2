@@ -40,34 +40,39 @@
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox9 = new PictureBox();
-            lbThoat = new Label();
-            label8 = new Label();
-            lbCaiDat = new Label();
-            lbDanhGia = new Label();
-            label7 = new Label();
-            lbThucDon = new Label();
-            lbDatPhong = new Label();
-            lbTrangChu = new Label();
+            rjButton7 = new CustomControls.RJControls.RJButton();
+            panel12 = new Panel();
+            btnCaiDat = new CustomControls.RJControls.RJButton();
+            panel11 = new Panel();
+            btnDanhGia = new CustomControls.RJControls.RJButton();
+            panel10 = new Panel();
+            btnQuanCafe = new CustomControls.RJControls.RJButton();
+            panel9 = new Panel();
+            btnNhaHang = new CustomControls.RJControls.RJButton();
+            panel4 = new Panel();
+            btnBooking = new CustomControls.RJControls.RJButton();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            btnTrangChu = new CustomControls.RJControls.RJButton();
+            panel2 = new Panel();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             panelMain = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelSidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonCustomPaletteBase1
@@ -109,9 +114,6 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox6);
-            panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
@@ -213,43 +215,10 @@
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Cursor = Cursors.Hand;
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1429, 21);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(15, 15);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 1;
-            pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Cursor = Cursors.Hand;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1476, 12);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(40, 40);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 1;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(1527, 8);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(45, 45);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1281, 12);
+            pictureBox3.Location = new Point(1331, 15);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(31, 31);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -270,7 +239,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(1313, 17);
+            label2.Location = new Point(1363, 20);
             label2.Name = "label2";
             label2.Size = new Size(119, 23);
             label2.TabIndex = 0;
@@ -288,20 +257,26 @@
             // 
             // panelSidebar
             // 
-            panelSidebar.BackColor = Color.FromArgb(1, 126, 245);
+            panelSidebar.BackColor = Color.FromArgb(1, 156, 255);
             panelSidebar.BorderRadius = 10;
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
-            panelSidebar.Controls.Add(pictureBox9);
-            panelSidebar.Controls.Add(lbThoat);
-            panelSidebar.Controls.Add(label8);
-            panelSidebar.Controls.Add(lbCaiDat);
-            panelSidebar.Controls.Add(lbDanhGia);
-            panelSidebar.Controls.Add(label7);
-            panelSidebar.Controls.Add(lbThucDon);
-            panelSidebar.Controls.Add(lbDatPhong);
-            panelSidebar.Controls.Add(lbTrangChu);
+            panelSidebar.Controls.Add(rjButton7);
+            panelSidebar.Controls.Add(panel12);
+            panelSidebar.Controls.Add(btnCaiDat);
+            panelSidebar.Controls.Add(panel11);
+            panelSidebar.Controls.Add(btnDanhGia);
+            panelSidebar.Controls.Add(panel10);
+            panelSidebar.Controls.Add(btnQuanCafe);
+            panelSidebar.Controls.Add(panel9);
+            panelSidebar.Controls.Add(btnNhaHang);
+            panelSidebar.Controls.Add(panel4);
+            panelSidebar.Controls.Add(btnBooking);
+            panelSidebar.Controls.Add(panel5);
+            panelSidebar.Controls.Add(btnTrangChu);
+            panelSidebar.Controls.Add(panel2);
+            panelSidebar.Controls.Add(rjButton1);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.IndicatorColor = Color.Transparent;
             panelSidebar.LeftSahddow = false;
@@ -314,139 +289,255 @@
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 13;
             // 
-            // pictureBox9
+            // rjButton7
             // 
-            pictureBox9.Cursor = Cursors.Hand;
-            pictureBox9.Image = baitap.Properties.Resources.more_24;
-            pictureBox9.Location = new Point(12, 33);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(24, 24);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 1;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += btnToggleSidebar_Click;
-            pictureBox9.MouseEnter += DoiMauLabel_MouseEnter;
-            pictureBox9.MouseLeave += DoiMauLabel_MouseLeave;
+            rjButton7.BackColor = Color.Transparent;
+            rjButton7.BackgroundColor = Color.Transparent;
+            rjButton7.BorderColor = Color.PaleVioletRed;
+            rjButton7.BorderRadius = 0;
+            rjButton7.BorderSize = 0;
+            rjButton7.Dock = DockStyle.Bottom;
+            rjButton7.FlatAppearance.BorderSize = 0;
+            rjButton7.FlatStyle = FlatStyle.Flat;
+            rjButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton7.ForeColor = Color.White;
+            rjButton7.Image = baitap.Properties.Resources.logout_24;
+            rjButton7.Location = new Point(0, 630);
+            rjButton7.Name = "rjButton7";
+            rjButton7.Size = new Size(50, 40);
+            rjButton7.TabIndex = 17;
+            rjButton7.TextColor = Color.White;
+            rjButton7.UseVisualStyleBackColor = false;
+            rjButton7.Click += thoat_Click;
             // 
-            // lbThoat
+            // panel12
             // 
-            lbThoat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbThoat.Image = baitap.Properties.Resources.logout_24;
-            lbThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbThoat.Location = new Point(12, 636);
-            lbThoat.Name = "lbThoat";
-            lbThoat.Size = new Size(184, 32);
-            lbThoat.TabIndex = 0;
-            lbThoat.Text = "Đăng xuất";
-            lbThoat.TextAlign = ContentAlignment.MiddleCenter;
-            lbThoat.Click += thoat_Click;
-            lbThoat.MouseEnter += DoiMauLabel2_MouseEnter;
-            lbThoat.MouseLeave += DoiMauLabel_MouseLeave;
+            panel12.Dock = DockStyle.Bottom;
+            panel12.Location = new Point(0, 670);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(50, 20);
+            panel12.TabIndex = 16;
             // 
-            // label8
+            // btnCaiDat
             // 
-            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Image = baitap.Properties.Resources.settings_24;
-            label8.ImageAlign = ContentAlignment.MiddleLeft;
-            label8.Location = new Point(9, 441);
-            label8.Name = "label8";
-            label8.Size = new Size(211, 32);
-            label8.TabIndex = 0;
-            label8.Text = "Hàng Hóa";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            label8.Click += HangHoaOpen;
-            label8.MouseEnter += DoiMauLabel_MouseEnter;
-            label8.MouseLeave += DoiMauLabel_MouseLeave;
+            btnCaiDat.BackColor = Color.Transparent;
+            btnCaiDat.BackgroundColor = Color.Transparent;
+            btnCaiDat.BorderColor = Color.PaleVioletRed;
+            btnCaiDat.BorderRadius = 0;
+            btnCaiDat.BorderSize = 0;
+            btnCaiDat.Dock = DockStyle.Top;
+            btnCaiDat.FlatAppearance.BorderSize = 0;
+            btnCaiDat.FlatStyle = FlatStyle.Flat;
+            btnCaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCaiDat.ForeColor = Color.White;
+            btnCaiDat.Image = baitap.Properties.Resources.settings_24;
+            btnCaiDat.Location = new Point(0, 375);
+            btnCaiDat.Name = "btnCaiDat";
+            btnCaiDat.Size = new Size(50, 40);
+            btnCaiDat.TabIndex = 15;
+            btnCaiDat.TextColor = Color.White;
+            btnCaiDat.UseVisualStyleBackColor = false;
+            btnCaiDat.Click += SettingKhachHangOpen;
             // 
-            // lbCaiDat
+            // panel11
             // 
-            lbCaiDat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbCaiDat.Image = baitap.Properties.Resources.settings_24;
-            lbCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbCaiDat.Location = new Point(9, 333);
-            lbCaiDat.Name = "lbCaiDat";
-            lbCaiDat.Size = new Size(211, 32);
-            lbCaiDat.TabIndex = 0;
-            lbCaiDat.Text = "Cài đặt";
-            lbCaiDat.TextAlign = ContentAlignment.MiddleCenter;
-            lbCaiDat.Click += SettingKhachHangOpen;
-            lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
-            lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
+            panel11.Dock = DockStyle.Top;
+            panel11.Location = new Point(0, 355);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(50, 20);
+            panel11.TabIndex = 14;
             // 
-            // lbDanhGia
+            // btnDanhGia
             // 
-            lbDanhGia.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDanhGia.Image = baitap.Properties.Resources.feedback_24;
-            lbDanhGia.ImageAlign = ContentAlignment.MiddleLeft;
-            lbDanhGia.Location = new Point(9, 283);
-            lbDanhGia.Name = "lbDanhGia";
-            lbDanhGia.Size = new Size(211, 32);
-            lbDanhGia.TabIndex = 0;
-            lbDanhGia.Text = "Báo cáo";
-            lbDanhGia.TextAlign = ContentAlignment.MiddleCenter;
-            lbDanhGia.Click += DanhGiaOpen;
-            lbDanhGia.MouseEnter += DoiMauLabel_MouseEnter;
-            lbDanhGia.MouseLeave += DoiMauLabel_MouseLeave;
+            btnDanhGia.BackColor = Color.Transparent;
+            btnDanhGia.BackgroundColor = Color.Transparent;
+            btnDanhGia.BorderColor = Color.PaleVioletRed;
+            btnDanhGia.BorderRadius = 0;
+            btnDanhGia.BorderSize = 0;
+            btnDanhGia.Dock = DockStyle.Top;
+            btnDanhGia.FlatAppearance.BorderSize = 0;
+            btnDanhGia.FlatStyle = FlatStyle.Flat;
+            btnDanhGia.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDanhGia.ForeColor = Color.White;
+            btnDanhGia.Image = baitap.Properties.Resources.feedback_24;
+            btnDanhGia.Location = new Point(0, 315);
+            btnDanhGia.Name = "btnDanhGia";
+            btnDanhGia.Size = new Size(50, 40);
+            btnDanhGia.TabIndex = 13;
+            btnDanhGia.TextColor = Color.White;
+            btnDanhGia.UseVisualStyleBackColor = false;
+            btnDanhGia.Click += DanhGiaOpen;
             // 
-            // label7
+            // panel10
             // 
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Image = baitap.Properties.Resources.cafe_24;
-            label7.ImageAlign = ContentAlignment.MiddleLeft;
-            label7.Location = new Point(9, 233);
-            label7.Name = "label7";
-            label7.Size = new Size(211, 32);
-            label7.TabIndex = 0;
-            label7.Text = "Cafe";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            label7.Click += NhaHang2Open;
-            label7.MouseEnter += DoiMauLabel_MouseEnter;
-            label7.MouseLeave += DoiMauLabel_MouseLeave;
+            panel10.Dock = DockStyle.Top;
+            panel10.Location = new Point(0, 295);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(50, 20);
+            panel10.TabIndex = 12;
             // 
-            // lbThucDon
+            // btnQuanCafe
             // 
-            lbThucDon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbThucDon.Image = baitap.Properties.Resources.restaurant_menu_24;
-            lbThucDon.ImageAlign = ContentAlignment.MiddleLeft;
-            lbThucDon.Location = new Point(9, 183);
-            lbThucDon.Name = "lbThucDon";
-            lbThucDon.Size = new Size(211, 32);
-            lbThucDon.TabIndex = 0;
-            lbThucDon.Text = "Thực đơn";
-            lbThucDon.TextAlign = ContentAlignment.MiddleCenter;
-            lbThucDon.Click += NhaHangOpen;
-            lbThucDon.MouseEnter += DoiMauLabel_MouseEnter;
-            lbThucDon.MouseLeave += DoiMauLabel_MouseLeave;
+            btnQuanCafe.BackColor = Color.Transparent;
+            btnQuanCafe.BackgroundColor = Color.Transparent;
+            btnQuanCafe.BorderColor = Color.PaleVioletRed;
+            btnQuanCafe.BorderRadius = 0;
+            btnQuanCafe.BorderSize = 0;
+            btnQuanCafe.Dock = DockStyle.Top;
+            btnQuanCafe.FlatAppearance.BorderSize = 0;
+            btnQuanCafe.FlatStyle = FlatStyle.Flat;
+            btnQuanCafe.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQuanCafe.ForeColor = Color.White;
+            btnQuanCafe.Image = baitap.Properties.Resources.cafe_24;
+            btnQuanCafe.Location = new Point(0, 255);
+            btnQuanCafe.Name = "btnQuanCafe";
+            btnQuanCafe.Size = new Size(50, 40);
+            btnQuanCafe.TabIndex = 11;
+            btnQuanCafe.TextColor = Color.White;
+            btnQuanCafe.UseVisualStyleBackColor = false;
+            btnQuanCafe.Click += NhaHang2Open;
             // 
-            // lbDatPhong
+            // panel9
             // 
-            lbDatPhong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDatPhong.Image = baitap.Properties.Resources.booking_24;
-            lbDatPhong.ImageAlign = ContentAlignment.MiddleLeft;
-            lbDatPhong.Location = new Point(9, 133);
-            lbDatPhong.Name = "lbDatPhong";
-            lbDatPhong.Size = new Size(211, 32);
-            lbDatPhong.TabIndex = 0;
-            lbDatPhong.Text = "Đặt Phòng";
-            lbDatPhong.TextAlign = ContentAlignment.MiddleCenter;
-            lbDatPhong.Click += ThueResortOpen;
-            lbDatPhong.MouseEnter += DoiMauLabel_MouseEnter;
-            lbDatPhong.MouseLeave += DoiMauLabel_MouseLeave;
+            panel9.Dock = DockStyle.Top;
+            panel9.Location = new Point(0, 235);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(50, 20);
+            panel9.TabIndex = 10;
             // 
-            // lbTrangChu
+            // btnNhaHang
             // 
-            lbTrangChu.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbTrangChu.Image = baitap.Properties.Resources.home_24;
-            lbTrangChu.ImageAlign = ContentAlignment.MiddleLeft;
-            lbTrangChu.Location = new Point(9, 83);
-            lbTrangChu.Name = "lbTrangChu";
-            lbTrangChu.Size = new Size(211, 32);
-            lbTrangChu.TabIndex = 0;
-            lbTrangChu.Text = "Trang Chủ";
-            lbTrangChu.TextAlign = ContentAlignment.MiddleCenter;
-            lbTrangChu.Click += TrangChuOpen;
-            lbTrangChu.MouseEnter += DoiMauLabel_MouseEnter;
-            lbTrangChu.MouseLeave += DoiMauLabel_MouseLeave;
+            btnNhaHang.BackColor = Color.Transparent;
+            btnNhaHang.BackgroundColor = Color.Transparent;
+            btnNhaHang.BorderColor = Color.PaleVioletRed;
+            btnNhaHang.BorderRadius = 0;
+            btnNhaHang.BorderSize = 0;
+            btnNhaHang.Dock = DockStyle.Top;
+            btnNhaHang.FlatAppearance.BorderSize = 0;
+            btnNhaHang.FlatStyle = FlatStyle.Flat;
+            btnNhaHang.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhaHang.ForeColor = Color.White;
+            btnNhaHang.Image = baitap.Properties.Resources.restaurant_menu_24;
+            btnNhaHang.Location = new Point(0, 195);
+            btnNhaHang.Name = "btnNhaHang";
+            btnNhaHang.Size = new Size(50, 40);
+            btnNhaHang.TabIndex = 9;
+            btnNhaHang.TextColor = Color.White;
+            btnNhaHang.UseVisualStyleBackColor = false;
+            btnNhaHang.Click += NhaHangOpen;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 175);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(50, 20);
+            panel4.TabIndex = 8;
+            // 
+            // btnBooking
+            // 
+            btnBooking.BackColor = Color.Transparent;
+            btnBooking.BackgroundColor = Color.Transparent;
+            btnBooking.BorderColor = Color.PaleVioletRed;
+            btnBooking.BorderRadius = 0;
+            btnBooking.BorderSize = 0;
+            btnBooking.Dock = DockStyle.Top;
+            btnBooking.FlatAppearance.BorderSize = 0;
+            btnBooking.FlatStyle = FlatStyle.Flat;
+            btnBooking.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBooking.ForeColor = Color.White;
+            btnBooking.Image = baitap.Properties.Resources.booking_24;
+            btnBooking.Location = new Point(0, 135);
+            btnBooking.Name = "btnBooking";
+            btnBooking.Size = new Size(50, 40);
+            btnBooking.TabIndex = 7;
+            btnBooking.TextColor = Color.White;
+            btnBooking.UseVisualStyleBackColor = false;
+            btnBooking.Click += ThueResortOpen;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel6);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 115);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(50, 20);
+            panel5.TabIndex = 6;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(panel7);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(50, 20);
+            panel6.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(panel8);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(50, 20);
+            panel7.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            panel8.Dock = DockStyle.Top;
+            panel8.Location = new Point(0, 0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(50, 20);
+            panel8.TabIndex = 6;
+            // 
+            // btnTrangChu
+            // 
+            btnTrangChu.BackColor = Color.Transparent;
+            btnTrangChu.BackgroundColor = Color.Transparent;
+            btnTrangChu.BorderColor = Color.PaleVioletRed;
+            btnTrangChu.BorderRadius = 0;
+            btnTrangChu.BorderSize = 0;
+            btnTrangChu.Dock = DockStyle.Top;
+            btnTrangChu.FlatAppearance.BorderSize = 0;
+            btnTrangChu.FlatStyle = FlatStyle.Flat;
+            btnTrangChu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTrangChu.ForeColor = Color.White;
+            btnTrangChu.Image = baitap.Properties.Resources.home_24;
+            btnTrangChu.Location = new Point(0, 75);
+            btnTrangChu.Name = "btnTrangChu";
+            btnTrangChu.Size = new Size(50, 40);
+            btnTrangChu.TabIndex = 3;
+            btnTrangChu.TextColor = Color.White;
+            btnTrangChu.UseVisualStyleBackColor = false;
+            btnTrangChu.Click += TrangChuOpen;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 40);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(50, 35);
+            panel2.TabIndex = 1;
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.Transparent;
+            rjButton1.BackgroundColor = Color.Transparent;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 0;
+            rjButton1.BorderSize = 0;
+            rjButton1.Dock = DockStyle.Top;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Image = baitap.Properties.Resources.more_24;
+            rjButton1.Location = new Point(0, 0);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(50, 40);
+            rjButton1.TabIndex = 0;
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnToggleSidebar_Click;
             // 
             // panelMain
             // 
@@ -476,13 +567,12 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelSidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -497,24 +587,30 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private Label label2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
         private Panel panel3;
         private Bunifu.Framework.UI.BunifuCards panelSidebar;
-        private PictureBox pictureBox9;
-        private Label lbThoat;
-        private Label lbCaiDat;
-        private Label lbDanhGia;
-        private Label lbThucDon;
-        private Label lbDatPhong;
-        private Label lbTrangChu;
         private Panel panelMain;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label6;
-        private Label label7;
-        private Label label8;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private Panel panel2;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private CustomControls.RJControls.RJButton btnTrangChu;
+        private CustomControls.RJControls.RJButton btnCaiDat;
+        private Panel panel11;
+        private CustomControls.RJControls.RJButton btnDanhGia;
+        private Panel panel10;
+        private CustomControls.RJControls.RJButton btnQuanCafe;
+        private Panel panel9;
+        private CustomControls.RJControls.RJButton btnNhaHang;
+        private Panel panel4;
+        private CustomControls.RJControls.RJButton btnBooking;
+        private CustomControls.RJControls.RJButton rjButton7;
+        private Panel panel12;
     }
 }

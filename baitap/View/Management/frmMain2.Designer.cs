@@ -47,13 +47,26 @@
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
-            pictureBox9 = new PictureBox();
-            lbThoat = new Label();
-            lbCaiDat = new Label();
-            lbLuong = new Label();
-            lbTrangChu = new Label();
-            label7 = new Label();
-            lbNhanVien = new Label();
+            btnDangXuat = new CustomControls.RJControls.RJButton();
+            panel14 = new Panel();
+            btnCaiDat = new CustomControls.RJControls.RJButton();
+            panel12 = new Panel();
+            btnHoaDon = new CustomControls.RJControls.RJButton();
+            panel11 = new Panel();
+            btnHangHoa = new CustomControls.RJControls.RJButton();
+            panel10 = new Panel();
+            btnKeToan = new CustomControls.RJControls.RJButton();
+            panel9 = new Panel();
+            btnNhanVien = new CustomControls.RJControls.RJButton();
+            panel4 = new Panel();
+            btnKhachHang = new CustomControls.RJControls.RJButton();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            btnTrangChu = new CustomControls.RJControls.RJButton();
+            panel2 = new Panel();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             panelMain = new Panel();
             panel1.SuspendLayout();
@@ -65,7 +78,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelSidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -153,6 +168,7 @@
             label6.Size = new Size(104, 25);
             label6.TabIndex = 5;
             label6.Text = "Trang Chủ";
+            label6.Click += TrangChuOpen;
             // 
             // panel3
             // 
@@ -257,18 +273,28 @@
             // 
             // panelSidebar
             // 
-            panelSidebar.BackColor = Color.FromArgb(1, 126, 245);
+            panelSidebar.BackColor = Color.FromArgb(255, 193, 37);
             panelSidebar.BorderRadius = 10;
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
-            panelSidebar.Controls.Add(pictureBox9);
-            panelSidebar.Controls.Add(lbThoat);
-            panelSidebar.Controls.Add(lbCaiDat);
-            panelSidebar.Controls.Add(lbLuong);
-            panelSidebar.Controls.Add(lbTrangChu);
-            panelSidebar.Controls.Add(label7);
-            panelSidebar.Controls.Add(lbNhanVien);
+            panelSidebar.Controls.Add(btnDangXuat);
+            panelSidebar.Controls.Add(panel14);
+            panelSidebar.Controls.Add(btnCaiDat);
+            panelSidebar.Controls.Add(panel12);
+            panelSidebar.Controls.Add(btnHoaDon);
+            panelSidebar.Controls.Add(panel11);
+            panelSidebar.Controls.Add(btnHangHoa);
+            panelSidebar.Controls.Add(panel10);
+            panelSidebar.Controls.Add(btnKeToan);
+            panelSidebar.Controls.Add(panel9);
+            panelSidebar.Controls.Add(btnNhanVien);
+            panelSidebar.Controls.Add(panel4);
+            panelSidebar.Controls.Add(btnKhachHang);
+            panelSidebar.Controls.Add(panel5);
+            panelSidebar.Controls.Add(btnTrangChu);
+            panelSidebar.Controls.Add(panel2);
+            panelSidebar.Controls.Add(rjButton1);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.IndicatorColor = Color.Transparent;
             panelSidebar.LeftSahddow = false;
@@ -281,107 +307,281 @@
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 14;
             // 
-            // pictureBox9
+            // btnDangXuat
             // 
-            pictureBox9.Cursor = Cursors.Hand;
-            pictureBox9.Image = Properties.Resources.more_24;
-            pictureBox9.Location = new Point(12, 33);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(24, 24);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 1;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += btnToggleSidebar_Click;
-            pictureBox9.MouseEnter += DoiMauLabel_MouseEnter;
+            btnDangXuat.BackColor = Color.Transparent;
+            btnDangXuat.BackgroundColor = Color.Transparent;
+            btnDangXuat.BorderColor = Color.PaleVioletRed;
+            btnDangXuat.BorderRadius = 0;
+            btnDangXuat.BorderSize = 0;
+            btnDangXuat.Dock = DockStyle.Bottom;
+            btnDangXuat.FlatAppearance.BorderSize = 0;
+            btnDangXuat.FlatStyle = FlatStyle.Flat;
+            btnDangXuat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDangXuat.ForeColor = Color.White;
+            btnDangXuat.Image = Properties.Resources.logout_24;
+            btnDangXuat.Location = new Point(0, 630);
+            btnDangXuat.Name = "btnDangXuat";
+            btnDangXuat.Size = new Size(50, 40);
+            btnDangXuat.TabIndex = 34;
+            btnDangXuat.TextColor = Color.White;
+            btnDangXuat.UseVisualStyleBackColor = false;
             // 
-            // lbThoat
+            // panel14
             // 
-            lbThoat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbThoat.Image = Properties.Resources.logout_24;
-            lbThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbThoat.Location = new Point(9, 632);
-            lbThoat.Name = "lbThoat";
-            lbThoat.Size = new Size(184, 32);
-            lbThoat.TabIndex = 0;
-            lbThoat.Text = "Đăng xuất";
-            lbThoat.TextAlign = ContentAlignment.MiddleCenter;
-            lbThoat.Click += thoat_Click;
-            lbThoat.MouseEnter += DoiMauLabel2_MouseEnter;
-            lbThoat.MouseLeave += DoiMauLabel_MouseLeave;
+            panel14.Dock = DockStyle.Bottom;
+            panel14.Location = new Point(0, 670);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(50, 20);
+            panel14.TabIndex = 33;
             // 
-            // lbCaiDat
+            // btnCaiDat
             // 
-            lbCaiDat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbCaiDat.Image = Properties.Resources.settings_24;
-            lbCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
-            lbCaiDat.Location = new Point(9, 283);
-            lbCaiDat.Name = "lbCaiDat";
-            lbCaiDat.Size = new Size(211, 32);
-            lbCaiDat.TabIndex = 0;
-            lbCaiDat.Text = "Cài đặt";
-            lbCaiDat.TextAlign = ContentAlignment.MiddleCenter;
-            lbCaiDat.MouseEnter += DoiMauLabel_MouseEnter;
-            lbCaiDat.MouseLeave += DoiMauLabel_MouseLeave;
+            btnCaiDat.BackColor = Color.Transparent;
+            btnCaiDat.BackgroundColor = Color.Transparent;
+            btnCaiDat.BorderColor = Color.PaleVioletRed;
+            btnCaiDat.BorderRadius = 0;
+            btnCaiDat.BorderSize = 0;
+            btnCaiDat.Dock = DockStyle.Top;
+            btnCaiDat.FlatAppearance.BorderSize = 0;
+            btnCaiDat.FlatStyle = FlatStyle.Flat;
+            btnCaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCaiDat.ForeColor = Color.White;
+            btnCaiDat.Image = Properties.Resources.settings_24;
+            btnCaiDat.Location = new Point(0, 435);
+            btnCaiDat.Name = "btnCaiDat";
+            btnCaiDat.Size = new Size(50, 40);
+            btnCaiDat.TabIndex = 30;
+            btnCaiDat.TextColor = Color.White;
+            btnCaiDat.UseVisualStyleBackColor = false;
             // 
-            // lbLuong
+            // panel12
             // 
-            lbLuong.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbLuong.Image = Properties.Resources.transaction_24;
-            lbLuong.ImageAlign = ContentAlignment.MiddleLeft;
-            lbLuong.Location = new Point(9, 233);
-            lbLuong.Name = "lbLuong";
-            lbLuong.Size = new Size(211, 32);
-            lbLuong.TabIndex = 0;
-            lbLuong.Text = "Accountant";
-            lbLuong.TextAlign = ContentAlignment.MiddleCenter;
-            lbLuong.Click += KeToanOpen;
-            lbLuong.MouseEnter += DoiMauLabel_MouseEnter;
-            lbLuong.MouseLeave += DoiMauLabel_MouseLeave;
+            panel12.Dock = DockStyle.Top;
+            panel12.Location = new Point(0, 415);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(50, 20);
+            panel12.TabIndex = 29;
             // 
-            // lbTrangChu
+            // btnHoaDon
             // 
-            lbTrangChu.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbTrangChu.Image = Properties.Resources.home_24;
-            lbTrangChu.ImageAlign = ContentAlignment.MiddleLeft;
-            lbTrangChu.Location = new Point(9, 83);
-            lbTrangChu.Name = "lbTrangChu";
-            lbTrangChu.Size = new Size(211, 32);
-            lbTrangChu.TabIndex = 0;
-            lbTrangChu.Text = "Trang Chủ";
-            lbTrangChu.TextAlign = ContentAlignment.MiddleCenter;
-            lbTrangChu.Click += TrangChuOpen;
-            lbTrangChu.MouseEnter += DoiMauLabel_MouseEnter;
-            lbTrangChu.MouseLeave += DoiMauLabel_MouseLeave;
+            btnHoaDon.BackColor = Color.Transparent;
+            btnHoaDon.BackgroundColor = Color.Transparent;
+            btnHoaDon.BorderColor = Color.PaleVioletRed;
+            btnHoaDon.BorderRadius = 0;
+            btnHoaDon.BorderSize = 0;
+            btnHoaDon.Dock = DockStyle.Top;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHoaDon.ForeColor = Color.White;
+            btnHoaDon.Image = Properties.Resources.bill_24;
+            btnHoaDon.Location = new Point(0, 375);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Size = new Size(50, 40);
+            btnHoaDon.TabIndex = 28;
+            btnHoaDon.TextColor = Color.White;
+            btnHoaDon.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // panel11
             // 
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Image = Properties.Resources.staff_24;
-            label7.ImageAlign = ContentAlignment.MiddleLeft;
-            label7.Location = new Point(9, 183);
-            label7.Name = "label7";
-            label7.Size = new Size(211, 32);
-            label7.TabIndex = 0;
-            label7.Text = "Nhân viên";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            label7.Click += NhanVienOpen;
-            label7.MouseEnter += DoiMauLabel_MouseEnter;
-            label7.MouseLeave += DoiMauLabel_MouseLeave;
+            panel11.Dock = DockStyle.Top;
+            panel11.Location = new Point(0, 355);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(50, 20);
+            panel11.TabIndex = 27;
             // 
-            // lbNhanVien
+            // btnHangHoa
             // 
-            lbNhanVien.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbNhanVien.Image = Properties.Resources.user_24;
-            lbNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
-            lbNhanVien.Location = new Point(9, 133);
-            lbNhanVien.Name = "lbNhanVien";
-            lbNhanVien.Size = new Size(211, 32);
-            lbNhanVien.TabIndex = 0;
-            lbNhanVien.Text = "Khách Hàng";
-            lbNhanVien.TextAlign = ContentAlignment.MiddleCenter;
-            lbNhanVien.Click += KhachhangOpen;
-            lbNhanVien.MouseEnter += DoiMauLabel_MouseEnter;
-            lbNhanVien.MouseLeave += DoiMauLabel_MouseLeave;
+            btnHangHoa.BackColor = Color.Transparent;
+            btnHangHoa.BackgroundColor = Color.Transparent;
+            btnHangHoa.BorderColor = Color.PaleVioletRed;
+            btnHangHoa.BorderRadius = 0;
+            btnHangHoa.BorderSize = 0;
+            btnHangHoa.Dock = DockStyle.Top;
+            btnHangHoa.FlatAppearance.BorderSize = 0;
+            btnHangHoa.FlatStyle = FlatStyle.Flat;
+            btnHangHoa.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHangHoa.ForeColor = Color.White;
+            btnHangHoa.Image = Properties.Resources.goods_24;
+            btnHangHoa.Location = new Point(0, 315);
+            btnHangHoa.Name = "btnHangHoa";
+            btnHangHoa.Size = new Size(50, 40);
+            btnHangHoa.TabIndex = 26;
+            btnHangHoa.TextColor = Color.White;
+            btnHangHoa.UseVisualStyleBackColor = false;
+            btnHangHoa.Click += HangHoaOpen;
+            // 
+            // panel10
+            // 
+            panel10.Dock = DockStyle.Top;
+            panel10.Location = new Point(0, 295);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(50, 20);
+            panel10.TabIndex = 25;
+            // 
+            // btnKeToan
+            // 
+            btnKeToan.BackColor = Color.Transparent;
+            btnKeToan.BackgroundColor = Color.Transparent;
+            btnKeToan.BorderColor = Color.PaleVioletRed;
+            btnKeToan.BorderRadius = 0;
+            btnKeToan.BorderSize = 0;
+            btnKeToan.Dock = DockStyle.Top;
+            btnKeToan.FlatAppearance.BorderSize = 0;
+            btnKeToan.FlatStyle = FlatStyle.Flat;
+            btnKeToan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKeToan.ForeColor = Color.White;
+            btnKeToan.Image = Properties.Resources.transaction_24;
+            btnKeToan.Location = new Point(0, 255);
+            btnKeToan.Name = "btnKeToan";
+            btnKeToan.Size = new Size(50, 40);
+            btnKeToan.TabIndex = 24;
+            btnKeToan.TextColor = Color.White;
+            btnKeToan.UseVisualStyleBackColor = false;
+            btnKeToan.Click += KeToanOpen;
+            // 
+            // panel9
+            // 
+            panel9.Dock = DockStyle.Top;
+            panel9.Location = new Point(0, 235);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(50, 20);
+            panel9.TabIndex = 23;
+            // 
+            // btnNhanVien
+            // 
+            btnNhanVien.BackColor = Color.Transparent;
+            btnNhanVien.BackgroundColor = Color.Transparent;
+            btnNhanVien.BorderColor = Color.PaleVioletRed;
+            btnNhanVien.BorderRadius = 0;
+            btnNhanVien.BorderSize = 0;
+            btnNhanVien.Dock = DockStyle.Top;
+            btnNhanVien.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatStyle = FlatStyle.Flat;
+            btnNhanVien.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhanVien.ForeColor = Color.White;
+            btnNhanVien.Image = Properties.Resources.staff_24;
+            btnNhanVien.Location = new Point(0, 195);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Size = new Size(50, 40);
+            btnNhanVien.TabIndex = 22;
+            btnNhanVien.TextColor = Color.White;
+            btnNhanVien.UseVisualStyleBackColor = false;
+            btnNhanVien.Click += NhanVienOpen;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 175);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(50, 20);
+            panel4.TabIndex = 21;
+            // 
+            // btnKhachHang
+            // 
+            btnKhachHang.BackColor = Color.Transparent;
+            btnKhachHang.BackgroundColor = Color.Transparent;
+            btnKhachHang.BorderColor = Color.PaleVioletRed;
+            btnKhachHang.BorderRadius = 0;
+            btnKhachHang.BorderSize = 0;
+            btnKhachHang.Dock = DockStyle.Top;
+            btnKhachHang.FlatAppearance.BorderSize = 0;
+            btnKhachHang.FlatStyle = FlatStyle.Flat;
+            btnKhachHang.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKhachHang.ForeColor = Color.White;
+            btnKhachHang.Image = Properties.Resources.user_24;
+            btnKhachHang.Location = new Point(0, 135);
+            btnKhachHang.Name = "btnKhachHang";
+            btnKhachHang.Size = new Size(50, 40);
+            btnKhachHang.TabIndex = 20;
+            btnKhachHang.TextColor = Color.White;
+            btnKhachHang.UseVisualStyleBackColor = false;
+            btnKhachHang.Click += KhachhangOpen;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel6);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 115);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(50, 20);
+            panel5.TabIndex = 19;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(panel7);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(50, 20);
+            panel6.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(panel8);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(50, 20);
+            panel7.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            panel8.Dock = DockStyle.Top;
+            panel8.Location = new Point(0, 0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(50, 20);
+            panel8.TabIndex = 6;
+            // 
+            // btnTrangChu
+            // 
+            btnTrangChu.BackColor = Color.Transparent;
+            btnTrangChu.BackgroundColor = Color.Transparent;
+            btnTrangChu.BorderColor = Color.PaleVioletRed;
+            btnTrangChu.BorderRadius = 0;
+            btnTrangChu.BorderSize = 0;
+            btnTrangChu.Dock = DockStyle.Top;
+            btnTrangChu.FlatAppearance.BorderSize = 0;
+            btnTrangChu.FlatStyle = FlatStyle.Flat;
+            btnTrangChu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTrangChu.ForeColor = Color.White;
+            btnTrangChu.Image = Properties.Resources.home_24;
+            btnTrangChu.Location = new Point(0, 75);
+            btnTrangChu.Name = "btnTrangChu";
+            btnTrangChu.Size = new Size(50, 40);
+            btnTrangChu.TabIndex = 18;
+            btnTrangChu.TextColor = Color.White;
+            btnTrangChu.UseVisualStyleBackColor = false;
+            btnTrangChu.Click += TrangChuOpen;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 40);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(50, 35);
+            panel2.TabIndex = 17;
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.Transparent;
+            rjButton1.BackgroundColor = Color.Transparent;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 0;
+            rjButton1.BorderSize = 0;
+            rjButton1.Dock = DockStyle.Top;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Image = Properties.Resources.more_24;
+            rjButton1.Location = new Point(0, 0);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(50, 40);
+            rjButton1.TabIndex = 16;
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += btnToggleSidebar_Click;
             // 
             // kryptonCustomPaletteBase1
             // 
@@ -445,7 +645,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelSidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -468,14 +670,30 @@
         private Label label2;
         private Label label1;
         private Bunifu.Framework.UI.BunifuCards panelSidebar;
-        private PictureBox pictureBox9;
-        private Label lbThoat;
-        private Label lbCaiDat;
-        private Label lbLuong;
-        private Label lbTrangChu;
-        private Label lbNhanVien;
         private Krypton.Toolkit.KryptonCustomPaletteBase kryptonCustomPaletteBase1;
-        private Label label7;
         private Panel panelMain;
+        private CustomControls.RJControls.RJButton rjButton4;
+        private Panel panel14;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private Panel panel13;
+        private CustomControls.RJControls.RJButton btnCaiDat;
+        private Panel panel12;
+        private CustomControls.RJControls.RJButton btnHoaDon;
+        private Panel panel11;
+        private CustomControls.RJControls.RJButton btnHangHoa;
+        private Panel panel10;
+        private CustomControls.RJControls.RJButton btnKeToan;
+        private Panel panel9;
+        private CustomControls.RJControls.RJButton btnNhanVien;
+        private Panel panel4;
+        private CustomControls.RJControls.RJButton btnKhachHang;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private CustomControls.RJControls.RJButton btnTrangChu;
+        private Panel panel2;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton btnDangXuat;
     }
 }

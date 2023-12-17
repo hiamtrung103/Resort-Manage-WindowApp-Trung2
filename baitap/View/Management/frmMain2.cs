@@ -26,36 +26,27 @@ namespace baitap.View
             InitializeComponent();
         }
 
-        private void DoiMauLabel_MouseEnter(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, Color.LightBlue, Color.Gray);
-        }
-
-        private void DoiMauLabel2_MouseEnter(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, Color.Red);
-        }
-
-        private void DoiMauLabel_MouseLeave(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, Color.Black, Color.FromArgb(1, 126, 245));
-        }
-
-        private void ThayDoiMauLabel(object sender, Color foreColor, Color? backColor = null)
-        {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = foreColor;
-                label.BackColor = backColor ?? (foreColor == Color.LightBlue ? Color.Gray : Color.FromArgb(1, 126, 245));
-            }
-        }
-
         private void btnToggleSidebar_Click(object sender, EventArgs e)
         {
             int minSize = 50;
             panelSidebar.Width = (panelSidebar.Width == minSize) ? 200 : minSize;
+
+            NutBam(btnTrangChu, "Trang Chủ");
+            NutBam(btnKhachHang, "Khách Hàng");
+            NutBam(btnNhanVien, "Nhân Viên");
+            NutBam(btnKeToan, "Kế Toán");
+            NutBam(btnHangHoa, "Hàng Hóa");
+            NutBam(btnHoaDon, "Hóa Đơn");
+            NutBam(btnCaiDat, "Cài Đặt");
+            NutBam(btnDangXuat, "Đăng Xuất");
         }
+
+        private void NutBam(Button button, string originalText)
+        {
+            button.ImageAlign = (button.ImageAlign == ContentAlignment.MiddleLeft) ? ContentAlignment.MiddleCenter : ContentAlignment.MiddleLeft;
+            button.Text = (button.Text == originalText) ? "" : originalText;
+        }
+
 
         private void MofrmCon(Form frmCon)
         {
@@ -127,6 +118,10 @@ namespace baitap.View
         private void KeToanOpen(object sender, EventArgs e)
         {
             CheckQuyenHan("accountant", new frmKeToan());
+        }
+        private void HangHoaOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmHangHoa());
         }
 
         private void frmMain2_Load(object sender, EventArgs e)

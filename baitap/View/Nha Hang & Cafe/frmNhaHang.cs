@@ -46,7 +46,6 @@ namespace baitap.View
                                 txtDiaChi.Text = khachHangDataTable.Rows[0]["DiaChi"].ToString();
                                 txtDienThoai.Text = khachHangDataTable.Rows[0]["DienThoai"].ToString();
                                 txtEmail.Text = khachHangDataTable.Rows[0]["Email"].ToString();
-                                txtTen.Text = khachHangDataTable.Rows[0]["MaGiamGia"].ToString();
                                 txtTen.Text = "Riverview Dining";
                             }
                         }

@@ -29,38 +29,25 @@ namespace QL_QuanCafe_Trung_Hai.View
             MofrmCon(new frmTrangChu());
         }
 
-        private void DoiMauLabel_MouseEnter(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, Color.LightBlue, Color.Gray);
-        }
-
-        private void DoiMauLabel2_MouseEnter(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, Color.Red);
-        }
-
-        private void DoiMauLabel_MouseLeave(object sender, EventArgs e)
-        {
-            ThayDoiMauLabel(sender, anhClick ? Color.White : SystemColors.ControlText, anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245));
-        }
-
-        private bool anhClick = false;
-
-        private void ThayDoiMauLabel(object sender, Color foreColor, Color? backColor = null)
-        {
-            Label label = sender as Label;
-            if (label != null)
-            {
-                label.ForeColor = foreColor;
-                label.BackColor = backColor ?? (foreColor == Color.LightBlue ? Color.Gray : Color.FromArgb(1, 126, 245));
-            }
-        }
-
         private void btnToggleSidebar_Click(object sender, EventArgs e)
         {
             int minSize = 50;
             panelSidebar.Width = (panelSidebar.Width == minSize) ? 200 : minSize;
+
+            NutBam(btnTrangChu, "Trang Chủ");
+            NutBam(btnBooking, "Thuê Resort");
+            NutBam(btnNhaHang, "Nhà Hàng");
+            NutBam(btnQuanCafe, "Quán Cafe");
+            NutBam(btnDanhGia, "Đánh Giá");
+            NutBam(btnCaiDat, "Cài Đặt");
         }
+
+        private void NutBam(Button button, string originalText)
+        {
+            button.ImageAlign = (button.ImageAlign == ContentAlignment.MiddleLeft) ? ContentAlignment.MiddleCenter : ContentAlignment.MiddleLeft;
+            button.Text = (button.Text == originalText) ? "" : originalText;
+        }
+
 
         public void MofrmCon(Form frmCon)
         {
@@ -72,8 +59,6 @@ namespace QL_QuanCafe_Trung_Hai.View
 
             frmConHientai = frmCon;
             frmConHientai.FormClosed += frmCon_Tat;
-
-//            ThayDoiMauLabel(sender, anhClick ? Color.White : SystemColors.ControlText, anhClick ? Color.FromArgb(51, 51, 51) : Color.FromArgb(1, 126, 245));
 
             frmCon.TopLevel = false;
             frmCon.FormBorderStyle = FormBorderStyle.None;
@@ -132,11 +117,6 @@ namespace QL_QuanCafe_Trung_Hai.View
         private void SettingKhachHangOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmSettingKhachHang());
-        }
-
-        private void HangHoaOpen(object sender, EventArgs e)
-        {
-            MofrmCon(new frmHangHoa());
         }
 
         private void thoat_Click(object sender, EventArgs e)

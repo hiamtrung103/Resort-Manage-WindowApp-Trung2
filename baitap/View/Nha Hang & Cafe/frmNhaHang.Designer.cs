@@ -69,6 +69,8 @@
             label3 = new Label();
             lb_RiverviewDining = new Label();
             label1 = new Label();
+            rjButton1 = new CustomControls.RJControls.RJButton();
+            rjButton2 = new CustomControls.RJControls.RJButton();
             panel1.SuspendLayout();
             bunifuCards6.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -117,7 +119,7 @@
             bunifuCards6.IndicatorColor = Color.Transparent;
             bunifuCards6.LeftSahddow = false;
             bunifuCards6.LeftShadow = false;
-            bunifuCards6.Location = new Point(912, 36);
+            bunifuCards6.Location = new Point(917, 36);
             bunifuCards6.Name = "bunifuCards6";
             bunifuCards6.RightSahddow = true;
             bunifuCards6.RightShadow = true;
@@ -229,7 +231,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(rjButton2);
             groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(rjButton1);
             groupBox1.Controls.Add(txtHoTen);
             groupBox1.Controls.Add(txtNamSinh);
             groupBox1.Controls.Add(label11);
@@ -246,7 +250,7 @@
             groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 356);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(735, 207);
+            groupBox1.Size = new Size(883, 207);
             groupBox1.TabIndex = 12;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin";
@@ -632,6 +636,44 @@
             label1.TabIndex = 0;
             label1.Text = "Ẩm Thực";
             // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.FromArgb(204, 0, 39);
+            rjButton1.BackgroundColor = Color.FromArgb(204, 0, 39);
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(748, 22);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(114, 40);
+            rjButton1.TabIndex = 14;
+            rjButton1.Text = "Đặt bàn";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // rjButton2
+            // 
+            rjButton2.BackColor = Color.FromArgb(13, 135, 242);
+            rjButton2.BackgroundColor = Color.FromArgb(13, 135, 242);
+            rjButton2.BorderColor = Color.PaleVioletRed;
+            rjButton2.BorderRadius = 5;
+            rjButton2.BorderSize = 0;
+            rjButton2.FlatAppearance.BorderSize = 0;
+            rjButton2.FlatStyle = FlatStyle.Flat;
+            rjButton2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton2.ForeColor = Color.White;
+            rjButton2.Location = new Point(748, 68);
+            rjButton2.Name = "rjButton2";
+            rjButton2.Size = new Size(114, 40);
+            rjButton2.TabIndex = 14;
+            rjButton2.Text = "Liên hệ";
+            rjButton2.TextColor = Color.White;
+            rjButton2.UseVisualStyleBackColor = false;
+            // 
             // frmNhaHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -706,5 +748,7 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private Label lbMoTa3;
         private Label lbThoiGian2;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }

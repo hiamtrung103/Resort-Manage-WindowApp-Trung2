@@ -103,6 +103,16 @@ namespace baitap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bill_24 {
+            get {
+                object obj = ResourceManager.GetObject("bill-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap booking_24 {
             get {
                 object obj = ResourceManager.GetObject("booking-24", resourceCulture);
@@ -196,6 +206,16 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap feedback_24 {
             get {
                 object obj = ResourceManager.GetObject("feedback-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap goods_24 {
+            get {
+                object obj = ResourceManager.GetObject("goods-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

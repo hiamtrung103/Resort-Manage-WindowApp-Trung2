@@ -40,6 +40,7 @@ namespace QL_QuanCafe_Trung_Hai.View
             NutBam(btnQuanCafe, "Quán Cafe");
             NutBam(btnDanhGia, "Đánh Giá");
             NutBam(btnCaiDat, "Cài Đặt");
+            NutBam(btnDangXuat, "Đăng Xuất");
         }
 
         private void NutBam(Button button, string originalText)
@@ -48,17 +49,14 @@ namespace QL_QuanCafe_Trung_Hai.View
             button.Text = (button.Text == originalText) ? "" : originalText;
         }
 
-
         public void MofrmCon(Form frmCon)
         {
             if (frmConHientai != null)
             {
-                frmConHientai.FormClosed -= frmCon_Tat;
                 frmConHientai.Close();
             }
 
             frmConHientai = frmCon;
-            frmConHientai.FormClosed += frmCon_Tat;
 
             frmCon.TopLevel = false;
             frmCon.FormBorderStyle = FormBorderStyle.None;
@@ -68,15 +66,6 @@ namespace QL_QuanCafe_Trung_Hai.View
             panelMain.Tag = frmCon;
             frmCon.BringToFront();
             frmCon.Show();
-        }
-
-        public void frmCon_Tat(object sender, FormClosedEventArgs e)
-        {
-            Form closedForm = sender as Form;
-            if (closedForm != null)
-            {
-                closedForm.Dispose();
-            }
         }
 
         private void TrangChuOpen(object sender, EventArgs e)
@@ -114,9 +103,9 @@ namespace QL_QuanCafe_Trung_Hai.View
             MofrmCon(new frmKhachHang());
         }
 
-        private void SettingKhachHangOpen(object sender, EventArgs e)
+        private void SettingOpen(object sender, EventArgs e)
         {
-            MofrmCon(new frmSettingKhachHang());
+            MofrmCon(new frmSettings());
         }
 
         private void thoat_Click(object sender, EventArgs e)

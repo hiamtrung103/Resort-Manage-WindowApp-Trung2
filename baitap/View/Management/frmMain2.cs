@@ -1,5 +1,6 @@
 ﻿using baitap.Model;
 using baitap.Object;
+using baitap.View.Management;
 using Krypton.Toolkit;
 using QL_QuanCafe_Trung_Hai.View;
 using System;
@@ -36,7 +37,7 @@ namespace baitap.View
             NutBam(btnNhanVien, "Nhân Viên");
             NutBam(btnKeToan, "Kế Toán");
             NutBam(btnHangHoa, "Hàng Hóa");
-            NutBam(btnHoaDon, "Hóa Đơn");
+            NutBam(btnFeedback, "Danh sách FeedBack");
             NutBam(btnCaiDat, "Cài Đặt");
             NutBam(btnDangXuat, "Đăng Xuất");
         }
@@ -112,16 +113,25 @@ namespace baitap.View
 
         private void NhanVienOpen(object sender, EventArgs e)
         {
-            CheckQuyenHan("manager", new frmNhanVien());
+            CheckQuyenHan("Manager", new frmNhanVien());
         }
 
         private void KeToanOpen(object sender, EventArgs e)
         {
-            CheckQuyenHan("accountant", new frmKeToan());
+            CheckQuyenHan("Accountant", new frmKeToan());
         }
         private void HangHoaOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmHangHoa());
+        }
+
+        private void FeedBackOpen(object sender, EventArgs e)
+        {
+            CheckQuyenHan("Manager", new frmFeedBack2());
+        }
+        private void CaiDatOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmCaiDat());
         }
 
         private void frmMain2_Load(object sender, EventArgs e)

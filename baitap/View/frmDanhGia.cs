@@ -1,21 +1,18 @@
-﻿using baitap.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using baitap.Control;
+using baitap.Model;
+using baitap.Object;
 
 namespace baitap.View
 {
     public partial class frmDanhGia : Form
     {
-        private frmKhachHang kh = new frmKhachHang();
         private ConnectToSQL conn = new ConnectToSQL();
+        private string luaChonDanhGia = "";
+
         public frmDanhGia()
         {
             InitializeComponent();
@@ -23,32 +20,111 @@ namespace baitap.View
 
         private void FeedBack_RatTe_Click(object sender, EventArgs e)
         {
-            lbFeedBack.Text = "Tôi cảm thấy chuyến đi rất tệ";
+            lbFeedBack.Text = "Tôi cảm thấy rất tệ";
+            luaChonDanhGia = lbFeedBack.Text;
         }
 
         private void FeedBack_NhamChan_Click(object sender, EventArgs e)
         {
-            lbFeedBack.Text = "Tôi cảm thấy chuyến đi rấ nhàm chán";
-
+            lbFeedBack.Text = "Tôi cảm thấy rất nhàm chán";
+            luaChonDanhGia = lbFeedBack.Text;
         }
 
         private void FeedBack_BinhThuong_Click(object sender, EventArgs e)
         {
-            lbFeedBack.Text = "Tôi cảm thấy chuyến đi bình thường";
-
+            lbFeedBack.Text = "Tôi cảm thấy bình thường";
+            luaChonDanhGia = lbFeedBack.Text;
         }
 
         private void FeedBack_VuiVe_Click(object sender, EventArgs e)
         {
-            lbFeedBack.Text = "Tôi cảm thấy chuyến đi khá vui";
-
+            lbFeedBack.Text = "Tôi cảm thấy khá vui";
+            luaChonDanhGia = lbFeedBack.Text;
         }
 
         private void FeedBack_RatVuiVe_Click(object sender, EventArgs e)
         {
-            lbFeedBack.Text = "Tôi cảm thấy chuyến đi rất vui";
-
+            lbFeedBack.Text = "Tôi cảm thấy rất vui";
+            luaChonDanhGia = lbFeedBack.Text;
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(luaChonDanhGia))
+            {
+                MessageBox.Show("Vui lòng chọn một đánh giá trước khi lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                string tenKhachHang = txtHoTen.Text;
+                string trangThai = luaChonDanhGia;
+                string tieuDe = txtTieuDe.Text;
+                string phanHoi = txtPhanHoi.Text;
+                DateTime ngayGui = DateTime.Now;
+
+                string chenFeedbackSql = "INSERT INTO feedback (TenKhachHang, TrangThai, TieuDe, PhanHoi, NgayGui) VALUES (@tenKhachHang, @trangThai, @tieuDe, @phanHoi, @ngayGui)";
+                using (SqlCommand chenFeedbackCmd = new SqlCommand(chenFeedbackSql, conn.KetNoi))
+                {
+                    conn.MoKetNoi();
+                    chenFeedbackCmd.Parameters.AddWithValue("@tenKhachHang", tenKhachHang);
+                    chenFeedbackCmd.Parameters.AddWithValue("@trangThai", trangThai);
+                    chenFeedbackCmd.Parameters.AddWithValue("@tieuDe", tieuDe);
+                    chenFeedbackCmd.Parameters.AddWithValue("@phanHoi", phanHoi);
+                    chenFeedbackCmd.Parameters.AddWithValue("@ngayGui", ngayGui);
+
+                    int FeedBackChuaDu = chenFeedbackCmd.ExecuteNonQuery();
+
+                    if (FeedBackChuaDu > 0)
+                    {
+                        MessageBox.Show("Đánh giá đã được lưu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể lưu đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XuLyLoi("Lỗi khi lưu đánh giá", ex);
+            }
+            finally
+            {
+                conn.DongKetNoi();
+            }
+        }
+
+        private void XuLyLoi(string message, Exception ex)
+        {
+            MessageBox.Show($"{message}: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void frmDanhGia_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
+            {
+                string tenTaiKhoan = Session.TenTaiKhoan;
+
+                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
+                {
+                    conn.MoKetNoi();
+                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+
+                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
+                    {
+                        DataTable khachHangDataTable = new DataTable();
+                        khachHangDataAdapter.Fill(khachHangDataTable);
+
+                        if (khachHangDataTable.Rows.Count > 0)
+                        {
+                            txtHoTen.Text = khachHangDataTable.Rows[0]["HoTen"].ToString();
+                        }
+                    }
+                }
+            }
+        }
     }
 }

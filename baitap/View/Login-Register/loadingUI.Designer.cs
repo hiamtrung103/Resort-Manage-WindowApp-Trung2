@@ -61,7 +61,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.network_robot_assistant_working_on_laptop;
+            pictureBox2.Image = Properties.Resources.loading2;
             pictureBox2.Location = new Point(411, 87);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(300, 250);
@@ -72,10 +72,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(169, 119);
             label1.Name = "label1";
-            label1.Size = new Size(167, 51);
+            label1.Size = new Size(152, 33);
             label1.TabIndex = 1;
             label1.Text = "Loading...";
             // 
@@ -113,13 +113,13 @@
             label4.ForeColor = Color.Gray;
             label4.Location = new Point(63, 326);
             label4.Name = "label4";
-            label4.Size = new Size(303, 48);
+            label4.Size = new Size(291, 48);
             label4.TabIndex = 1;
-            label4.Text = "Giao diện quản lí bán hàng số một \r\nViệt Nam";
+            label4.Text = "Giao diện quản lí booking số một \r\nViệt Nam";
             // 
             // timer1
             // 
-            timer1.Interval = 35;
+            timer1.Interval = 58;
             timer1.Tick += timer1_Tick;
             // 
             // pictureBox3

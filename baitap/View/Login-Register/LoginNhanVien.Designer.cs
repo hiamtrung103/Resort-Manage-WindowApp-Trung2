@@ -175,10 +175,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.network_robot_assistant_working_on_laptop;
-            pictureBox1.Location = new Point(12, 277);
+            pictureBox1.Image = Properties.Resources.loginAdmin;
+            pictureBox1.Location = new Point(12, 261);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(333, 175);
+            pictureBox1.Size = new Size(333, 250);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -187,7 +187,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 464);
+            ClientSize = new Size(357, 516);
             Controls.Add(pictureBox1);
             Controls.Add(btn_DangNhap);
             Controls.Add(txtPassword1);
@@ -199,6 +199,7 @@
             Name = "LoginNhanVien";
             Palette = kryptonCustomPaletteBase1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginNhanVien";
             Load += LoginNhanVien_Load;

@@ -48,9 +48,12 @@
             txtTenHangHoa = new Krypton.Toolkit.KryptonTextBox();
             kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            pictureBox1 = new PictureBox();
+            kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -289,17 +292,35 @@
             kryptonLabel2.TabIndex = 1;
             kryptonLabel2.Values.Text = "Tên Hàng Hóa";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(705, 37);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(196, 153);
+            pictureBox1.TabIndex = 37;
+            pictureBox1.TabStop = false;
+            // 
+            // kryptonLabel4
+            // 
+            kryptonLabel4.Location = new Point(776, 196);
+            kryptonLabel4.Name = "kryptonLabel4";
+            kryptonLabel4.Size = new Size(60, 20);
+            kryptonLabel4.TabIndex = 1;
+            kryptonLabel4.Values.Text = "Hình ảnh";
+            // 
             // frmHangHoa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1092, 644);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(rjButton4);
             Controls.Add(rjButton3);
             Controls.Add(rjButton2);
             Controls.Add(rjButton1);
             Controls.Add(groupBox2);
+            Controls.Add(kryptonLabel4);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmHangHoa";
@@ -309,6 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,5 +353,7 @@
         private Krypton.Toolkit.KryptonTextBox txtTenHangHoa;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private PictureBox pictureBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
     }
 }

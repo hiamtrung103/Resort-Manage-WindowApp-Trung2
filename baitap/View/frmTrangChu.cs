@@ -6,19 +6,19 @@ namespace baitap.View
 {
     public partial class frmTrangChu : Form
     {
-        private int currentImageIndex = 0;
-        private string[] imageNames = { "rs1", "rs2", "rs3", "rs4", "rs5", "rs6", "rs7" };
+        private int hinhanhHienTai = 0;
+        private string[] HinhAnh = { "rs1", "rs2", "rs3", "rs4", "rs5", "rs6", "rs7" };
 
         public frmTrangChu()
         {
             InitializeComponent();
-            SetupImageTimer();
+            HinhAnhTimer();
         }
 
-        private void SetupImageTimer()
+        private void HinhAnhTimer()
         {
             System.Windows.Forms.Timer imageTimer = new System.Windows.Forms.Timer();
-            imageTimer.Interval = 5000;
+            imageTimer.Interval = 10000;
             imageTimer.Tick += ImageTimer_Tick;
             imageTimer.Start();
         }
@@ -27,9 +27,9 @@ namespace baitap.View
         {
             try
             {
-                currentImageIndex = (currentImageIndex + 1) % imageNames.Length;
+                hinhanhHienTai = (hinhanhHienTai + 1) % HinhAnh.Length;
 
-                Image backgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(imageNames[currentImageIndex]);
+                Image backgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(HinhAnh[hinhanhHienTai]);
                 bunifuCards2.BackgroundImage = backgroundImage;
             }
             catch (Exception ex)

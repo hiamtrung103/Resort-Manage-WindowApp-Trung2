@@ -40,8 +40,6 @@
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
@@ -51,7 +49,7 @@
             panel14 = new Panel();
             btnCaiDat = new CustomControls.RJControls.RJButton();
             panel12 = new Panel();
-            btnHoaDon = new CustomControls.RJControls.RJButton();
+            btnFeedback = new CustomControls.RJControls.RJButton();
             panel11 = new Panel();
             btnHangHoa = new CustomControls.RJControls.RJButton();
             panel10 = new Panel();
@@ -73,8 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelSidebar.SuspendLayout();
@@ -95,8 +91,6 @@
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox6);
-            panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
@@ -202,39 +196,17 @@
             // 
             pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1429, 21);
+            pictureBox6.Location = new Point(1557, 22);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(15, 15);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            pictureBox7.Cursor = Cursors.Hand;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1476, 12);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(40, 40);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 1;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(1527, 8);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(45, 45);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1281, 12);
+            pictureBox3.Location = new Point(1331, 15);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(31, 31);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -255,7 +227,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(1313, 17);
+            label2.Location = new Point(1363, 20);
             label2.Name = "label2";
             label2.Size = new Size(119, 23);
             label2.TabIndex = 0;
@@ -282,7 +254,7 @@
             panelSidebar.Controls.Add(panel14);
             panelSidebar.Controls.Add(btnCaiDat);
             panelSidebar.Controls.Add(panel12);
-            panelSidebar.Controls.Add(btnHoaDon);
+            panelSidebar.Controls.Add(btnFeedback);
             panelSidebar.Controls.Add(panel11);
             panelSidebar.Controls.Add(btnHangHoa);
             panelSidebar.Controls.Add(panel10);
@@ -326,6 +298,7 @@
             btnDangXuat.TabIndex = 34;
             btnDangXuat.TextColor = Color.White;
             btnDangXuat.UseVisualStyleBackColor = false;
+            btnDangXuat.Click += thoat_Click;
             // 
             // panel14
             // 
@@ -354,6 +327,7 @@
             btnCaiDat.TabIndex = 30;
             btnCaiDat.TextColor = Color.White;
             btnCaiDat.UseVisualStyleBackColor = false;
+            btnCaiDat.Click += CaiDatOpen;
             // 
             // panel12
             // 
@@ -363,25 +337,26 @@
             panel12.Size = new Size(50, 20);
             panel12.TabIndex = 29;
             // 
-            // btnHoaDon
+            // btnFeedback
             // 
-            btnHoaDon.BackColor = Color.Transparent;
-            btnHoaDon.BackgroundColor = Color.Transparent;
-            btnHoaDon.BorderColor = Color.PaleVioletRed;
-            btnHoaDon.BorderRadius = 0;
-            btnHoaDon.BorderSize = 0;
-            btnHoaDon.Dock = DockStyle.Top;
-            btnHoaDon.FlatAppearance.BorderSize = 0;
-            btnHoaDon.FlatStyle = FlatStyle.Flat;
-            btnHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHoaDon.ForeColor = Color.White;
-            btnHoaDon.Image = Properties.Resources.bill_24;
-            btnHoaDon.Location = new Point(0, 375);
-            btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Size = new Size(50, 40);
-            btnHoaDon.TabIndex = 28;
-            btnHoaDon.TextColor = Color.White;
-            btnHoaDon.UseVisualStyleBackColor = false;
+            btnFeedback.BackColor = Color.Transparent;
+            btnFeedback.BackgroundColor = Color.Transparent;
+            btnFeedback.BorderColor = Color.PaleVioletRed;
+            btnFeedback.BorderRadius = 0;
+            btnFeedback.BorderSize = 0;
+            btnFeedback.Dock = DockStyle.Top;
+            btnFeedback.FlatAppearance.BorderSize = 0;
+            btnFeedback.FlatStyle = FlatStyle.Flat;
+            btnFeedback.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFeedback.ForeColor = Color.White;
+            btnFeedback.Image = Properties.Resources.feedback_24;
+            btnFeedback.Location = new Point(0, 375);
+            btnFeedback.Name = "btnFeedback";
+            btnFeedback.Size = new Size(50, 40);
+            btnFeedback.TabIndex = 28;
+            btnFeedback.TextColor = Color.White;
+            btnFeedback.UseVisualStyleBackColor = false;
+            btnFeedback.Click += FeedBackOpen;
             // 
             // panel11
             // 
@@ -640,8 +615,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelSidebar.ResumeLayout(false);
@@ -663,8 +636,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox5;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
         private Label label2;
@@ -678,7 +649,7 @@
         private Panel panel13;
         private CustomControls.RJControls.RJButton btnCaiDat;
         private Panel panel12;
-        private CustomControls.RJControls.RJButton btnHoaDon;
+        private CustomControls.RJControls.RJButton btnFeedback;
         private Panel panel11;
         private CustomControls.RJControls.RJButton btnHangHoa;
         private Panel panel10;

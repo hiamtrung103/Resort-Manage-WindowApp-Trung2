@@ -47,7 +47,7 @@ namespace baitap.View
             {
                 timer1.Stop();
 
-                await Task.Delay(1000);
+                await Task.Delay(500);
 
                 this.Hide();
                 frmMain UI = new frmMain();

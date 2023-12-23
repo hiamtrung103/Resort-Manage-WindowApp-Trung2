@@ -45,7 +45,7 @@
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
-            rjButton7 = new CustomControls.RJControls.RJButton();
+            btnDangXuat = new CustomControls.RJControls.RJButton();
             panel12 = new Panel();
             btnCaiDat = new CustomControls.RJControls.RJButton();
             panel11 = new Panel();
@@ -262,7 +262,7 @@
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
-            panelSidebar.Controls.Add(rjButton7);
+            panelSidebar.Controls.Add(btnDangXuat);
             panelSidebar.Controls.Add(panel12);
             panelSidebar.Controls.Add(btnCaiDat);
             panelSidebar.Controls.Add(panel11);
@@ -289,26 +289,26 @@
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 13;
             // 
-            // rjButton7
+            // btnDangXuat
             // 
-            rjButton7.BackColor = Color.Transparent;
-            rjButton7.BackgroundColor = Color.Transparent;
-            rjButton7.BorderColor = Color.PaleVioletRed;
-            rjButton7.BorderRadius = 0;
-            rjButton7.BorderSize = 0;
-            rjButton7.Dock = DockStyle.Bottom;
-            rjButton7.FlatAppearance.BorderSize = 0;
-            rjButton7.FlatStyle = FlatStyle.Flat;
-            rjButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton7.ForeColor = Color.White;
-            rjButton7.Image = baitap.Properties.Resources.logout_24;
-            rjButton7.Location = new Point(0, 630);
-            rjButton7.Name = "rjButton7";
-            rjButton7.Size = new Size(50, 40);
-            rjButton7.TabIndex = 17;
-            rjButton7.TextColor = Color.White;
-            rjButton7.UseVisualStyleBackColor = false;
-            rjButton7.Click += thoat_Click;
+            btnDangXuat.BackColor = Color.Transparent;
+            btnDangXuat.BackgroundColor = Color.Transparent;
+            btnDangXuat.BorderColor = Color.PaleVioletRed;
+            btnDangXuat.BorderRadius = 0;
+            btnDangXuat.BorderSize = 0;
+            btnDangXuat.Dock = DockStyle.Bottom;
+            btnDangXuat.FlatAppearance.BorderSize = 0;
+            btnDangXuat.FlatStyle = FlatStyle.Flat;
+            btnDangXuat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDangXuat.ForeColor = Color.White;
+            btnDangXuat.Image = baitap.Properties.Resources.logout_24;
+            btnDangXuat.Location = new Point(0, 630);
+            btnDangXuat.Name = "btnDangXuat";
+            btnDangXuat.Size = new Size(50, 40);
+            btnDangXuat.TabIndex = 17;
+            btnDangXuat.TextColor = Color.White;
+            btnDangXuat.UseVisualStyleBackColor = false;
+            btnDangXuat.Click += thoat_Click;
             // 
             // panel12
             // 
@@ -337,7 +337,7 @@
             btnCaiDat.TabIndex = 15;
             btnCaiDat.TextColor = Color.White;
             btnCaiDat.UseVisualStyleBackColor = false;
-            btnCaiDat.Click += SettingKhachHangOpen;
+            btnCaiDat.Click += SettingOpen;
             // 
             // panel11
             // 
@@ -610,7 +610,7 @@
         private CustomControls.RJControls.RJButton btnNhaHang;
         private Panel panel4;
         private CustomControls.RJControls.RJButton btnBooking;
-        private CustomControls.RJControls.RJButton rjButton7;
+        private CustomControls.RJControls.RJButton btnDangXuat;
         private Panel panel12;
     }
 }

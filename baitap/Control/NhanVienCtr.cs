@@ -61,5 +61,9 @@ namespace baitap.Control
                 MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void CapNhatAvatar(string tenTaiKhoan, byte[] avatar)
+        {
+            nvMod.CapNhatAvatar(tenTaiKhoan, avatar);
+        }
     }
 }

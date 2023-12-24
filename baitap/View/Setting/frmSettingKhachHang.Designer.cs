@@ -364,7 +364,7 @@
             rjButton1.FlatStyle = FlatStyle.Flat;
             rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(547, 304);
+            rjButton1.Location = new Point(559, 304);
             rjButton1.Name = "rjButton1";
             rjButton1.Size = new Size(91, 30);
             rjButton1.TabIndex = 33;

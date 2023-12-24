@@ -45,31 +45,32 @@ namespace baitap.View
                             txtGioiTinh.Texts = khachHangDataTable.Rows[0]["GioiTinh"].ToString();
                             txtNamSinh.Texts = khachHangDataTable.Rows[0]["NamSinh"].ToString();
                             txtDiaChi.Texts = khachHangDataTable.Rows[0]["DiaChi"].ToString();
+                            object avatarObject = khachHangDataTable.Rows[0]["Avatar"];
 
-                            HienThiAnhDaiDien((byte[])khachHangDataTable.Rows[0]["Avatar"]);
+                            if (avatarObject != DBNull.Value && avatarObject != null)
+                            {
+                                byte[] hinhAnh = (byte[])avatarObject;
+                                HienThiAnhDaiDien(hinhAnh);
+                            }
+                            else
+                            {
+                                pictureBox1.Image = null;
+                            }
                         }
                     }
                 }
             }
         }
-
         private void HienThiAnhDaiDien(object hinhAnhObject)
         {
-            if (hinhAnhObject != DBNull.Value && hinhAnhObject != null)
-            {
-                byte[] hinhAnh = (byte[])hinhAnhObject;
+            byte[] hinhAnh = hinhAnhObject as byte[];
 
-                if (hinhAnh != null && hinhAnh.Length > 0)
+            if (hinhAnh?.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(hinhAnh))
                 {
-                    using (MemoryStream ms = new MemoryStream(hinhAnh))
-                    {
-                        pictureBox1.Image = Image.FromStream(ms);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                }
-                else
-                {
-                    pictureBox1.Image = null;
+                    pictureBox1.Image = Image.FromStream(ms);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else
@@ -77,6 +78,7 @@ namespace baitap.View
                 pictureBox1.Image = null;
             }
         }
+
 
         private void btnChonAnhDaiDien_Click(object sender, EventArgs e)
         {

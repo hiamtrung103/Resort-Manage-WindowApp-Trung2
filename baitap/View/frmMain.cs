@@ -130,8 +130,8 @@ namespace QL_QuanCafe_Trung_Hai.View
             if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
             {
                 string tenTaiKhoan = Session.TenTaiKhoan;
-                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
 
+                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
                 using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
                 {
                     conn.MoKetNoi();
@@ -145,30 +145,31 @@ namespace QL_QuanCafe_Trung_Hai.View
                         if (khachHangDataTable.Rows.Count > 0)
                         {
                             label2.Text = khachHangDataTable.Rows[0]["HoTen"].ToString();
-                            HienThiAnhDaiDien((byte[])khachHangDataTable.Rows[0]["Avatar"]);
+                            object avatarObject = khachHangDataTable.Rows[0]["Avatar"];
+
+                            if (avatarObject != DBNull.Value && avatarObject != null)
+                            {
+                                byte[] hinhAnh = (byte[])avatarObject;
+                                HienThiAnhDaiDien(hinhAnh);
+                            }
+                            else
+                            {
+                                pictureBox1.Image = null;
+                            }
                         }
                     }
                 }
             }
         }
 
-        public void HienThiAnhDaiDien(object hinhAnhObject)
+        public void HienThiAnhDaiDien(byte[] hinhAnh)
         {
-            if (hinhAnhObject != DBNull.Value && hinhAnhObject != null)
+            if (hinhAnh != null && hinhAnh.Length > 0)
             {
-                byte[] hinhAnh = (byte[])hinhAnhObject;
-
-                if (hinhAnh != null && hinhAnh.Length > 0)
+                using (MemoryStream ms = new MemoryStream(hinhAnh))
                 {
-                    using (MemoryStream ms = new MemoryStream(hinhAnh))
-                    {
-                        pictureBox3.Image = Image.FromStream(ms);
-                        pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                }
-                else
-                {
-                    pictureBox3.Image = null;
+                    pictureBox3.Image = Image.FromStream(ms);
+                    pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
             else

@@ -46,7 +46,14 @@
             label3 = new Label();
             label15 = new Label();
             txtQuyenHan = new Krypton.Toolkit.KryptonTextBox();
+            pictureBox1 = new PictureBox();
+            rjButton3 = new CustomControls.RJControls.RJButton();
+            rjButton1 = new CustomControls.RJControls.RJButton();
+            label2 = new Label();
+            label4 = new Label();
+            openFileDialog1 = new OpenFileDialog();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -269,19 +276,99 @@
             txtQuyenHan.StateCommon.Content.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtQuyenHan.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.pablita_loading;
+            pictureBox1.Location = new Point(738, 48);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(200, 200);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
+            // 
+            // rjButton3
+            // 
+            rjButton3.BackColor = Color.FromArgb(13, 135, 242);
+            rjButton3.BackgroundColor = Color.FromArgb(13, 135, 242);
+            rjButton3.BorderColor = Color.PaleVioletRed;
+            rjButton3.BorderRadius = 5;
+            rjButton3.BorderSize = 0;
+            rjButton3.FlatAppearance.BorderSize = 0;
+            rjButton3.FlatStyle = FlatStyle.Flat;
+            rjButton3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton3.ForeColor = Color.White;
+            rjButton3.Location = new Point(738, 275);
+            rjButton3.Name = "rjButton3";
+            rjButton3.Size = new Size(91, 30);
+            rjButton3.TabIndex = 40;
+            rjButton3.Text = "Tải ảnh";
+            rjButton3.TextColor = Color.White;
+            rjButton3.UseVisualStyleBackColor = false;
+            rjButton3.Click += btnChonAnhDaiDien_Click;
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.FromArgb(63, 194, 138);
+            rjButton1.BackgroundColor = Color.FromArgb(63, 194, 138);
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(847, 274);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(91, 30);
+            rjButton1.TabIndex = 41;
+            rjButton1.Text = "Lưu";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += rjButton1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(738, 308);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 34);
+            label2.TabIndex = 38;
+            label2.Text = "*Bạn có thể tải ảnh đại diện \r\ncủa bản thân lên";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(790, 251);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 21);
+            label4.TabIndex = 39;
+            label4.Text = "Ảnh đại diện";
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmCaiDat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1197, 686);
+            Controls.Add(pictureBox1);
+            Controls.Add(rjButton3);
             Controls.Add(groupBox1);
+            Controls.Add(rjButton1);
             Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(label4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmCaiDat";
             Text = "frmCaiDat";
             Load += frmCaiDat_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -306,5 +393,11 @@
         private Label label3;
         private Label label15;
         private Krypton.Toolkit.KryptonTextBox txtQuyenHan;
+        private PictureBox pictureBox1;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private Label label2;
+        private Label label4;
+        private OpenFileDialog openFileDialog1;
     }
 }

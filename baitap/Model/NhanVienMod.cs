@@ -150,6 +150,29 @@ namespace baitap.Model
             return false;
         }
 
+        internal void CapNhatAvatar(string tenTaiKhoan, byte[] avatar)
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE NhanVien SET Avatar = @Avatar WHERE TenTaiKhoan = @TenTaiKhoan", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+                cmd.Parameters.AddWithValue("@Avatar", avatar);
+                try
+                {
+                    conn.MoKetNoi();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật dữ liệu cá nhân thành công.", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc cập nhật dữ liệu cá nhân", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
+        }
+
         private void DuLieuNhanVienParameter(SqlCommand cmd, NhanvienObj nvobj)
         {
             cmd.Parameters.AddWithValue("@TenNhanVien", nvobj.TenNhanVien);

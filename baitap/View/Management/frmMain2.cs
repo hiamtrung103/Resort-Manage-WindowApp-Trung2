@@ -141,26 +141,54 @@ namespace baitap.View
             if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
             {
                 string tenTaiKhoan = Session.TenTaiKhoan;
-                string selectKhachHangSql = "SELECT * FROM KhachHang WHERE TenTaiKhoan=@tenTaiKhoan";
+                string selectNhanVienSql = "SELECT * FROM NhanVien WHERE TenTaiKhoan=@tenTaiKhoan";
 
-                using (SqlCommand selectKhachHangCmd = new SqlCommand(selectKhachHangSql, conn.KetNoi))
+                using (SqlCommand selectNhanVienCmd = new SqlCommand(selectNhanVienSql, conn.KetNoi))
                 {
                     conn.MoKetNoi();
-                    selectKhachHangCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
+                    selectNhanVienCmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
 
-                    using (SqlDataAdapter khachHangDataAdapter = new SqlDataAdapter(selectKhachHangCmd))
+                    using (SqlDataAdapter nhanVienDataAdapter = new SqlDataAdapter(selectNhanVienCmd))
                     {
-                        DataTable khachHangDataTable = new DataTable();
-                        khachHangDataAdapter.Fill(khachHangDataTable);
+                        DataTable nhanVienDataTable = new DataTable();
+                        nhanVienDataAdapter.Fill(nhanVienDataTable);
 
-                        if (khachHangDataTable.Rows.Count > 0)
+                        if (nhanVienDataTable.Rows.Count > 0)
                         {
-                            label2.Text = khachHangDataTable.Rows[0]["HoTen"].ToString();
+                            label2.Text = nhanVienDataTable.Rows[0]["HoTen"].ToString();
+                            object avatarObject = nhanVienDataTable.Rows[0]["Avatar"];
+
+                            if (avatarObject != DBNull.Value && avatarObject != null)
+                            {
+                                byte[] hinhAnh = (byte[])avatarObject;
+                                HienThiAnhDaiDien(hinhAnh);
+                            }
+                            else
+                            {
+                                pictureBox3.Image = null;
+                            }
                         }
                     }
                 }
             }
         }
+
+        public void HienThiAnhDaiDien(byte[] hinhAnh)
+        {
+            if (hinhAnh != null && hinhAnh.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(hinhAnh))
+                {
+                    pictureBox3.Image = Image.FromStream(ms);
+                    pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            else
+            {
+                pictureBox3.Image = null;
+            }
+        }
+
 
         private void thoat_Click(object sender, EventArgs e)
         {

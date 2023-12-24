@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
@@ -197,7 +196,7 @@
             rjButton4.FlatStyle = FlatStyle.Flat;
             rjButton4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton4.ForeColor = Color.White;
-            rjButton4.Location = new Point(393, 263);
+            rjButton4.Location = new Point(309, 263);
             rjButton4.Name = "rjButton4";
             rjButton4.Size = new Size(91, 30);
             rjButton4.TabIndex = 23;
@@ -217,7 +216,7 @@
             rjButton3.FlatStyle = FlatStyle.Flat;
             rjButton3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton3.ForeColor = Color.White;
-            rjButton3.Location = new Point(296, 263);
+            rjButton3.Location = new Point(212, 263);
             rjButton3.Name = "rjButton3";
             rjButton3.Size = new Size(91, 30);
             rjButton3.TabIndex = 24;
@@ -255,7 +254,7 @@
             rjButton2.FlatStyle = FlatStyle.Flat;
             rjButton2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton2.ForeColor = Color.White;
-            rjButton2.Location = new Point(199, 263);
+            rjButton2.Location = new Point(115, 263);
             rjButton2.Name = "rjButton2";
             rjButton2.Size = new Size(91, 30);
             rjButton2.TabIndex = 25;
@@ -275,7 +274,7 @@
             rjButton1.FlatStyle = FlatStyle.Flat;
             rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(102, 263);
+            rjButton1.Location = new Point(18, 263);
             rjButton1.Name = "rjButton1";
             rjButton1.Size = new Size(91, 30);
             rjButton1.TabIndex = 26;
@@ -303,7 +302,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(6, 299);
+            groupBox2.Location = new Point(12, 309);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(960, 217);
             groupBox2.TabIndex = 22;
@@ -453,7 +452,6 @@
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmNhanVien";
-            PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmNhanVien";

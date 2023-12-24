@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             txtTenTaiKhoan = new Krypton.Toolkit.KryptonTextBox();
             label1 = new Label();
             txtDienThoai = new Krypton.Toolkit.KryptonTextBox();
@@ -59,14 +58,14 @@
             txtGiamGia = new Krypton.Toolkit.KryptonTextBox();
             txtXacNhanPass = new Krypton.Toolkit.KryptonLabel();
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            rjButton5 = new CustomControls.RJControls.RJButton();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // txtTenTaiKhoan
@@ -175,7 +174,7 @@
             rjButton4.FlatStyle = FlatStyle.Flat;
             rjButton4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton4.ForeColor = Color.White;
-            rjButton4.Location = new Point(390, 226);
+            rjButton4.Location = new Point(303, 226);
             rjButton4.Name = "rjButton4";
             rjButton4.Size = new Size(91, 30);
             rjButton4.TabIndex = 16;
@@ -195,7 +194,7 @@
             rjButton3.FlatStyle = FlatStyle.Flat;
             rjButton3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton3.ForeColor = Color.White;
-            rjButton3.Location = new Point(293, 226);
+            rjButton3.Location = new Point(206, 226);
             rjButton3.Name = "rjButton3";
             rjButton3.Size = new Size(91, 30);
             rjButton3.TabIndex = 17;
@@ -215,7 +214,7 @@
             rjButton2.FlatStyle = FlatStyle.Flat;
             rjButton2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton2.ForeColor = Color.White;
-            rjButton2.Location = new Point(196, 226);
+            rjButton2.Location = new Point(109, 226);
             rjButton2.Name = "rjButton2";
             rjButton2.Size = new Size(91, 30);
             rjButton2.TabIndex = 18;
@@ -235,7 +234,7 @@
             rjButton1.FlatStyle = FlatStyle.Flat;
             rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton1.ForeColor = Color.White;
-            rjButton1.Location = new Point(99, 226);
+            rjButton1.Location = new Point(12, 226);
             rjButton1.Name = "rjButton1";
             rjButton1.Size = new Size(91, 30);
             rjButton1.TabIndex = 19;
@@ -254,43 +253,43 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle9.ForeColor = Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(255, 255, 192);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(255, 255, 192);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(6, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -301,7 +300,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(12, 262);
+            groupBox2.Location = new Point(12, 373);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(960, 217);
             groupBox2.TabIndex = 15;
@@ -413,65 +412,31 @@
             kryptonLabel2.TabIndex = 1;
             kryptonLabel2.Values.Text = "Tên khách hàng";
             // 
-            // rjTextBox1
-            // 
-            rjTextBox1.BackColor = SystemColors.Window;
-            rjTextBox1.BorderColor = Color.MediumSlateBlue;
-            rjTextBox1.BorderFocusColor = Color.HotPink;
-            rjTextBox1.BorderRadius = 5;
-            rjTextBox1.BorderSize = 2;
-            rjTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            rjTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
-            rjTextBox1.Location = new Point(488, 227);
-            rjTextBox1.Margin = new Padding(4);
-            rjTextBox1.Multiline = false;
-            rjTextBox1.Name = "rjTextBox1";
-            rjTextBox1.Padding = new Padding(10, 7, 10, 7);
-            rjTextBox1.PasswordChar = false;
-            rjTextBox1.PlaceholderColor = Color.DarkGray;
-            rjTextBox1.PlaceholderText = "Tìm kiếm nhân viên tại đây";
-            rjTextBox1.Size = new Size(316, 31);
-            rjTextBox1.TabIndex = 30;
-            rjTextBox1.Texts = "";
-            rjTextBox1.UnderlinedStyle = false;
-            // 
-            // rjButton5
-            // 
-            rjButton5.BackColor = Color.FromArgb(255, 192, 128);
-            rjButton5.BackgroundColor = Color.FromArgb(255, 192, 128);
-            rjButton5.BorderColor = Color.PaleVioletRed;
-            rjButton5.BorderRadius = 5;
-            rjButton5.BorderSize = 0;
-            rjButton5.FlatAppearance.BorderSize = 0;
-            rjButton5.FlatStyle = FlatStyle.Flat;
-            rjButton5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton5.ForeColor = Color.White;
-            rjButton5.Location = new Point(811, 227);
-            rjButton5.Name = "rjButton5";
-            rjButton5.Size = new Size(91, 30);
-            rjButton5.TabIndex = 29;
-            rjButton5.Text = "Tìm kiếm";
-            rjButton5.TextColor = Color.White;
-            rjButton5.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.candidates;
-            pictureBox1.Location = new Point(978, 37);
+            pictureBox1.Location = new Point(978, 49);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(400, 350);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 36;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(413, 226);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(174, 141);
+            pictureBox2.TabIndex = 37;
+            pictureBox2.TabStop = false;
+            // 
             // frmKhachHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1474, 667);
+            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(rjTextBox1);
-            Controls.Add(rjButton5);
             Controls.Add(label1);
             Controls.Add(rjButton4);
             Controls.Add(rjButton3);
@@ -481,7 +446,6 @@
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmKhachHang";
-            PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmKhachHang";
             Load += frmKhachHang_Load;
@@ -491,6 +455,7 @@
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -523,8 +488,7 @@
         private Krypton.Toolkit.KryptonLabel txtXacNhanPass;
         private Krypton.Toolkit.KryptonComboBox txtGioiTinh;
         private ComboBox txtNamSinh;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJButton rjButton5;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

@@ -33,14 +33,10 @@
             kryptonCustomPaletteBase1 = new Krypton.Toolkit.KryptonCustomPaletteBase(components);
             panel1 = new Panel();
             rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label6 = new Label();
+            pictureBox3 = new PictureBox();
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
@@ -65,9 +61,9 @@
             rjButton1 = new CustomControls.RJControls.RJButton();
             panelMain = new Panel();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelSidebar.SuspendLayout();
             panel5.SuspendLayout();
@@ -107,14 +103,10 @@
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(rjTextBox1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label6);
+            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -141,51 +133,20 @@
             rjTextBox1.PasswordChar = false;
             rjTextBox1.PlaceholderColor = Color.DarkGray;
             rjTextBox1.PlaceholderText = "Tìm kiếm mọi thứ ở đây...";
-            rjTextBox1.Size = new Size(250, 31);
+            rjTextBox1.Size = new Size(308, 31);
             rjTextBox1.TabIndex = 6;
             rjTextBox1.Texts = "";
             rjTextBox1.UnderlinedStyle = false;
             // 
-            // label5
+            // pictureBox3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(1156, 18);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 25);
-            label5.TabIndex = 2;
-            label5.Text = "Liên hệ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(1072, 18);
-            label4.Name = "label4";
-            label4.Size = new Size(78, 25);
-            label4.TabIndex = 3;
-            label4.Text = "Dịch vụ";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(964, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(102, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Tính năng";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(854, 18);
-            label6.Name = "label6";
-            label6.Size = new Size(104, 25);
-            label6.TabIndex = 5;
-            label6.Text = "Trang Chủ";
-            label6.Click += TrangChuOpen;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1307, 12);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(50, 50);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -215,16 +176,6 @@
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1331, 15);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(31, 31);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -239,7 +190,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(1363, 20);
+            label2.Location = new Point(1363, 22);
             label2.Name = "label2";
             label2.Size = new Size(119, 23);
             label2.TabIndex = 0;
@@ -565,9 +516,9 @@
             Load += frmMain_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelSidebar.ResumeLayout(false);
             panel5.ResumeLayout(false);
@@ -590,10 +541,6 @@
         private Panel panel3;
         private Bunifu.Framework.UI.BunifuCards panelSidebar;
         private Panel panelMain;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label6;
         private CustomControls.RJControls.RJButton rjButton1;
         private Panel panel2;
         private Panel panel5;

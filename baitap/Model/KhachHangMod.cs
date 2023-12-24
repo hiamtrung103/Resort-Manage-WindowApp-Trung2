@@ -8,7 +8,7 @@ namespace baitap.Model
 {
     class KhachHangMod
     {
-        private ConnectToSQL conn = new ConnectToSQL();
+        private readonly ConnectToSQL conn = new ConnectToSQL();
 
         public DataTable LayDuLieuKhachHang()
         {
@@ -19,8 +19,7 @@ namespace baitap.Model
                 try
                 {
                     conn.MoKetNoi();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
+                    new SqlDataAdapter(cmd).Fill(dt);
                 }
                 catch (Exception ex)
                 {
@@ -45,8 +44,7 @@ namespace baitap.Model
                 try
                 {
                     conn.MoKetNoi();
-                    int count = (int)cmd.ExecuteScalar();
-                    return count > 0;
+                    return (int)cmd.ExecuteScalar() > 0;
                 }
                 catch (Exception ex)
                 {
@@ -108,14 +106,7 @@ namespace baitap.Model
                     conn.MoKetNoi();
                     int soDongAnhHuong = cmd.ExecuteNonQuery();
 
-                    if (soDongAnhHuong > 0)
-                    {
-                        MessageBox.Show("Cập nhật dữ liệu thành công.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật dữ liệu thất bại.");
-                    }
+                    MessageBox.Show(soDongAnhHuong > 0 ? "Cập nhật dữ liệu thành công." : "Cập nhật dữ liệu thất bại.");
                 }
                 catch (Exception ex)
                 {
@@ -151,6 +142,57 @@ namespace baitap.Model
             }
 
             return false;
+        }
+
+        internal void CapNhatDuLieuCaNhan(string tenTaiKhoan, string hoTen, string gioiTinh, string namSinh, string diaChi)
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE KhachHang SET HoTen = @HoTen, GioiTinh = @GioiTinh, NamSinh = @NamSinh, " +
+                                                  "DiaChi = @DiaChi WHERE TenTaiKhoan = @TenTaiKhoan", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@HoTen", hoTen);
+                cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
+                cmd.Parameters.AddWithValue("@NamSinh", namSinh);
+                cmd.Parameters.AddWithValue("@DiaChi", diaChi);
+                cmd.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+
+                try
+                {
+                    conn.MoKetNoi();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật dữ liệu cá nhân thành công.", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc cập nhật dữ liệu cá nhân", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
+        }
+
+        internal void CapNhatAvatar(string tenTaiKhoan, byte[] avatar)
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE KhachHang SET Avatar = @Avatar WHERE TenTaiKhoan = @TenTaiKhoan", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+                cmd.Parameters.AddWithValue("@Avatar", avatar);
+                try
+                {
+                    conn.MoKetNoi();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật dữ liệu cá nhân thành công.", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc cập nhật dữ liệu cá nhân", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
         }
 
         private void SetKhachHangParameters(SqlCommand cmd, KhachHangObj khObj)

@@ -64,26 +64,34 @@ namespace baitap.View
                 string phanHoi = txtPhanHoi.Text;
                 DateTime ngayGui = DateTime.Now;
 
-                string chenFeedbackSql = "INSERT INTO feedback (TenKhachHang, TrangThai, TieuDe, PhanHoi, NgayGui) VALUES (@tenKhachHang, @trangThai, @tieuDe, @phanHoi, @ngayGui)";
-                using (SqlCommand chenFeedbackCmd = new SqlCommand(chenFeedbackSql, conn.KetNoi))
+                if (!DaDanhGia(tenKhachHang))
                 {
-                    conn.MoKetNoi();
-                    chenFeedbackCmd.Parameters.AddWithValue("@tenKhachHang", tenKhachHang);
-                    chenFeedbackCmd.Parameters.AddWithValue("@trangThai", trangThai);
-                    chenFeedbackCmd.Parameters.AddWithValue("@tieuDe", tieuDe);
-                    chenFeedbackCmd.Parameters.AddWithValue("@phanHoi", phanHoi);
-                    chenFeedbackCmd.Parameters.AddWithValue("@ngayGui", ngayGui);
-
-                    int FeedBackChuaDu = chenFeedbackCmd.ExecuteNonQuery();
-
-                    if (FeedBackChuaDu > 0)
+                    string chenFeedbackSql = "INSERT INTO feedback (TenKhachHang, TrangThai, TieuDe, PhanHoi, NgayGui, TenTaiKhoan) VALUES (@tenKhachHang, @trangThai, @tieuDe, @phanHoi, @ngayGui, @tenTaiKhoan)";
+                    using (SqlCommand chenFeedbackCmd = new SqlCommand(chenFeedbackSql, conn.KetNoi))
                     {
-                        MessageBox.Show("Đánh giá đã được lưu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.MoKetNoi();
+                        chenFeedbackCmd.Parameters.AddWithValue("@tenKhachHang", tenKhachHang);
+                        chenFeedbackCmd.Parameters.AddWithValue("@trangThai", trangThai);
+                        chenFeedbackCmd.Parameters.AddWithValue("@tieuDe", tieuDe);
+                        chenFeedbackCmd.Parameters.AddWithValue("@phanHoi", phanHoi);
+                        chenFeedbackCmd.Parameters.AddWithValue("@ngayGui", ngayGui);
+                        chenFeedbackCmd.Parameters.AddWithValue("@tenTaiKhoan", Session.TenTaiKhoan);
+
+                        int FeedBackChuaDu = chenFeedbackCmd.ExecuteNonQuery();
+
+                        if (FeedBackChuaDu > 0)
+                        {
+                            MessageBox.Show("Đánh giá đã được lưu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không thể lưu đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Không thể lưu đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn đã đánh giá trước đó, chỉ được đánh giá một lần.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -95,6 +103,21 @@ namespace baitap.View
                 conn.DongKetNoi();
             }
         }
+
+        private bool DaDanhGia(string tenKhachHang)
+        {
+            string kiemTraFeedbackSql = "SELECT COUNT(*) FROM feedback WHERE TenKhachHang = @tenKhachHang AND TenTaiKhoan = @tenTaiKhoan";
+            using (SqlCommand kiemTraFeedbackCmd = new SqlCommand(kiemTraFeedbackSql, conn.KetNoi))
+            {
+                kiemTraFeedbackCmd.Parameters.AddWithValue("@tenKhachHang", tenKhachHang);
+                kiemTraFeedbackCmd.Parameters.AddWithValue("@tenTaiKhoan", Session.TenTaiKhoan);
+
+                conn.MoKetNoi();
+                int soLuongDanhGia = (int)kiemTraFeedbackCmd.ExecuteScalar();
+                return soLuongDanhGia > 0;
+            }
+        }
+
 
         private void XuLyLoi(string message, Exception ex)
         {

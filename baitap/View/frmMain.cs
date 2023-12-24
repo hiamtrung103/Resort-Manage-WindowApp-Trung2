@@ -145,9 +145,35 @@ namespace QL_QuanCafe_Trung_Hai.View
                         if (khachHangDataTable.Rows.Count > 0)
                         {
                             label2.Text = khachHangDataTable.Rows[0]["HoTen"].ToString();
+                            HienThiAnhDaiDien((byte[])khachHangDataTable.Rows[0]["Avatar"]);
                         }
                     }
                 }
+            }
+        }
+
+        public void HienThiAnhDaiDien(object hinhAnhObject)
+        {
+            if (hinhAnhObject != DBNull.Value && hinhAnhObject != null)
+            {
+                byte[] hinhAnh = (byte[])hinhAnhObject;
+
+                if (hinhAnh != null && hinhAnh.Length > 0)
+                {
+                    using (MemoryStream ms = new MemoryStream(hinhAnh))
+                    {
+                        pictureBox3.Image = Image.FromStream(ms);
+                        pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                else
+                {
+                    pictureBox3.Image = null;
+                }
+            }
+            else
+            {
+                pictureBox3.Image = null;
             }
         }
     }

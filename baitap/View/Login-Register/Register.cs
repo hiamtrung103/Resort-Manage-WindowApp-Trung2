@@ -39,7 +39,6 @@ namespace baitap.View
                 label6.ForeColor = Color.White;
                 label7.ForeColor = Color.White;
                 label8.ForeColor = Color.White;
-                panel1.BackgroundImage = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\sign-up2.jpg");
 
             }
             else
@@ -51,7 +50,6 @@ namespace baitap.View
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                panel1.BackgroundImage = Image.FromFile("D:\\Visual studio\\Repo\\Resort-Manage-WindowApp-H-T\\Resort-Manage-WindowApp-H-T\\icons\\sign-up1.jpg");
             }
         }
         private void btnDangNhap_click(object sender, EventArgs e)
@@ -82,6 +80,37 @@ namespace baitap.View
             txtDienThoai.Text = "";
         }
 
+        private string duongDanAnh = "";
+        private void btnChonAnhDaiDien_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All files (*.*)|*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                duongDanAnh = openFileDialog1.FileName;
+
+                pictureBox2.Image = Image.FromFile(duongDanAnh);
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+        private byte[] ChuyenDoiHinhAnh(string imagePath)
+        {
+            try
+            {
+                if (File.Exists(imagePath))
+                {
+                    return File.ReadAllBytes(imagePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đọc hình ảnh: " + ex.Message);
+            }
+
+            return null;
+        }
+
+
         private ConnectToSQL conn = new ConnectToSQL();
         private void btnDangKy_click(object sender, EventArgs e)
         {
@@ -96,6 +125,7 @@ namespace baitap.View
                 string gioiTinh = txtGioiTinh.Text;
                 string diaChi = txtDiaChi.Text;
                 string email = txtEmail.Text;
+                byte[] avatar = ChuyenDoiHinhAnh(duongDanAnh);
 
                 if (mkMoi != mkXacNhan)
                 {
@@ -117,8 +147,8 @@ namespace baitap.View
                     }
                 }
 
-                string truyVanThemMoiKhachHang = "INSERT INTO KhachHang (HoTen, NamSinh, GioiTinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password) " +
-                                                "VALUES (@hoTen, @NamSinh, @gioiTinh, @diaChi, '', @tkMoi, @email, @mkMoi)";
+                string truyVanThemMoiKhachHang = "INSERT INTO KhachHang (HoTen, NamSinh, GioiTinh, DiaChi, DienThoai, TenTaiKhoan, Email, Password, Avatar) " +
+                                                "VALUES (@hoTen, @NamSinh, @gioiTinh, @diaChi, '', @tkMoi, @email, @mkMoi, @avatar)";
                 using (SqlCommand cmdThemMoiKhachHang = new SqlCommand(truyVanThemMoiKhachHang, conn.KetNoi))
                 {
                     cmdThemMoiKhachHang.Parameters.AddWithValue("@hoTen", hoTen);
@@ -128,6 +158,7 @@ namespace baitap.View
                     cmdThemMoiKhachHang.Parameters.AddWithValue("@tkMoi", tkMoi);
                     cmdThemMoiKhachHang.Parameters.AddWithValue("@email", email);
                     cmdThemMoiKhachHang.Parameters.AddWithValue("@mkMoi", mkMoi);
+                    cmdThemMoiKhachHang.Parameters.AddWithValue("@avatar", avatar);
                     cmdThemMoiKhachHang.ExecuteNonQuery();
                 }
 
@@ -140,7 +171,7 @@ namespace baitap.View
             }
         }
 
-        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+            private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
         {
             nv.ChiNhapSo(e);
         }

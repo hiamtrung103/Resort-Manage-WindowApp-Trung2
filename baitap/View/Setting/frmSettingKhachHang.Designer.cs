@@ -47,6 +47,9 @@
             label12 = new Label();
             txtGioiTinh = new CustomControls.RJControls.RJComboBox();
             txtHoTen = new CustomControls.RJControls.RJTextBox();
+            label2 = new Label();
+            openFileDialog1 = new OpenFileDialog();
+            rjButton1 = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -149,13 +152,14 @@
             rjButton3.FlatStyle = FlatStyle.Flat;
             rjButton3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton3.ForeColor = Color.White;
-            rjButton3.Location = new Point(606, 101);
+            rjButton3.Location = new Point(450, 304);
             rjButton3.Name = "rjButton3";
             rjButton3.Size = new Size(91, 30);
             rjButton3.TabIndex = 32;
             rjButton3.Text = "Tải ảnh";
             rjButton3.TextColor = Color.White;
             rjButton3.UseVisualStyleBackColor = false;
+            rjButton3.Click += btnChonAnhDaiDien_Click;
             // 
             // btn_Luu
             // 
@@ -268,8 +272,8 @@
             pictureBox1.Image = Properties.Resources.pablita_loading;
             pictureBox1.Location = new Point(450, 77);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 150);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.Size = new Size(200, 200);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 37;
             pictureBox1.TabStop = false;
             // 
@@ -277,7 +281,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(606, 77);
+            label11.Location = new Point(502, 280);
             label11.Name = "label11";
             label11.Size = new Size(97, 21);
             label11.TabIndex = 29;
@@ -302,6 +306,7 @@
             txtGioiTinh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtGioiTinh.ForeColor = Color.DimGray;
             txtGioiTinh.IconColor = Color.RoyalBlue;
+            txtGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
             txtGioiTinh.ListBackColor = Color.FromArgb(230, 228, 245);
             txtGioiTinh.ListTextColor = Color.DimGray;
             txtGioiTinh.Location = new Point(93, 196);
@@ -334,6 +339,40 @@
             txtHoTen.Texts = "";
             txtHoTen.UnderlinedStyle = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(450, 337);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 34);
+            label2.TabIndex = 29;
+            label2.Text = "*Bạn có thể tải ảnh đại diện \r\ncủa bản thân lên";
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.FromArgb(63, 194, 138);
+            rjButton1.BackgroundColor = Color.FromArgb(63, 194, 138);
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 5;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(547, 304);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(91, 30);
+            rjButton1.TabIndex = 33;
+            rjButton1.Text = "Lưu";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += rjButton1_Click;
+            // 
             // frmSettingKhachHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -347,11 +386,13 @@
             Controls.Add(txtNamSinh);
             Controls.Add(rjButton4);
             Controls.Add(rjButton3);
+            Controls.Add(rjButton1);
             Controls.Add(btn_Luu);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label4);
             Controls.Add(label7);
+            Controls.Add(label2);
             Controls.Add(label11);
             Controls.Add(label3);
             Controls.Add(label12);
@@ -406,5 +447,8 @@
         private Label label12;
         private CustomControls.RJControls.RJComboBox txtGioiTinh;
         private CustomControls.RJControls.RJTextBox txtHoTen;
+        private Label label2;
+        private OpenFileDialog openFileDialog1;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }

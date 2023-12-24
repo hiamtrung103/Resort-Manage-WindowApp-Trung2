@@ -2,25 +2,20 @@
 using baitap.Model;
 using baitap.Object;
 using Krypton.Toolkit;
-using Microsoft.VisualBasic.ApplicationServices;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace baitap.View
 {
     public partial class frmSettingKhachHang : KryptonForm
     {
-
+        private string duongDanAnh = "";
         private ConnectToSQL conn = new ConnectToSQL();
         private KhachHangCtr khCtr = new KhachHangCtr();
+
         public frmSettingKhachHang()
         {
             InitializeComponent();
@@ -50,24 +45,94 @@ namespace baitap.View
                             txtGioiTinh.Texts = khachHangDataTable.Rows[0]["GioiTinh"].ToString();
                             txtNamSinh.Texts = khachHangDataTable.Rows[0]["NamSinh"].ToString();
                             txtDiaChi.Texts = khachHangDataTable.Rows[0]["DiaChi"].ToString();
+
+                            HienThiAnhDaiDien((byte[])khachHangDataTable.Rows[0]["Avatar"]);
                         }
                     }
                 }
             }
         }
-        public void SuaKhachHang()
+
+        private void HienThiAnhDaiDien(object hinhAnhObject)
         {
-            KhachHangObj khachHangObj = new KhachHangObj();
-            khachHangObj.HoTen = txtHoTen.Texts;
-            khachHangObj.GioiTinh = txtGioiTinh.Texts;
-            khachHangObj.NamSinh = txtNamSinh.Texts;
-            khachHangObj.DiaChi = txtDiaChi.Texts;
-            khCtr.CapNhatDuLieuKhachHang(khachHangObj);
+            if (hinhAnhObject != DBNull.Value && hinhAnhObject != null)
+            {
+                byte[] hinhAnh = (byte[])hinhAnhObject;
+
+                if (hinhAnh != null && hinhAnh.Length > 0)
+                {
+                    using (MemoryStream ms = new MemoryStream(hinhAnh))
+                    {
+                        pictureBox1.Image = Image.FromStream(ms);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                }
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+        }
+
+        private void btnChonAnhDaiDien_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All files (*.*)|*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                duongDanAnh = openFileDialog1.FileName;
+                HienThiAnhDaiDien(ChuyenDoiHinhAnh(duongDanAnh));
+            }
+        }
+
+        private byte[] ChuyenDoiHinhAnh(string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                return File.ReadAllBytes(imagePath);
+            }
+            return null;
+        }
+
+        public void CapNhatThongTinKhachHang(string hoTen, string gioiTinh, string namSinh, string diaChi)
+        {
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
+            {
+                string tenTaiKhoan = Session.TenTaiKhoan;
+
+                hoTen = txtHoTen.Texts;
+                gioiTinh = txtGioiTinh.Texts;
+                namSinh = txtNamSinh.Texts;
+                diaChi = txtDiaChi.Texts;
+
+                khCtr.CapNhatDuLieuCaNhan(tenTaiKhoan, hoTen, gioiTinh, namSinh, diaChi);
+            }
+        }
+
+        public void CapNhatAvatar(byte[] avatar)
+        {
+            if (!string.IsNullOrEmpty(Session.TenTaiKhoan))
+            {
+                string tenTaiKhoan = Session.TenTaiKhoan;
+
+                khCtr.CapNhatAvatar(tenTaiKhoan, avatar);
+            }
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            SuaKhachHang();
+            byte[] avatar = ChuyenDoiHinhAnh(duongDanAnh);
+            CapNhatThongTinKhachHang(txtHoTen.Texts, txtGioiTinh.Texts, txtNamSinh.Texts, txtDiaChi.Texts);
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            byte[] avatar = ChuyenDoiHinhAnh(duongDanAnh);
+            CapNhatAvatar(avatar);
         }
     }
 }

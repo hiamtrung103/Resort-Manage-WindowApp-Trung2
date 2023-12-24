@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace baitap.Object
 {
@@ -18,10 +14,11 @@ namespace baitap.Object
         public string Password { get; set; }
         public string MaKhachHang { get; set; }
         public string MaGiamGia { get; set; }
+        public byte[] Avatar { get; set; }
 
         public KhachHangObj() { }
 
-        public KhachHangObj(string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password, string maKhachHang, string maGiamGia)
+        public KhachHangObj(string hoTen, string gioiTinh, string namSinh, string diaChi, string dienThoai, string tenTaiKhoan, string email, string password, string maKhachHang, string maGiamGia, byte[] avatar)
         {
             HoTen = hoTen;
             GioiTinh = gioiTinh;
@@ -33,11 +30,13 @@ namespace baitap.Object
             Password = password;
             MaKhachHang = maKhachHang;
             MaGiamGia = maGiamGia;
+            Avatar = avatar;
         }
     }
+
+
     public static class Session
     {
         public static string TenTaiKhoan { get; set; }
     }
-
 }

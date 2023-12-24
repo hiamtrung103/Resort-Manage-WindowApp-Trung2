@@ -35,15 +35,14 @@
             label8 = new Label();
             label7 = new Label();
             panelMain = new Panel();
+            pictureBox2 = new PictureBox();
             txtDiaChi = new Krypton.Toolkit.KryptonTextBox();
+            rjButton3 = new CustomControls.RJControls.RJButton();
             rjButton2 = new CustomControls.RJControls.RJButton();
             txtGioiTinh = new Krypton.Toolkit.KryptonComboBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             txtNgaySinh = new Krypton.Toolkit.KryptonDateTimePicker();
             pictureBox7 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox5 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -52,16 +51,13 @@
             label10 = new Label();
             label5 = new Label();
             label6 = new Label();
-            pictureBox2 = new PictureBox();
             label12 = new Label();
             txtHoTen = new Krypton.Toolkit.KryptonTextBox();
             label4 = new Label();
             txtUserName = new Krypton.Toolkit.KryptonTextBox();
-            pictureBox3 = new PictureBox();
             menu = new PictureBox();
             txtPassword2 = new Krypton.Toolkit.KryptonTextBox();
             txtDienThoai = new Krypton.Toolkit.KryptonTextBox();
-            pictureBox4 = new PictureBox();
             txtPassword = new Krypton.Toolkit.KryptonTextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             báoCáoSựCốToolStripMenuItem = new ToolStripMenuItem();
@@ -71,17 +67,13 @@
             staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            openFileDialog1 = new OpenFileDialog();
             panel1.SuspendLayout();
             panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menu).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -150,15 +142,14 @@
             // panelMain
             // 
             panelMain.BackColor = Color.WhiteSmoke;
+            panelMain.Controls.Add(pictureBox2);
             panelMain.Controls.Add(txtDiaChi);
+            panelMain.Controls.Add(rjButton3);
             panelMain.Controls.Add(rjButton2);
             panelMain.Controls.Add(txtGioiTinh);
             panelMain.Controls.Add(txtEmail);
             panelMain.Controls.Add(txtNgaySinh);
             panelMain.Controls.Add(pictureBox7);
-            panelMain.Controls.Add(pictureBox1);
-            panelMain.Controls.Add(pictureBox6);
-            panelMain.Controls.Add(pictureBox5);
             panelMain.Controls.Add(label1);
             panelMain.Controls.Add(label2);
             panelMain.Controls.Add(label3);
@@ -167,16 +158,13 @@
             panelMain.Controls.Add(label10);
             panelMain.Controls.Add(label5);
             panelMain.Controls.Add(label6);
-            panelMain.Controls.Add(pictureBox2);
             panelMain.Controls.Add(label12);
             panelMain.Controls.Add(txtHoTen);
             panelMain.Controls.Add(label4);
             panelMain.Controls.Add(txtUserName);
-            panelMain.Controls.Add(pictureBox3);
             panelMain.Controls.Add(menu);
             panelMain.Controls.Add(txtPassword2);
             panelMain.Controls.Add(txtDienThoai);
-            panelMain.Controls.Add(pictureBox4);
             panelMain.Controls.Add(txtPassword);
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 0);
@@ -184,15 +172,43 @@
             panelMain.Size = new Size(800, 450);
             panelMain.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(372, 323);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(77, 71);
+            pictureBox2.TabIndex = 14;
+            pictureBox2.TabStop = false;
+            // 
             // txtDiaChi
             // 
-            txtDiaChi.Location = new Point(369, 348);
+            txtDiaChi.Location = new Point(371, 288);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(417, 29);
             txtDiaChi.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtDiaChi.StateCommon.Border.Rounding = 5F;
             txtDiaChi.StateCommon.Border.Width = 2;
             txtDiaChi.TabIndex = 11;
+            // 
+            // rjButton3
+            // 
+            rjButton3.BackColor = Color.LightGreen;
+            rjButton3.BackgroundColor = Color.LightGreen;
+            rjButton3.BorderColor = Color.PaleVioletRed;
+            rjButton3.BorderRadius = 5;
+            rjButton3.BorderSize = 0;
+            rjButton3.FlatAppearance.BorderSize = 0;
+            rjButton3.FlatStyle = FlatStyle.Flat;
+            rjButton3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton3.ForeColor = Color.White;
+            rjButton3.Location = new Point(372, 401);
+            rjButton3.Name = "rjButton3";
+            rjButton3.Size = new Size(77, 21);
+            rjButton3.TabIndex = 13;
+            rjButton3.Text = "Tải ảnh";
+            rjButton3.TextColor = Color.White;
+            rjButton3.UseVisualStyleBackColor = false;
+            rjButton3.Click += btnChonAnhDaiDien_Click;
             // 
             // rjButton2
             // 
@@ -219,7 +235,7 @@
             txtGioiTinh.DropDownWidth = 191;
             txtGioiTinh.IntegralHeight = false;
             txtGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
-            txtGioiTinh.Location = new Point(586, 294);
+            txtGioiTinh.Location = new Point(588, 234);
             txtGioiTinh.Name = "txtGioiTinh";
             txtGioiTinh.Size = new Size(197, 27);
             txtGioiTinh.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -234,7 +250,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(369, 188);
+            txtEmail.Location = new Point(371, 128);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(203, 29);
             txtEmail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -244,55 +260,27 @@
             // 
             // txtNgaySinh
             // 
-            txtNgaySinh.CustomFormat = "dddd, dd-MM- yyyy";
+            txtNgaySinh.CustomFormat = "yyyy";
             txtNgaySinh.Format = DateTimePickerFormat.Custom;
-            txtNgaySinh.Location = new Point(368, 294);
+            txtNgaySinh.Location = new Point(370, 234);
             txtNgaySinh.Name = "txtNgaySinh";
             txtNgaySinh.Size = new Size(201, 27);
             txtNgaySinh.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtNgaySinh.StateCommon.Border.Rounding = 5F;
             txtNgaySinh.StateCommon.Border.Width = 2;
+            txtNgaySinh.StateCommon.Content.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNgaySinh.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtNgaySinh.TabIndex = 8;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.eye_close;
-            pictureBox7.Location = new Point(543, 242);
+            pictureBox7.Location = new Point(545, 182);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(24, 24);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 1;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.password_16;
-            pictureBox1.Location = new Point(702, 219);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(20, 20);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = Properties.Resources.password_16;
-            pictureBox6.Location = new Point(427, 217);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(20, 20);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 1;
-            pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.user_16;
-            pictureBox5.Location = new Point(427, 110);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(20, 20);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
             // 
             // label1
             // 
@@ -309,7 +297,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(585, 221);
+            label2.Location = new Point(587, 161);
             label2.Name = "label2";
             label2.Size = new Size(118, 17);
             label2.TabIndex = 2;
@@ -321,7 +309,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(582, 168);
+            label3.Location = new Point(584, 108);
             label3.Name = "label3";
             label3.Size = new Size(89, 17);
             label3.TabIndex = 2;
@@ -333,7 +321,7 @@
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(370, 168);
+            label11.Location = new Point(370, 108);
             label11.Name = "label11";
             label11.Size = new Size(39, 17);
             label11.TabIndex = 2;
@@ -345,7 +333,7 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(370, 328);
+            label9.Location = new Point(372, 268);
             label9.Name = "label9";
             label9.Size = new Size(47, 17);
             label9.TabIndex = 2;
@@ -357,7 +345,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(589, 274);
+            label10.Location = new Point(591, 214);
             label10.Name = "label10";
             label10.Size = new Size(56, 17);
             label10.TabIndex = 2;
@@ -369,7 +357,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(370, 274);
+            label5.Location = new Point(372, 214);
             label5.Name = "label5";
             label5.Size = new Size(64, 17);
             label5.TabIndex = 2;
@@ -381,29 +369,19 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(368, 220);
+            label6.Location = new Point(370, 160);
             label6.Name = "label6";
             label6.Size = new Size(62, 17);
             label6.TabIndex = 2;
             label6.Text = "Mật khẩu";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.google_48;
-            pictureBox2.Location = new Point(486, 62);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 40);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            // 
             // label12
             // 
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(582, 113);
+            label12.Location = new Point(584, 53);
             label12.Name = "label12";
             label12.Size = new Size(66, 17);
             label12.TabIndex = 2;
@@ -412,7 +390,7 @@
             // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(582, 134);
+            txtHoTen.Location = new Point(584, 74);
             txtHoTen.Name = "txtHoTen";
             txtHoTen.Size = new Size(204, 31);
             txtHoTen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -425,7 +403,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(368, 113);
+            label4.Location = new Point(370, 53);
             label4.Name = "label4";
             label4.Size = new Size(63, 17);
             label4.TabIndex = 2;
@@ -434,23 +412,13 @@
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(368, 134);
+            txtUserName.Location = new Point(370, 74);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(204, 31);
             txtUserName.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             txtUserName.StateCommon.Border.Rounding = 7F;
             txtUserName.StateCommon.Border.Width = 2;
             txtUserName.TabIndex = 6;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.facebook_48;
-            pictureBox3.Location = new Point(566, 62);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 40);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
             // 
             // menu
             // 
@@ -464,7 +432,7 @@
             // 
             // txtPassword2
             // 
-            txtPassword2.Location = new Point(583, 240);
+            txtPassword2.Location = new Point(585, 180);
             txtPassword2.Name = "txtPassword2";
             txtPassword2.PasswordChar = '●';
             txtPassword2.Size = new Size(203, 31);
@@ -476,7 +444,7 @@
             // 
             // txtDienThoai
             // 
-            txtDienThoai.Location = new Point(581, 188);
+            txtDienThoai.Location = new Point(583, 128);
             txtDienThoai.Name = "txtDienThoai";
             txtDienThoai.Size = new Size(206, 31);
             txtDienThoai.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -485,19 +453,9 @@
             txtDienThoai.TabIndex = 6;
             txtDienThoai.KeyPress += txtDienThoai_KeyPress;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.twitter_48;
-            pictureBox4.Location = new Point(648, 62);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 40);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(368, 240);
+            txtPassword.Location = new Point(370, 180);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '●';
             txtPassword.Size = new Size(204, 31);
@@ -557,6 +515,10 @@
             thoátToolStripMenuItem.Size = new Size(205, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -572,15 +534,10 @@
             panel1.PerformLayout();
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtGioiTinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)menu).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -593,18 +550,11 @@
         private Label label7;
         private Panel panelMain;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox5;
         private Label label1;
         private Label label6;
-        private PictureBox pictureBox2;
         private Label label4;
         private Krypton.Toolkit.KryptonTextBox txtUserName;
-        private PictureBox pictureBox3;
-        private PictureBox menu;
-        private PictureBox pictureBox4;
         private Krypton.Toolkit.KryptonTextBox txtPassword;
-        private PictureBox pictureBox1;
         private Label label2;
         private Krypton.Toolkit.KryptonTextBox txtPassword2;
         private ContextMenuStrip contextMenuStrip1;
@@ -629,5 +579,9 @@
         private Krypton.Toolkit.KryptonComboBox txtGioiTinh;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
+        private PictureBox menu;
+        private PictureBox pictureBox2;
+        private OpenFileDialog openFileDialog1;
+        private CustomControls.RJControls.RJButton rjButton3;
     }
 }

@@ -60,5 +60,15 @@ namespace baitap.Control
                 tinnhanLoi = "Lỗi khi cập nhật dữ liệu: " + ex.Message;
             }
         }
+        public void CapNhatDuLieuCaNhan(string tenTaiKhoan, string hoTen, string gioiTinh, string namSinh, string diaChi)
+        {
+            khMod.CapNhatDuLieuCaNhan(tenTaiKhoan, hoTen, gioiTinh, namSinh, diaChi);
+        }
+
+        public void CapNhatAvatar(string tenTaiKhoan, byte[] avatar)
+        {
+            khMod.CapNhatAvatar(tenTaiKhoan, avatar);
+        }
+
     }
 }

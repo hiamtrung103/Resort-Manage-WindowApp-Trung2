@@ -85,7 +85,7 @@
             bunifuCards1.RightSahddow = true;
             bunifuCards1.RightShadow = true;
             bunifuCards1.ShadowDepth = 20;
-            bunifuCards1.Size = new Size(996, 604);
+            bunifuCards1.Size = new Size(1031, 604);
             bunifuCards1.TabIndex = 4;
             // 
             // panelMain
@@ -94,7 +94,7 @@
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(146, 0);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(850, 604);
+            panelMain.Size = new Size(885, 604);
             panelMain.TabIndex = 3;
             // 
             // panel7

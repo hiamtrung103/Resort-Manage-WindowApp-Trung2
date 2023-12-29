@@ -63,5 +63,18 @@ namespace baitap.Control
                 MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void CapNhatAvatar(string maHangHoa, byte[] avatar)
+        {
+            try
+            {
+                hhMod.CapNhatAvatar(maHangHoa, avatar);
+                MessageBox.Show("Cập nhật hình ảnh hàng hóa thành công.", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật hình ảnh hàng hóa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

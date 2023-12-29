@@ -89,7 +89,7 @@ namespace baitap.View
                         {
                             string quyenHan = khachHangDataTable.Rows[0]["QuyenHan"].ToString();
 
-                            if (quyenHan.ToLower() == "admin" || quyenHan.ToLower() == role.ToLower())
+                            if (quyenHan.ToLower() == "administrator" || quyenHan.ToLower() == role.ToLower())
                             {
                                 MofrmCon(form);
                             }
@@ -118,7 +118,7 @@ namespace baitap.View
 
         private void KeToanOpen(object sender, EventArgs e)
         {
-            CheckQuyenHan("Accountant", new frmKeToan());
+            CheckQuyenHan("Accountant", new frmban());
         }
         private void HangHoaOpen(object sender, EventArgs e)
         {
@@ -188,7 +188,6 @@ namespace baitap.View
                 pictureBox3.Image = null;
             }
         }
-
 
         private void thoat_Click(object sender, EventArgs e)
         {

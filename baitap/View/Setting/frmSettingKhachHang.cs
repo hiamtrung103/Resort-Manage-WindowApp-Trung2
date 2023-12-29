@@ -79,7 +79,6 @@ namespace baitap.View
             }
         }
 
-
         private void btnChonAnhDaiDien_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image files (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All files (*.*)|*.*";

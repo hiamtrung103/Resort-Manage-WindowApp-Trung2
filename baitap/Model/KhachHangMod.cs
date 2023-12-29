@@ -171,7 +171,7 @@ namespace baitap.Model
                 }
             }
         }
-
+        
         internal void CapNhatAvatar(string tenTaiKhoan, byte[] avatar)
         {
             using (SqlCommand cmd = new SqlCommand("UPDATE KhachHang SET Avatar = @Avatar WHERE TenTaiKhoan = @TenTaiKhoan", conn.KetNoi))

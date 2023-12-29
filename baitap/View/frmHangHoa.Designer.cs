@@ -50,6 +50,9 @@
             kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             pictureBox1 = new PictureBox();
             kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            openFileDialog1 = new OpenFileDialog();
+            rjButton5 = new CustomControls.RJControls.RJButton();
+            rjButton6 = new CustomControls.RJControls.RJButton();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
@@ -294,7 +297,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(705, 37);
+            pictureBox1.Location = new Point(723, 37);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(196, 153);
             pictureBox1.TabIndex = 37;
@@ -302,17 +305,63 @@
             // 
             // kryptonLabel4
             // 
-            kryptonLabel4.Location = new Point(776, 196);
+            kryptonLabel4.Location = new Point(794, 196);
             kryptonLabel4.Name = "kryptonLabel4";
             kryptonLabel4.Size = new Size(60, 20);
             kryptonLabel4.TabIndex = 1;
             kryptonLabel4.Values.Text = "Hình ảnh";
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // rjButton5
+            // 
+            rjButton5.BackColor = Color.FromArgb(13, 135, 242);
+            rjButton5.BackgroundColor = Color.FromArgb(13, 135, 242);
+            rjButton5.BorderColor = Color.PaleVioletRed;
+            rjButton5.BorderRadius = 5;
+            rjButton5.BorderSize = 0;
+            rjButton5.FlatAppearance.BorderSize = 0;
+            rjButton5.FlatStyle = FlatStyle.Flat;
+            rjButton5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton5.ForeColor = Color.White;
+            rjButton5.Location = new Point(723, 222);
+            rjButton5.Name = "rjButton5";
+            rjButton5.Size = new Size(91, 30);
+            rjButton5.TabIndex = 38;
+            rjButton5.Text = "Tải ảnh";
+            rjButton5.TextColor = Color.White;
+            rjButton5.UseVisualStyleBackColor = false;
+            rjButton5.Click += btnChonAnhDaiDien_Click;
+            // 
+            // rjButton6
+            // 
+            rjButton6.BackColor = Color.FromArgb(63, 194, 138);
+            rjButton6.BackgroundColor = Color.FromArgb(63, 194, 138);
+            rjButton6.BorderColor = Color.PaleVioletRed;
+            rjButton6.BorderRadius = 5;
+            rjButton6.BorderSize = 0;
+            rjButton6.FlatAppearance.BorderSize = 0;
+            rjButton6.FlatStyle = FlatStyle.Flat;
+            rjButton6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton6.ForeColor = Color.White;
+            rjButton6.Location = new Point(832, 222);
+            rjButton6.Name = "rjButton6";
+            rjButton6.Size = new Size(91, 30);
+            rjButton6.TabIndex = 39;
+            rjButton6.Text = "Lưu";
+            rjButton6.TextColor = Color.White;
+            rjButton6.UseVisualStyleBackColor = false;
+            rjButton6.Click += btn_Luu_Click;
             // 
             // frmHangHoa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1092, 644);
+            Controls.Add(rjButton5);
+            Controls.Add(rjButton6);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(rjButton4);
@@ -355,5 +404,8 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private PictureBox pictureBox1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private OpenFileDialog openFileDialog1;
+        private CustomControls.RJControls.RJButton rjButton5;
+        private CustomControls.RJControls.RJButton rjButton6;
     }
 }

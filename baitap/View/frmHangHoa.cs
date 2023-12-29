@@ -14,6 +14,7 @@ namespace baitap.View
 {
     public partial class frmHangHoa : Form
     {
+        private string duongDanAnh = "";
         private HangHoaCtr hhCtr = new HangHoaCtr();
         public frmHangHoa()
         {
@@ -22,6 +23,44 @@ namespace baitap.View
         private void frmHangHoa_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = hhCtr.LayDuLieuHangHoa();
+        }
+
+        private void HienThiAnhDaiDien(object hinhAnhObject)
+        {
+            byte[] hinhAnh = hinhAnhObject as byte[];
+
+            if (hinhAnh?.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(hinhAnh))
+                {
+                    pictureBox1.Image = Image.FromStream(ms);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+        }
+
+        private void btnChonAnhDaiDien_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All files (*.*)|*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                duongDanAnh = openFileDialog1.FileName;
+                HienThiAnhDaiDien(ChuyenDoiHinhAnh(duongDanAnh));
+            }
+        }
+
+        private byte[] ChuyenDoiHinhAnh(string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                return File.ReadAllBytes(imagePath);
+            }
+            return null;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -34,6 +73,9 @@ namespace baitap.View
                 txtTenHangHoa.Text = row.Cells["TenHangHoa"].Value.ToString();
                 txtDonGia.Text = row.Cells["DonGia"].Value.ToString();
                 txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
+
+                byte[] imageData = row.Cells["Avatar"].Value as byte[];
+                HienThiAnhDaiDien(imageData);
             }
         }
 
@@ -100,7 +142,7 @@ namespace baitap.View
                 hhObj.TenHangHoa = txtTenHangHoa.Text;
                 hhObj.DonGia = txtDonGia.Text;
                 hhObj.SoLuong = txtSoLuong.Text;
-                hhObj.MaHangHoa = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                hhObj.MaHangHoa = txtMaHangHoa.Text;
 
                 hhCtr.CapNhatDuLieuHangHoa(hhObj);
                 dataGridView1.DataSource = hhCtr.LayDuLieuHangHoa();
@@ -117,6 +159,28 @@ namespace baitap.View
             txtDonGia.Text = "";
             txtSoLuong.Text = "";
             txtMaHangHoa.Text = "";
+        }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string maHangHoa = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                byte[] avatar = ChuyenDoiHinhAnh(duongDanAnh);
+
+                if (avatar != null)
+                {
+                    hhCtr.CapNhatAvatar(maHangHoa, avatar);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn hình ảnh.", "Thông báo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hàng hóa để cập nhật hình ảnh.", "Thông báo");
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)

@@ -33,8 +33,6 @@ namespace baitap.Object
             Avatar = avatar;
         }
     }
-
-
     public static class Session
     {
         public static string TenTaiKhoan { get; set; }

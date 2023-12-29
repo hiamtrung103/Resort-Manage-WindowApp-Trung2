@@ -65,7 +65,7 @@ namespace baitap.Model
 
         public void CapNhatDuLieuHangHoa(HanghoaObj hhObj)
         {
-            using (SqlCommand cmd = new SqlCommand("UPDATE HangHoa SET SoLuong = @SoLuong, DonGia = @DonGia, TenHangHoa = @TenHangHoa, " +
+            using (SqlCommand cmd = new SqlCommand("UPDATE HangHoa SET SoLuong = @SoLuong, DonGia = @DonGia, TenHangHoa = @TenHangHoa " +
                                                   "WHERE ID = @ID", conn.KetNoi))
             {
                 SetKhachHangParameters(cmd, hhObj);
@@ -75,15 +75,6 @@ namespace baitap.Model
                 {
                     conn.MoKetNoi();
                     int soDongAnhHuong = cmd.ExecuteNonQuery();
-
-                    if (soDongAnhHuong > 0)
-                    {
-                        MessageBox.Show("Cập nhật dữ liệu thành công.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật dữ liệu thất bại.");
-                    }
                 }
                 catch (Exception ex)
                 {
@@ -120,6 +111,32 @@ namespace baitap.Model
 
             return false;
         }
+
+        public void CapNhatAvatar(string maHangHoa, byte[] avatar)
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE HangHoa SET Avatar = @Avatar WHERE ID = @ID", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@ID", maHangHoa);
+                cmd.Parameters.AddWithValue("@Avatar", avatar);
+
+                try
+                {
+                    conn.MoKetNoi();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật hình ảnh hàng hóa thành công.", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc cập nhật dữ liệu hàng hóa", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
+        }
+
+
         private void SetKhachHangParameters(SqlCommand cmd, HanghoaObj hhObj)
         {
             cmd.Parameters.AddWithValue("@SoLuong", hhObj.SoLuong);

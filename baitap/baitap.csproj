@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms" Version="6.1.0" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.0" />
     <PackageReference Include="Krypton" Version="2.0.0" />
     <PackageReference Include="Krypton.Docking" Version="80.23.11.321" />
     <PackageReference Include="Krypton.Navigator" Version="80.23.11.321" />
@@ -17,7 +18,10 @@
     <PackageReference Include="Krypton.Toolkit" Version="80.23.11.321" />
     <PackageReference Include="Krypton.Workspace" Version="80.23.11.321" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="xunit.runner.utility" Version="2.6.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +41,7 @@
 
   <ItemGroup>
     <Folder Include="Custom\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
 
 </Project>

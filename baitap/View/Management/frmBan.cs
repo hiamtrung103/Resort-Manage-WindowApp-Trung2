@@ -1,36 +1,37 @@
 ﻿using baitap.Control;
 using baitap.Model;
 using baitap.Object;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace baitap.View
 {
     public partial class frmban : Form
     {
-        private ConnectToSQL conn = new ConnectToSQL();
-        BanCtr pCtr = new BanCtr();
+        private readonly ConnectToSQL conn = new ConnectToSQL();
+        private readonly BanCtr banCtr = new BanCtr();
 
         public frmban()
         {
             InitializeComponent();
         }
+
         private void frmPhong_Load(object sender, EventArgs e)
         {
-            LoadDataAndPanelColors();
+            TaiDuLieuVaCapNhatMauPanel();
 
             if (dataGridView1.Rows.Count > 0)
             {
-                DataGridViewRow firstRow = dataGridView1.Rows[0];
-                string maPhong = firstRow.Cells["MaBan"].Value.ToString();
-                UpdatePanelColors(maPhong);
+                string maBan = dataGridView1.Rows[0].Cells["MaBan"].Value.ToString();
+                CapNhatMauPanel(maBan);
             }
         }
 
-        private void UpdatePanelColors(string maBan)
+        private void CapNhatMauPanel(string maBan)
         {
             for (int i = 1; i <= 16; i++)
             {
@@ -47,33 +48,21 @@ namespace baitap.View
 
                         if (trangThaiObj != null && trangThaiObj != DBNull.Value)
                         {
-                            string trangThai = trangThaiObj.ToString();
-                            if (trangThai == "Đang có khách")
-                            {
-                                panel.BackColor = Color.Red;
-                            }
-                            else if(trangThai == "Đang dọn dẹp")
-                            {
-                                panel.BackColor = Color.LightBlue;
-                            }
-                            else
-                            {
-                                panel.BackColor = Color.LightGreen;
-                            }
+                            DatMauChoPanel(panel, trangThaiObj.ToString());
                         }
                     }
                 }
             }
         }
 
-        private void LoadDataAndPanelColors()
+        private void TaiDuLieuVaCapNhatMauPanel()
         {
-            dataGridView1.DataSource = pCtr.LayDuLieuBan();
+            dataGridView1.DataSource = banCtr.LayDuLieuBan();
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 string maBan = dataGridView1.SelectedRows[0].Cells["MaBan"].Value.ToString();
-                UpdatePanelColors(maBan);
+                CapNhatMauPanel(maBan);
             }
         }
 
@@ -82,51 +71,77 @@ namespace baitap.View
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
-                txtMaBan.Text = row.Cells["MaBan"].Value.ToString();
-                txtTenBan.Text = row.Cells["TenBan"].Value.ToString();
-                txtLau.Text = row.Cells["Lau"].Value.ToString();
-                txtGia.Text = row.Cells["Gia"].Value.ToString();
-                txtTrangThai.Text = row.Cells["TrangThai"].Value.ToString();
+                DienThongTinVaoText(row);
 
                 string maBan = txtMaBan.Text;
-                UpdatePanelColors(maBan);
+                CapNhatMauPanel(maBan);
             }
         }
 
-
-        private void btnThemBan()
+        private void DienThongTinVaoText(DataGridViewRow row)
         {
-            string maPhong = txtMaBan.Text;
-            string tenPhong = txtTenBan.Text;
-            string lau = txtLau.Text;
-            decimal gia = Convert.ToDecimal(txtGia.Text);
-            string trangThai = txtTrangThai.Text;
+            txtMaBan.Text = row.Cells["MaBan"].Value.ToString();
+            txtTenBan.Text = row.Cells["TenBan"].Value.ToString();
+            txtLau.Text = row.Cells["Lau"].Value.ToString();
+            txtGia.Text = row.Cells["Gia"].Value.ToString();
+            txtTrangThai.Text = row.Cells["TrangThai"].Value.ToString();
+        }
 
-            BanObj banObj = new BanObj(maPhong, tenPhong, lau, gia, trangThai);
-
-            if (pCtr.ThemDuLieuBan(banObj))
+        private void DatMauChoPanel(Panel panel, string trangThai)
+        {
+            switch (trangThai)
             {
-                dataGridView1.DataSource = pCtr.LayDuLieuBan();
+                case "Đang có khách":
+                    panel.BackColor = System.Drawing.Color.Red;
+                    break;
+                case "Đang dọn dẹp":
+                    panel.BackColor = System.Drawing.Color.LightBlue;
+                    break;
+                default:
+                    panel.BackColor = System.Drawing.Color.LightGreen;
+                    break;
             }
         }
 
-        public void btnSuaBan()
+        private BanObj LayBanObjTuForm()
+        {
+            return new BanObj
+            {
+                MaBan = txtMaBan.Text,
+                TenBan = txtTenBan.Text,
+                Lau = txtLau.Text,
+                Gia = Convert.ToInt32(txtGia.Text),
+                TrangThai = txtTrangThai.Text
+            };
+        }
+
+        private void ThemBanMoi()
+        {
+            if (string.IsNullOrWhiteSpace(txtMaBan.Text) ||
+                string.IsNullOrWhiteSpace(txtTenBan.Text) ||
+                string.IsNullOrWhiteSpace(txtLau.Text) ||
+                string.IsNullOrWhiteSpace(txtGia.Text) ||
+                string.IsNullOrWhiteSpace(txtTrangThai.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
+
+            BanObj banObj = LayBanObjTuForm();
+
+            if (banCtr.ThemDuLieuBan(banObj))
+            {
+                dataGridView1.DataSource = banCtr.LayDuLieuBan();
+            }
+        }
+
+        private void SuaThongTinBan()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                BanObj banObj = new BanObj();
-                banObj.MaBan = txtMaBan.Text;
-                banObj.TenBan = txtTenBan.Text;
-                banObj.Lau = txtLau.Text;
-                banObj.TrangThai = txtTrangThai.Text;
-                if (decimal.TryParse(txtGia.Text, out decimal gia))
-                {
-                    banObj.Gia = gia;
-                }
-
-                pCtr.CapNhatDuLieuBan(banObj);
-                dataGridView1.DataSource = pCtr.LayDuLieuBan();
+                BanObj banObj = LayBanObjTuForm();
+                banCtr.CapNhatDuLieuBan(banObj);
+                dataGridView1.DataSource = banCtr.LayDuLieuBan();
             }
             else
             {
@@ -134,15 +149,24 @@ namespace baitap.View
             }
         }
 
-        private void btnXoaBan() 
+        private void XoaBan()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string maPhong = dataGridView1.SelectedRows[0].Cells["MaBan"].Value.ToString();
+                string maBan = dataGridView1.SelectedRows[0].Cells["MaBan"].Value.ToString();
 
-                if (pCtr.XoaDuLieuBan(maPhong))
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá hàng hóa này?", "Xoá hàng hóa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    dataGridView1.DataSource = pCtr.LayDuLieuBan();
+                    banCtr.XoaDuLieuBan(maBan);
+                    MessageBox.Show("Xoá dữ liệu thành công.");
+                    ClearTextBox();
+                    dataGridView1.DataSource = banCtr.LayDuLieuBan();
+                }
+                else
+                {
+                    MessageBox.Show("Xoá dữ liệu thất bại.");
                 }
             }
             else
@@ -151,19 +175,33 @@ namespace baitap.View
             }
         }
 
+        private void ClearTextBox()
+        {
+            txtMaBan.Text = "";
+            txtTenBan.Text = "";
+            txtTrangThai.Text = "";
+            txtLau.Text = "";
+            txtGia.Text = "";
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            btnThemBan();
+            ThemBanMoi();
         }
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            btnSuaBan();
+            SuaThongTinBan();
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            btnXoaBan();
+            XoaBan();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            ClearTextBox();
         }
     }
 }

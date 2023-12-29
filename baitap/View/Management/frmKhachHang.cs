@@ -40,6 +40,22 @@ namespace baitap.View
             }
         }
 
+        private KhachHangObj LayNhanVienObjTuForm()
+        {
+            return new KhachHangObj
+            {
+                HoTen = txtHoTenKhachHang.Text,
+                GioiTinh = txtGioiTinh.Text,
+                NamSinh = txtNamSinh.Text,
+                DiaChi = txtDiaChi.Text,
+                DienThoai = txtDienThoai.Text,
+                TenTaiKhoan = txtTenTaiKhoan.Text,
+                Email = txtEmail.Text,
+                Password = txtPassword.Text,
+                MaGiamGia = txtGiamGia.Text
+            };
+        }
+
         public void ThemKhachHang()
         {
             if (string.IsNullOrWhiteSpace(txtHoTenKhachHang.Text) ||
@@ -56,16 +72,7 @@ namespace baitap.View
                 return;
             }
 
-            KhachHangObj khachHangObj = new KhachHangObj();
-            khachHangObj.HoTen = txtHoTenKhachHang.Text;
-            khachHangObj.GioiTinh = txtGioiTinh.Text;
-            khachHangObj.NamSinh = txtNamSinh.Text;
-            khachHangObj.DiaChi = txtDiaChi.Text;
-            khachHangObj.DienThoai = txtDienThoai.Text;
-            khachHangObj.TenTaiKhoan = txtTenTaiKhoan.Text;
-            khachHangObj.Email = txtEmail.Text;
-            khachHangObj.Password = txtPassword.Text;
-            khachHangObj.MaGiamGia = txtGiamGia.Text;
+            KhachHangObj khachHangObj = LayNhanVienObjTuForm();
 
             bool result = khachHangCtr.ThemDuLieuKhachHang(khachHangObj);
 
@@ -109,16 +116,7 @@ namespace baitap.View
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                KhachHangObj khachHangObj = new KhachHangObj();
-                khachHangObj.HoTen = txtHoTenKhachHang.Text;
-                khachHangObj.GioiTinh = txtGioiTinh.Text;
-                khachHangObj.NamSinh = txtNamSinh.Text;
-                khachHangObj.DiaChi = txtDiaChi.Text;
-                khachHangObj.DienThoai = txtDienThoai.Text;
-                khachHangObj.TenTaiKhoan = txtTenTaiKhoan.Text;
-                khachHangObj.Email = txtEmail.Text;
-                khachHangObj.Password = txtPassword.Text;
-                khachHangObj.MaGiamGia = txtGiamGia.Text;
+                KhachHangObj khachHangObj = LayNhanVienObjTuForm();
 
                 khachHangObj.MaKhachHang = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 

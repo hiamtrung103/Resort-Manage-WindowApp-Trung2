@@ -78,28 +78,32 @@ namespace baitap.View
                 HienThiAnhDaiDien(imageData);
             }
         }
-
-        public void btnThem()
+        private HanghoaObj LayHangHoaObjTuForm()
         {
-            if (string.IsNullOrWhiteSpace(txtTenHangHoa.Text) ||
-                string.IsNullOrWhiteSpace(txtDonGia.Text) ||
+            return new HanghoaObj
+            {
+                MaHangHoa = txtMaHangHoa.Text,
+                TenHangHoa = txtTenHangHoa.Text,
+                DonGia = Convert.ToInt32(txtDonGia.Text),
+                SoLuong = Convert.ToInt32(txtSoLuong.Text),
+            };
+        }
+
+
+        private void btnThem()
+        {
+            if (string.IsNullOrWhiteSpace(txtTenHangHoa.Text) || 
+                string.IsNullOrWhiteSpace(txtDonGia.Text) || 
                 string.IsNullOrWhiteSpace(txtSoLuong.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
             }
 
-            HanghoaObj hhObj = new HanghoaObj();
-            hhObj.TenHangHoa = txtTenHangHoa.Text;
-            hhObj.DonGia = txtDonGia.Text;
-            hhObj.SoLuong = txtSoLuong.Text;
+            HanghoaObj hhObj = LayHangHoaObjTuForm();
 
-
-            bool result = hhCtr.ThemDuLieuHangHoa(hhObj);
-
-            if (result)
+            if (hhCtr.ThemDuLieuHangHoa(hhObj))
             {
-                MessageBox.Show("Thêm dữ liệu thành công.");
                 dataGridView1.DataSource = hhCtr.LayDuLieuHangHoa();
             }
             else
@@ -108,17 +112,17 @@ namespace baitap.View
             }
         }
 
-        public void btnXoa()
+        private void btnXoa()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                string maHangHoa = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá người dùng này?", "Xoá người dùng!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá hàng hóa này?", "Xoá hàng hóa!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    hhCtr.XoaDuLieuHangHoa(id);
+                    hhCtr.XoaDuLieuHangHoa(maHangHoa);
                     MessageBox.Show("Xoá dữ liệu thành công.");
                     ClearTextBox();
                     dataGridView1.DataSource = hhCtr.LayDuLieuHangHoa();
@@ -134,15 +138,19 @@ namespace baitap.View
             }
         }
 
-        public void btnSua()
+        private void btnSua()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                HanghoaObj hhObj = new HanghoaObj();
-                hhObj.TenHangHoa = txtTenHangHoa.Text;
-                hhObj.DonGia = txtDonGia.Text;
-                hhObj.SoLuong = txtSoLuong.Text;
-                hhObj.MaHangHoa = txtMaHangHoa.Text;
+                DataGridViewRow row = dataGridView1.SelectedRows[0];
+
+                if (!decimal.TryParse(txtDonGia.Text, out decimal donGia) || !int.TryParse(txtSoLuong.Text, out int soLuong))
+                {
+                    MessageBox.Show("Nhập giá trị hợp lệ cho Đơn giá và Số lượng.", "Lỗi");
+                    return;
+                }
+
+                HanghoaObj hhObj = LayHangHoaObjTuForm();
 
                 hhCtr.CapNhatDuLieuHangHoa(hhObj);
                 dataGridView1.DataSource = hhCtr.LayDuLieuHangHoa();
@@ -153,7 +161,7 @@ namespace baitap.View
             }
         }
 
-        public void ClearTextBox()
+        private void ClearTextBox()
         {
             txtTenHangHoa.Text = "";
             txtDonGia.Text = "";

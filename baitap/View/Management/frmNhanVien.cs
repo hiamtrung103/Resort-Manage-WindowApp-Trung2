@@ -47,7 +47,22 @@ namespace baitap.View
             }
         }
 
-        public void btnThem()
+        private NhanvienObj LayNhanVienObjTuForm()
+        {
+            return new NhanvienObj
+            {
+                TenNhanVien = txtTenNV.Text,
+                GioiTinh = txtGioiTinh.Text,
+                NamSinh = txtNamSinh.Text,
+                DiaChi = txtDiaChi.Text,
+                DienThoai = txtDienThoai.Text,
+                TenTaiKhoan = txtTenTaiKhoan.Text,
+                Email = txtEmail.Text,
+                MatKhau = txtMatkhau.Text,
+                QuyenHan = txtQuyenHan.Text
+            };
+        }
+        private void btnThem()
         {
             if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
                 string.IsNullOrWhiteSpace(txtGioiTinh.Text) ||
@@ -63,17 +78,7 @@ namespace baitap.View
                 return;
             }
 
-            NhanvienObj nvObj = new NhanvienObj();
-            nvObj.TenNhanVien = txtTenNV.Text;
-            nvObj.GioiTinh = txtGioiTinh.Text;
-            nvObj.NamSinh = txtNamSinh.Text;
-            nvObj.DiaChi = txtDiaChi.Text;
-            nvObj.DienThoai = txtDienThoai.Text;
-            nvObj.MatKhau = txtMatkhau.Text;
-            nvObj.TenTaiKhoan = txtTenTaiKhoan.Text;
-            nvObj.Email = txtEmail.Text;
-            nvObj.QuyenHan = txtQuyenHan.Text;
-
+            NhanvienObj nvObj = LayNhanVienObjTuForm();
 
             bool result = nhanVienCtr.ThemDuLieuNhanVien(nvObj);
 
@@ -88,7 +93,7 @@ namespace baitap.View
             }
         }
 
-        public void btnXoa()
+        private void btnXoa()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -114,20 +119,11 @@ namespace baitap.View
             }
         }
 
-        public void btnSua()
+        private void btnSua()
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                NhanvienObj nvObj = new NhanvienObj();
-                nvObj.TenNhanVien = txtTenNV.Text;
-                nvObj.GioiTinh = txtGioiTinh.Text;
-                nvObj.NamSinh = txtNamSinh.Text;
-                nvObj.DiaChi = txtDiaChi.Text;
-                nvObj.DienThoai = txtDienThoai.Text;
-                nvObj.MatKhau = txtMatkhau.Text;
-                nvObj.TenTaiKhoan = txtTenTaiKhoan.Text;
-                nvObj.Email = txtEmail.Text;
-                nvObj.QuyenHan = txtQuyenHan.Text;
+                NhanvienObj nvObj = LayNhanVienObjTuForm();
 
                 nvObj.MaNhanVien = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
@@ -140,7 +136,7 @@ namespace baitap.View
             }
         }
 
-        public void ClearTextBox()
+        private void ClearTextBox()
         {
             txtTenNV.Text = "";
             txtMatkhau.Text = "";
@@ -173,12 +169,12 @@ namespace baitap.View
             ClearTextBox();
         }
 
-        public void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
+        private void nhapSo_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChiNhapSo(e);
         }
 
-        public void ChiNhapSo(KeyPressEventArgs e)
+        internal void ChiNhapSo(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

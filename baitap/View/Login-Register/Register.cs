@@ -171,9 +171,9 @@ namespace baitap.View
             }
         }
 
-            private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
         {
-            nv.ChiNhapSo(e);
+          nv.ChiNhapSo(e);
         }
 
     }

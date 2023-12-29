@@ -123,6 +123,7 @@
             rjButton4.Text = "Huỷ";
             rjButton4.TextColor = Color.White;
             rjButton4.UseVisualStyleBackColor = false;
+            rjButton4.Click += btn_Huy_Click;
             // 
             // rjButton3
             // 

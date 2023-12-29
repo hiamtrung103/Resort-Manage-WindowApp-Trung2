@@ -37,7 +37,8 @@ namespace baitap.View
             NutBam(btnNhanVien, "Nhân Viên");
             NutBam(btnKeToan, "Kế Toán");
             NutBam(btnHangHoa, "Hàng Hóa");
-            NutBam(btnFeedback, "Danh sách FeedBack");
+            NutBam(btnHoaDon, "Hóa Đơn");
+            NutBam(btnFeedBack, "Danh sách FeedBack");
             NutBam(btnCaiDat, "Cài Đặt");
             NutBam(btnDangXuat, "Đăng Xuất");
         }
@@ -123,6 +124,10 @@ namespace baitap.View
         private void HangHoaOpen(object sender, EventArgs e)
         {
             MofrmCon(new frmHangHoa());
+        }
+        private void HoaDonOpen(object sender, EventArgs e)
+        {
+            MofrmCon(new frmHoaDon());
         }
 
         private void FeedBackOpen(object sender, EventArgs e)

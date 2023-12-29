@@ -63,6 +63,16 @@ namespace baitap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _476d1ad66ceeba003542ea1a0b0db600 {
+            get {
+                object obj = ResourceManager.GetObject("476d1ad66ceeba003542ea1a0b0db600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _505930882 {
             get {
                 object obj = ResourceManager.GetObject("505930882", resourceCulture);
@@ -126,6 +136,16 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap back {
             get {
                 object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bill {
+            get {
+                object obj = ResourceManager.GetObject("bill", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +723,16 @@ namespace baitap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap restaurant1 {
+            get {
+                object obj = ResourceManager.GetObject("restaurant1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rs1 {
             get {
                 object obj = ResourceManager.GetObject("rs1", resourceCulture);
@@ -836,6 +866,16 @@ namespace baitap.Properties {
         internal static System.Drawing.Bitmap staff_24 {
             get {
                 object obj = ResourceManager.GetObject("staff-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap table_24 {
+            get {
+                object obj = ResourceManager.GetObject("table-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -45,11 +45,13 @@
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
+            lbCaiDat = new CustomControls.RJControls.RJButton();
+            panel15 = new Panel();
+            btnFeedBack = new CustomControls.RJControls.RJButton();
             btnDangXuat = new CustomControls.RJControls.RJButton();
             panel14 = new Panel();
-            btnCaiDat = new CustomControls.RJControls.RJButton();
             panel12 = new Panel();
-            btnFeedback = new CustomControls.RJControls.RJButton();
+            btnHoaDon = new CustomControls.RJControls.RJButton();
             panel11 = new Panel();
             btnHangHoa = new CustomControls.RJControls.RJButton();
             panel10 = new Panel();
@@ -250,11 +252,13 @@
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
+            panelSidebar.Controls.Add(lbCaiDat);
+            panelSidebar.Controls.Add(panel15);
+            panelSidebar.Controls.Add(btnFeedBack);
             panelSidebar.Controls.Add(btnDangXuat);
             panelSidebar.Controls.Add(panel14);
-            panelSidebar.Controls.Add(btnCaiDat);
             panelSidebar.Controls.Add(panel12);
-            panelSidebar.Controls.Add(btnFeedback);
+            panelSidebar.Controls.Add(btnHoaDon);
             panelSidebar.Controls.Add(panel11);
             panelSidebar.Controls.Add(btnHangHoa);
             panelSidebar.Controls.Add(panel10);
@@ -278,6 +282,56 @@
             panelSidebar.ShadowDepth = 20;
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 14;
+            // 
+            // lbCaiDat
+            // 
+            lbCaiDat.BackColor = Color.Transparent;
+            lbCaiDat.BackgroundColor = Color.Transparent;
+            lbCaiDat.BorderColor = Color.PaleVioletRed;
+            lbCaiDat.BorderRadius = 0;
+            lbCaiDat.BorderSize = 0;
+            lbCaiDat.Dock = DockStyle.Top;
+            lbCaiDat.FlatAppearance.BorderSize = 0;
+            lbCaiDat.FlatStyle = FlatStyle.Flat;
+            lbCaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbCaiDat.ForeColor = Color.White;
+            lbCaiDat.Image = Properties.Resources.settings_24;
+            lbCaiDat.Location = new Point(0, 495);
+            lbCaiDat.Name = "lbCaiDat";
+            lbCaiDat.Size = new Size(50, 40);
+            lbCaiDat.TabIndex = 38;
+            lbCaiDat.TextColor = Color.White;
+            lbCaiDat.UseVisualStyleBackColor = false;
+            lbCaiDat.Click += CaiDatOpen;
+            // 
+            // panel15
+            // 
+            panel15.Dock = DockStyle.Top;
+            panel15.Location = new Point(0, 475);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(50, 20);
+            panel15.TabIndex = 37;
+            // 
+            // btnFeedBack
+            // 
+            btnFeedBack.BackColor = Color.Transparent;
+            btnFeedBack.BackgroundColor = Color.Transparent;
+            btnFeedBack.BorderColor = Color.PaleVioletRed;
+            btnFeedBack.BorderRadius = 0;
+            btnFeedBack.BorderSize = 0;
+            btnFeedBack.Dock = DockStyle.Top;
+            btnFeedBack.FlatAppearance.BorderSize = 0;
+            btnFeedBack.FlatStyle = FlatStyle.Flat;
+            btnFeedBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFeedBack.ForeColor = Color.White;
+            btnFeedBack.Image = Properties.Resources.feedback_24;
+            btnFeedBack.Location = new Point(0, 435);
+            btnFeedBack.Name = "btnFeedBack";
+            btnFeedBack.Size = new Size(50, 40);
+            btnFeedBack.TabIndex = 36;
+            btnFeedBack.TextColor = Color.White;
+            btnFeedBack.UseVisualStyleBackColor = false;
+            btnFeedBack.Click += FeedBackOpen;
             // 
             // btnDangXuat
             // 
@@ -308,27 +362,6 @@
             panel14.Size = new Size(50, 20);
             panel14.TabIndex = 33;
             // 
-            // btnCaiDat
-            // 
-            btnCaiDat.BackColor = Color.Transparent;
-            btnCaiDat.BackgroundColor = Color.Transparent;
-            btnCaiDat.BorderColor = Color.PaleVioletRed;
-            btnCaiDat.BorderRadius = 0;
-            btnCaiDat.BorderSize = 0;
-            btnCaiDat.Dock = DockStyle.Top;
-            btnCaiDat.FlatAppearance.BorderSize = 0;
-            btnCaiDat.FlatStyle = FlatStyle.Flat;
-            btnCaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCaiDat.ForeColor = Color.White;
-            btnCaiDat.Image = Properties.Resources.settings_24;
-            btnCaiDat.Location = new Point(0, 435);
-            btnCaiDat.Name = "btnCaiDat";
-            btnCaiDat.Size = new Size(50, 40);
-            btnCaiDat.TabIndex = 30;
-            btnCaiDat.TextColor = Color.White;
-            btnCaiDat.UseVisualStyleBackColor = false;
-            btnCaiDat.Click += CaiDatOpen;
-            // 
             // panel12
             // 
             panel12.Dock = DockStyle.Top;
@@ -337,26 +370,26 @@
             panel12.Size = new Size(50, 20);
             panel12.TabIndex = 29;
             // 
-            // btnFeedback
+            // btnHoaDon
             // 
-            btnFeedback.BackColor = Color.Transparent;
-            btnFeedback.BackgroundColor = Color.Transparent;
-            btnFeedback.BorderColor = Color.PaleVioletRed;
-            btnFeedback.BorderRadius = 0;
-            btnFeedback.BorderSize = 0;
-            btnFeedback.Dock = DockStyle.Top;
-            btnFeedback.FlatAppearance.BorderSize = 0;
-            btnFeedback.FlatStyle = FlatStyle.Flat;
-            btnFeedback.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFeedback.ForeColor = Color.White;
-            btnFeedback.Image = Properties.Resources.feedback_24;
-            btnFeedback.Location = new Point(0, 375);
-            btnFeedback.Name = "btnFeedback";
-            btnFeedback.Size = new Size(50, 40);
-            btnFeedback.TabIndex = 28;
-            btnFeedback.TextColor = Color.White;
-            btnFeedback.UseVisualStyleBackColor = false;
-            btnFeedback.Click += FeedBackOpen;
+            btnHoaDon.BackColor = Color.Transparent;
+            btnHoaDon.BackgroundColor = Color.Transparent;
+            btnHoaDon.BorderColor = Color.PaleVioletRed;
+            btnHoaDon.BorderRadius = 0;
+            btnHoaDon.BorderSize = 0;
+            btnHoaDon.Dock = DockStyle.Top;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHoaDon.ForeColor = Color.White;
+            btnHoaDon.Image = Properties.Resources.bill_24;
+            btnHoaDon.Location = new Point(0, 375);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Size = new Size(50, 40);
+            btnHoaDon.TabIndex = 28;
+            btnHoaDon.TextColor = Color.White;
+            btnHoaDon.UseVisualStyleBackColor = false;
+            btnHoaDon.Click += HoaDonOpen;
             // 
             // panel11
             // 
@@ -407,7 +440,7 @@
             btnKeToan.FlatStyle = FlatStyle.Flat;
             btnKeToan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnKeToan.ForeColor = Color.White;
-            btnKeToan.Image = Properties.Resources.transaction_24;
+            btnKeToan.Image = Properties.Resources.table_24;
             btnKeToan.Location = new Point(0, 255);
             btnKeToan.Name = "btnKeToan";
             btnKeToan.Size = new Size(50, 40);
@@ -649,7 +682,7 @@
         private Panel panel13;
         private CustomControls.RJControls.RJButton btnCaiDat;
         private Panel panel12;
-        private CustomControls.RJControls.RJButton btnFeedback;
+        private CustomControls.RJControls.RJButton btnHoaDon;
         private Panel panel11;
         private CustomControls.RJControls.RJButton btnHangHoa;
         private Panel panel10;
@@ -666,5 +699,8 @@
         private Panel panel2;
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton btnDangXuat;
+        private CustomControls.RJControls.RJButton lbCaiDat;
+        private Panel panel15;
+        private CustomControls.RJControls.RJButton btnFeedBack;
     }
 }

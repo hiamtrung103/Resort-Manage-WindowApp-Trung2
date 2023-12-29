@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             label2 = new Label();
@@ -45,7 +45,7 @@
             label5 = new Label();
             bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             pictureBox2 = new PictureBox();
-            label4 = new Label();
+            lbID3 = new Label();
             label6 = new Label();
             bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
             pictureBox3 = new PictureBox();
@@ -53,15 +53,15 @@
             label8 = new Label();
             bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
             pictureBox4 = new PictureBox();
-            lbIDFeedback = new Label();
+            lbID4 = new Label();
             label16 = new Label();
             bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
             pictureBox5 = new PictureBox();
-            label17 = new Label();
+            lbID5 = new Label();
             label18 = new Label();
             bunifuCards7 = new Bunifu.Framework.UI.BunifuCards();
             pictureBox6 = new PictureBox();
-            label19 = new Label();
+            lbID7 = new Label();
             label20 = new Label();
             bunifuCards9 = new Bunifu.Framework.UI.BunifuCards();
             label10 = new Label();
@@ -71,6 +71,10 @@
             bunifuCards8 = new Bunifu.Framework.UI.BunifuCards();
             label11 = new Label();
             dataGridView2 = new DataGridView();
+            bunifuCards10 = new Bunifu.Framework.UI.BunifuCards();
+            pictureBox7 = new PictureBox();
+            lbID6 = new Label();
+            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             bunifuCards1.SuspendLayout();
             bunifuCards2.SuspendLayout();
@@ -89,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewFeedback).BeginInit();
             bunifuCards8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            bunifuCards10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -96,23 +102,23 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 40);
             dataGridView1.Name = "dataGridView1";
@@ -234,7 +240,7 @@
             bunifuCards3.BottomShadow = true;
             bunifuCards3.color = Color.Transparent;
             bunifuCards3.Controls.Add(pictureBox2);
-            bunifuCards3.Controls.Add(label4);
+            bunifuCards3.Controls.Add(lbID3);
             bunifuCards3.Controls.Add(label6);
             bunifuCards3.IndicatorColor = Color.Transparent;
             bunifuCards3.LeftSahddow = false;
@@ -257,15 +263,15 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
-            // label4
+            // lbID3
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(163, 58);
-            label4.Name = "label4";
-            label4.Size = new Size(23, 25);
-            label4.TabIndex = 1;
-            label4.Text = "0";
+            lbID3.AutoSize = true;
+            lbID3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbID3.Location = new Point(163, 58);
+            lbID3.Name = "lbID3";
+            lbID3.Size = new Size(23, 25);
+            lbID3.TabIndex = 1;
+            lbID3.Text = "0";
             // 
             // label6
             // 
@@ -336,7 +342,7 @@
             bunifuCards5.BottomShadow = true;
             bunifuCards5.color = Color.Transparent;
             bunifuCards5.Controls.Add(pictureBox4);
-            bunifuCards5.Controls.Add(lbIDFeedback);
+            bunifuCards5.Controls.Add(lbID4);
             bunifuCards5.Controls.Add(label16);
             bunifuCards5.IndicatorColor = Color.Transparent;
             bunifuCards5.LeftSahddow = false;
@@ -359,15 +365,15 @@
             pictureBox4.TabIndex = 2;
             pictureBox4.TabStop = false;
             // 
-            // lbIDFeedback
+            // lbID4
             // 
-            lbIDFeedback.AutoSize = true;
-            lbIDFeedback.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbIDFeedback.Location = new Point(163, 58);
-            lbIDFeedback.Name = "lbIDFeedback";
-            lbIDFeedback.Size = new Size(23, 25);
-            lbIDFeedback.TabIndex = 1;
-            lbIDFeedback.Text = "0";
+            lbID4.AutoSize = true;
+            lbID4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbID4.Location = new Point(163, 58);
+            lbID4.Name = "lbID4";
+            lbID4.Size = new Size(23, 25);
+            lbID4.TabIndex = 1;
+            lbID4.Text = "0";
             // 
             // label16
             // 
@@ -387,7 +393,7 @@
             bunifuCards6.BottomShadow = true;
             bunifuCards6.color = Color.Transparent;
             bunifuCards6.Controls.Add(pictureBox5);
-            bunifuCards6.Controls.Add(label17);
+            bunifuCards6.Controls.Add(lbID5);
             bunifuCards6.Controls.Add(label18);
             bunifuCards6.IndicatorColor = Color.Transparent;
             bunifuCards6.LeftSahddow = false;
@@ -410,15 +416,15 @@
             pictureBox5.TabIndex = 2;
             pictureBox5.TabStop = false;
             // 
-            // label17
+            // lbID5
             // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(163, 58);
-            label17.Name = "label17";
-            label17.Size = new Size(23, 25);
-            label17.TabIndex = 1;
-            label17.Text = "0";
+            lbID5.AutoSize = true;
+            lbID5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbID5.Location = new Point(163, 58);
+            lbID5.Name = "lbID5";
+            lbID5.Size = new Size(23, 25);
+            lbID5.TabIndex = 1;
+            lbID5.Text = "0";
             // 
             // label18
             // 
@@ -438,7 +444,7 @@
             bunifuCards7.BottomShadow = true;
             bunifuCards7.color = Color.Transparent;
             bunifuCards7.Controls.Add(pictureBox6);
-            bunifuCards7.Controls.Add(label19);
+            bunifuCards7.Controls.Add(lbID7);
             bunifuCards7.Controls.Add(label20);
             bunifuCards7.IndicatorColor = Color.Transparent;
             bunifuCards7.LeftSahddow = false;
@@ -461,15 +467,15 @@
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
             // 
-            // label19
+            // lbID7
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.Location = new Point(163, 58);
-            label19.Name = "label19";
-            label19.Size = new Size(23, 25);
-            label19.TabIndex = 1;
-            label19.Text = "0";
+            lbID7.AutoSize = true;
+            lbID7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbID7.Location = new Point(163, 58);
+            lbID7.Name = "lbID7";
+            lbID7.Size = new Size(23, 25);
+            lbID7.TabIndex = 1;
+            lbID7.Text = "0";
             // 
             // label20
             // 
@@ -527,23 +533,23 @@
             dataGridViewFeedback.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewFeedback.BorderStyle = BorderStyle.None;
             dataGridViewFeedback.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewFeedback.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dataGridViewFeedback.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridViewFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridViewFeedback.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = SystemColors.Window;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dataGridViewFeedback.DefaultCellStyle = dataGridViewCellStyle10;
             dataGridViewFeedback.Dock = DockStyle.Bottom;
             dataGridViewFeedback.Location = new Point(0, 40);
             dataGridViewFeedback.Name = "dataGridViewFeedback";
@@ -560,7 +566,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             label9.ForeColor = Color.Red;
-            label9.Location = new Point(529, 210);
+            label9.Location = new Point(292, 344);
             label9.Name = "label9";
             label9.Size = new Size(329, 34);
             label9.TabIndex = 1;
@@ -592,32 +598,32 @@
             label11.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label11.Location = new Point(3, 12);
             label11.Name = "label11";
-            label11.Size = new Size(88, 25);
+            label11.Size = new Size(92, 25);
             label11.TabIndex = 1;
-            label11.Text = "Booking";
+            label11.Text = "Hóa Đơn";
             // 
             // dataGridView2
             // 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = SystemColors.Window;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
+            dataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
             dataGridView2.Dock = DockStyle.Bottom;
             dataGridView2.Location = new Point(0, 40);
             dataGridView2.Name = "dataGridView2";
@@ -629,12 +635,64 @@
             dataGridView2.Size = new Size(350, 228);
             dataGridView2.TabIndex = 0;
             // 
+            // bunifuCards10
+            // 
+            bunifuCards10.BackColor = Color.White;
+            bunifuCards10.BorderRadius = 20;
+            bunifuCards10.BottomSahddow = true;
+            bunifuCards10.BottomShadow = true;
+            bunifuCards10.color = Color.Transparent;
+            bunifuCards10.Controls.Add(pictureBox7);
+            bunifuCards10.Controls.Add(lbID6);
+            bunifuCards10.Controls.Add(label12);
+            bunifuCards10.IndicatorColor = Color.Transparent;
+            bunifuCards10.LeftSahddow = false;
+            bunifuCards10.LeftShadow = false;
+            bunifuCards10.Location = new Point(529, 210);
+            bunifuCards10.Name = "bunifuCards10";
+            bunifuCards10.RightSahddow = true;
+            bunifuCards10.RightShadow = true;
+            bunifuCards10.ShadowDepth = 20;
+            bunifuCards10.Size = new Size(242, 131);
+            bunifuCards10.TabIndex = 15;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.bill;
+            pictureBox7.Location = new Point(9, 20);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(100, 100);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 2;
+            pictureBox7.TabStop = false;
+            // 
+            // lbID6
+            // 
+            lbID6.AutoSize = true;
+            lbID6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbID6.Location = new Point(163, 58);
+            lbID6.Name = "lbID6";
+            lbID6.Size = new Size(23, 25);
+            lbID6.TabIndex = 1;
+            lbID6.Text = "0";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(135, 20);
+            label12.Name = "label12";
+            label12.Size = new Size(75, 21);
+            label12.TabIndex = 1;
+            label12.Text = "Hóa đơn";
+            // 
             // frmTrangChu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 242, 251);
             ClientSize = new Size(1330, 667);
+            Controls.Add(bunifuCards10);
             Controls.Add(bunifuCards5);
             Controls.Add(bunifuCards7);
             Controls.Add(bunifuCards6);
@@ -677,6 +735,9 @@
             bunifuCards8.ResumeLayout(false);
             bunifuCards8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            bunifuCards10.ResumeLayout(false);
+            bunifuCards10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -693,7 +754,7 @@
         private PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private PictureBox pictureBox2;
-        private Label label4;
+        private Label lbID3;
         private Label label6;
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
         private PictureBox pictureBox3;
@@ -701,15 +762,15 @@
         private Label label8;
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
         private PictureBox pictureBox4;
-        private Label lbIDFeedback;
+        private Label lbID4;
         private Label label16;
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
         private PictureBox pictureBox5;
-        private Label label17;
+        private Label lbID5;
         private Label label18;
         private Bunifu.Framework.UI.BunifuCards bunifuCards7;
         private PictureBox pictureBox6;
-        private Label label19;
+        private Label lbID7;
         private Label label20;
         private Bunifu.Framework.UI.BunifuCards bunifuCards9;
         private Label label23;
@@ -720,5 +781,9 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards8;
         private Label label11;
         private DataGridView dataGridView2;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards10;
+        private PictureBox pictureBox7;
+        private Label lbID6;
+        private Label label12;
     }
 }

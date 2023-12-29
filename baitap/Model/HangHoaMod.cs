@@ -123,7 +123,6 @@ namespace baitap.Model
                 {
                     conn.MoKetNoi();
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cập nhật hình ảnh hàng hóa thành công.", "Thông báo");
                 }
                 catch (Exception ex)
                 {
@@ -134,6 +133,50 @@ namespace baitap.Model
                     conn.DongKetNoi();
                 }
             }
+        }
+
+        public HanghoaObj LayThongTinHangHoa(string tenHangHoa)
+        {
+            HanghoaObj hhObj = new HanghoaObj();
+
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM HangHoa WHERE TenHangHoa = @TenHangHoa", conn.KetNoi))
+            {
+                cmd.Parameters.AddWithValue("@TenHangHoa", tenHangHoa);
+
+                try
+                {
+                    conn.MoKetNoi();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            hhObj.MaHangHoa = reader["ID"].ToString();
+                            hhObj.SoLuong = int.Parse(reader["SoLuong"].ToString());
+                            hhObj.DonGia = int.Parse(reader["DonGia"].ToString());
+                            hhObj.TenHangHoa = reader["TenHangHoa"].ToString();
+
+                            if (reader["Avatar"] != DBNull.Value)
+                            {
+                                hhObj.Avatar = (byte[])reader["Avatar"];
+                            }
+                            else
+                            {
+                                hhObj.Avatar = null;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XuLyLoi("Lỗi kết nối hoặc đọc dữ liệu hàng hóa", ex);
+                }
+                finally
+                {
+                    conn.DongKetNoi();
+                }
+            }
+
+            return hhObj;
         }
 
 

@@ -20,16 +20,14 @@ namespace baitap.View
         private void frmTrangChu2_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = LayDuLieu("SELECT * FROM ThongTinDangNhap");
-            HienThiFeedback();
+            dataGridViewFeedback.DataSource = LayDuLieu("SELECT ID, TrangThai, NgayGui FROM Feedback");
+            dataGridView2.DataSource = LayDuLieu("SELECT ID, TenKhachHang, ThoiGian FROM Bill");
+
 
             lbID.Text = $"{LayTongSoID("SELECT COUNT(ID) FROM KhachHang")}";
             lbID2.Text = $"{LayTongSoID("SELECT COUNT(ID) FROM NhanVien")}";
-            lbIDFeedback.Text = $"{LayTongSoID("SELECT COUNT(ID) FROM Feedback")}";
-        }
-
-        private void HienThiFeedback()
-        {
-            dataGridViewFeedback.DataSource = LayDuLieu("SELECT ID, TrangThai, NgayGui FROM Feedback");
+            lbID6.Text = $"{LayTongSoID("SELECT COUNT(ID) FROM Bill")}";
+            lbID4.Text = $"{LayTongSoID("SELECT COUNT(ID) FROM Feedback")}";
         }
 
         private DataTable LayDuLieu(string query)

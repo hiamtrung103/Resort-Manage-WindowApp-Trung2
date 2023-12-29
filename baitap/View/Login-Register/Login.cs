@@ -15,6 +15,8 @@ namespace baitap.View
 {
     public partial class Login : Form
     {
+        private ConnectToSQL conn = new ConnectToSQL();
+        public static string TenTaiKhoanDangNhap { get; private set; }
         private bool isDarkMode = false;
 
         public Login()
@@ -68,8 +70,7 @@ namespace baitap.View
             label7.ForeColor = color;
             label8.ForeColor = color;
         }
-        private ConnectToSQL conn = new ConnectToSQL();
-        public static string TenTaiKhoanDangNhap { get; private set; }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
                 try

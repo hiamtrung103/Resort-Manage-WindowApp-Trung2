@@ -39,7 +39,7 @@ namespace baitap.View
             NutBam(btnHangHoa, "Hàng Hóa");
             NutBam(btnHoaDon, "Hóa Đơn");
             NutBam(btnFeedBack, "Danh sách FeedBack");
-            NutBam(btnCaiDat, "Cài Đặt");
+            NutBam(CaiDat, "Cài Đặt");
             NutBam(btnDangXuat, "Đăng Xuất");
         }
 

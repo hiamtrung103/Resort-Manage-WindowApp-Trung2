@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             panelMain = new Panel();
+            lbQuenMK = new LinkLabel();
             pic = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
@@ -54,12 +55,8 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             báoCáoSựCốToolStripMenuItem = new ToolStripMenuItem();
             chuyểnDạngĐăngNhậpToolStripMenuItem = new ToolStripMenuItem();
-            administratorToolStripMenuItem = new ToolStripMenuItem();
-            staffToolStripMenuItem = new ToolStripMenuItem();
-            staffToolStripMenuItem1 = new ToolStripMenuItem();
             chếĐộTốiToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
-            lbQuenMK = new LinkLabel();
             panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -106,6 +103,19 @@
             panelMain.Size = new Size(784, 461);
             panelMain.TabIndex = 3;
             panelMain.Click += btnDangNhap_Click;
+            // 
+            // lbQuenMK
+            // 
+            lbQuenMK.AutoSize = true;
+            lbQuenMK.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbQuenMK.LinkBehavior = LinkBehavior.NeverUnderline;
+            lbQuenMK.Location = new Point(509, 367);
+            lbQuenMK.Name = "lbQuenMK";
+            lbQuenMK.Size = new Size(109, 20);
+            lbQuenMK.TabIndex = 8;
+            lbQuenMK.TabStop = true;
+            lbQuenMK.Text = "Quên mật khẩu";
+            lbQuenMK.LinkClicked += lbQuenMK_LinkClicked;
             // 
             // pic
             // 
@@ -358,29 +368,10 @@
             // 
             // chuyểnDạngĐăngNhậpToolStripMenuItem
             // 
-            chuyểnDạngĐăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { administratorToolStripMenuItem, staffToolStripMenuItem, staffToolStripMenuItem1 });
             chuyểnDạngĐăngNhậpToolStripMenuItem.Name = "chuyểnDạngĐăngNhậpToolStripMenuItem";
             chuyểnDạngĐăngNhậpToolStripMenuItem.Size = new Size(205, 22);
             chuyểnDạngĐăngNhậpToolStripMenuItem.Text = "Chuyển dạng đăng nhập";
-            // 
-            // administratorToolStripMenuItem
-            // 
-            administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
-            administratorToolStripMenuItem.Size = new Size(147, 22);
-            administratorToolStripMenuItem.Text = "Administrator";
-            administratorToolStripMenuItem.Click += administratorToolStripMenuItem_Click;
-            // 
-            // staffToolStripMenuItem
-            // 
-            staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            staffToolStripMenuItem.Size = new Size(147, 22);
-            staffToolStripMenuItem.Text = "Manager";
-            // 
-            // staffToolStripMenuItem1
-            // 
-            staffToolStripMenuItem1.Name = "staffToolStripMenuItem1";
-            staffToolStripMenuItem1.Size = new Size(147, 22);
-            staffToolStripMenuItem1.Text = "Staff";
+            chuyểnDạngĐăngNhậpToolStripMenuItem.Click += administratorToolStripMenuItem_Click;
             // 
             // chếĐộTốiToolStripMenuItem
             // 
@@ -394,19 +385,6 @@
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             thoátToolStripMenuItem.Size = new Size(205, 22);
             thoátToolStripMenuItem.Text = "Thoát";
-            // 
-            // lbQuenMK
-            // 
-            lbQuenMK.AutoSize = true;
-            lbQuenMK.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lbQuenMK.LinkBehavior = LinkBehavior.NeverUnderline;
-            lbQuenMK.Location = new Point(509, 367);
-            lbQuenMK.Name = "lbQuenMK";
-            lbQuenMK.Size = new Size(109, 20);
-            lbQuenMK.TabIndex = 8;
-            lbQuenMK.TabStop = true;
-            lbQuenMK.Text = "Quên mật khẩu";
-            lbQuenMK.LinkClicked += lbQuenMK_LinkClicked;
             // 
             // Login
             // 
@@ -458,9 +436,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem báoCáoSựCốToolStripMenuItem;
         private ToolStripMenuItem chuyểnDạngĐăngNhậpToolStripMenuItem;
-        private ToolStripMenuItem administratorToolStripMenuItem;
-        private ToolStripMenuItem staffToolStripMenuItem;
-        private ToolStripMenuItem staffToolStripMenuItem1;
         private ToolStripMenuItem chếĐộTốiToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Label label7;

@@ -202,9 +202,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(68, 21);
             label1.Name = "label1";
-            label1.Size = new Size(174, 32);
+            label1.Size = new Size(183, 32);
             label1.TabIndex = 0;
-            label1.Text = "Luxury Resort";
+            label1.Text = "Cafe Trung Hải";
             // 
             // panelSidebar
             // 

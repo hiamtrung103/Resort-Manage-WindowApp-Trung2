@@ -45,7 +45,7 @@
             label2 = new Label();
             label1 = new Label();
             panelSidebar = new Bunifu.Framework.UI.BunifuCards();
-            lbCaiDat = new CustomControls.RJControls.RJButton();
+            CaiDat = new CustomControls.RJControls.RJButton();
             panel15 = new Panel();
             btnFeedBack = new CustomControls.RJControls.RJButton();
             btnDangXuat = new CustomControls.RJControls.RJButton();
@@ -252,7 +252,7 @@
             panelSidebar.BottomSahddow = true;
             panelSidebar.BottomShadow = true;
             panelSidebar.color = Color.Transparent;
-            panelSidebar.Controls.Add(lbCaiDat);
+            panelSidebar.Controls.Add(CaiDat);
             panelSidebar.Controls.Add(panel15);
             panelSidebar.Controls.Add(btnFeedBack);
             panelSidebar.Controls.Add(btnDangXuat);
@@ -283,26 +283,26 @@
             panelSidebar.Size = new Size(50, 690);
             panelSidebar.TabIndex = 14;
             // 
-            // lbCaiDat
+            // CaiDat
             // 
-            lbCaiDat.BackColor = Color.Transparent;
-            lbCaiDat.BackgroundColor = Color.Transparent;
-            lbCaiDat.BorderColor = Color.PaleVioletRed;
-            lbCaiDat.BorderRadius = 0;
-            lbCaiDat.BorderSize = 0;
-            lbCaiDat.Dock = DockStyle.Top;
-            lbCaiDat.FlatAppearance.BorderSize = 0;
-            lbCaiDat.FlatStyle = FlatStyle.Flat;
-            lbCaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbCaiDat.ForeColor = Color.White;
-            lbCaiDat.Image = Properties.Resources.settings_24;
-            lbCaiDat.Location = new Point(0, 495);
-            lbCaiDat.Name = "lbCaiDat";
-            lbCaiDat.Size = new Size(50, 40);
-            lbCaiDat.TabIndex = 38;
-            lbCaiDat.TextColor = Color.White;
-            lbCaiDat.UseVisualStyleBackColor = false;
-            lbCaiDat.Click += CaiDatOpen;
+            CaiDat.BackColor = Color.Transparent;
+            CaiDat.BackgroundColor = Color.Transparent;
+            CaiDat.BorderColor = Color.PaleVioletRed;
+            CaiDat.BorderRadius = 0;
+            CaiDat.BorderSize = 0;
+            CaiDat.Dock = DockStyle.Top;
+            CaiDat.FlatAppearance.BorderSize = 0;
+            CaiDat.FlatStyle = FlatStyle.Flat;
+            CaiDat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CaiDat.ForeColor = Color.White;
+            CaiDat.Image = Properties.Resources.settings_24;
+            CaiDat.Location = new Point(0, 495);
+            CaiDat.Name = "CaiDat";
+            CaiDat.Size = new Size(50, 40);
+            CaiDat.TabIndex = 38;
+            CaiDat.TextColor = Color.White;
+            CaiDat.UseVisualStyleBackColor = false;
+            CaiDat.Click += CaiDatOpen;
             // 
             // panel15
             // 
@@ -699,7 +699,7 @@
         private Panel panel2;
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton btnDangXuat;
-        private CustomControls.RJControls.RJButton lbCaiDat;
+        private CustomControls.RJControls.RJButton CaiDat;
         private Panel panel15;
         private CustomControls.RJControls.RJButton btnFeedBack;
     }
